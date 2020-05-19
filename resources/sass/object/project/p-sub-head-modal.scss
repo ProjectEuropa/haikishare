@@ -1,0 +1,34 @@
+.p-sub-head-modal__container {
+  height: $space_7l;
+  background: $theme_black;
+  overflow: hidden;
+}
+
+.p-sub-head-modal__bar {
+  float: right;
+  list-style: none;
+  overflow: hidden;
+}
+
+.p-sub-head-modal__box {
+  float: left;
+  line-height: $space_7l;
+  margin-right: $space_10l;
+  &:hover {
+    transition: .4s;
+    opacity: .8;
+  }
+}
+
+.p-sub-head-modal__title {
+  color: $theme_white;
+  font-size: $font_m;
+  padding-right: $space_2l;;
+  text-decoration: none;
+  transition: .4s;
+}
+
+.p-sub-head-modal__logo {
+  color: $theme_white;
+  font-size: $font_m;
+}

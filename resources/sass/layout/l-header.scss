@@ -1,0 +1,63 @@
+.l-header {
+  align-items: center;
+  background: $theme_dark_header;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: $space_7xl;
+  padding: 0 $space_3l;
+  position: relative;
+}
+
+.l-header__title {
+  display: block;
+  height: 35px;
+  width: 140px;
+}
+
+.l-header__left-box {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  height: $space_7xl;
+  cursor: pointer;
+  width: 120px;
+}
+
+.l-header__right-box {
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  position: relative;
+  width: 180px;
+}
+
+.l-header__user-logo {
+  color: #f8fafc;
+  cursor: pointer;
+  font-size: $font_l;
+  filter: drop-shadow(0px 0px 10px rgba(0,0,0,.8));
+  transition: .4s;
+  &:hover {
+    color: $theme_yellow;
+    transition: .4s;
+    transform: scale(1.05) translateY(-2px);
+  }
+}
+
+.l-header__search-logo {
+  color: #f8fafc;
+  cursor: pointer;
+  font-size: $font_l;
+  filter: drop-shadow(0px 0px 10px rgba(0,0,0,.8));
+  transition: .4s;
+  &:hover {
+    color: $theme_yellow;
+    transition: .4s;
+    transform: scale(1.05) translateY(-2px);
+  }
+}

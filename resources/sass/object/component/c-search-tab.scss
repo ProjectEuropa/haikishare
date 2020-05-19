@@ -1,0 +1,195 @@
+.c-search-tab {
+  max-height: 250px;
+  background: $theme_white;
+  overflow: hidden;
+}
+
+.c-search-tab__main-container {
+  margin: 0 auto;
+  padding: $space_2l 0;
+  width: 500px;
+  overflow: hidden;
+}
+
+.c-search-tab__item {
+  align-items: center;
+  display: flex;
+  height: $space_3l;
+  justify-content: space-between;
+  margin-bottom: $space_m;
+}
+
+.c-search-tab__warning {
+  color: black;
+  text-align: right;
+  width: 140px;
+}
+.c-search-tab__input {
+  box-sizing: border-box;
+  background: $theme_super_light_gray;
+  border: none;
+  font-size: $font_s;
+  outline: none;
+  padding: $space_m;
+  width: 320px;
+}
+
+.c-search-tab__create-btn-box {
+  margin: $space_2l auto 0;
+  position: relative;
+  text-align: center;
+  width: 200px;
+}
+.c-search-tab__create-btn {
+  align-items: center;
+  background: $theme_pearl_gray;
+  border: 0;
+  cursor: pointer;
+  font-size: $font_s;
+  height: $space_4l;
+  letter-spacing: 0.1em;
+  outline: none;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  width: 100%;
+}
+
+.c-search-tab__logo {
+  position: absolute;
+  right: 10px;
+  top: 11px;
+}
+
+.c-search-tab__select-box {
+	overflow: hidden;
+	margin: 0 220px 0 0;
+	text-align: center;
+  font-size: $font_m;
+  box-sizing: border-box;
+  background: $theme_super_light_gray;
+  border: none;
+  outline: none;
+  width: 100px;
+  padding: $space_s 0 0 $space_s;
+  position: relative;
+  border-bottom: 3px solid $theme_gray_word_bottom;
+  background: $theme_super_light_gray;
+}
+.c-search-tab__select--bigger {
+	margin: 0 170px 0 0;
+  width: 150px;
+
+}
+.c-search-tab__select-box select {
+  width: 200px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+  font-size: $font_s;
+}
+.c-search-tab__select-box select::-ms-expand {
+    display: none;
+}
+.c-search-tab__select-box:before {
+	position: absolute;
+	top: 12px;
+	right: 14px;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid black;
+	pointer-events: none;
+}
+
+.c-search-tab__input-for-price {
+  box-sizing: border-box;
+  background: $theme_pearl_gray;
+  border: none;
+  font-size: $font_s;
+  outline: none;
+  padding: $space_s;
+  width: 100px;
+  text-align: right;
+}
+
+.c-search-tab__item-for-price {
+  margin-bottom: $space_m;
+  overflow: hidden;
+  height: $space_3l;
+  line-height: $space_3l;
+}
+
+
+.c-search-tab__warning-for-price {
+  color: $theme_black;
+  text-align: right;
+  width: 140px;
+  float: left;
+  margin-right: $space_4l;
+}
+
+.c-search-tab__simbol-for-price {
+  color: $theme_gray;
+}
+
+.c-search-tab__item-for-checkbox {
+  margin-bottom: $space_m;
+  overflow: hidden;
+  height: $space_3l;
+  line-height: $space_3l;
+  user-select: none;
+}
+
+.c-search-tab__checkbox {
+  float: left;
+}
+
+/* 元々のチェックボックス（非表示） */
+.c-search-tab__checkbox .checkbox{
+    display: none;
+}
+/* チェックボックスの代わりを成すラベル */
+.c-search-tab__checkbox .checkbox+label{
+    display: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: $space_2xl;
+    padding-right: $space_m;
+}
+/* ラベルの左に表示させる正方形のボックス□ */
+.c-search-tab__checkbox .checkbox+label::before{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 20px;
+    height: $space_2l;
+    margin-top: -10px;
+    left: 0;
+    top: 50%;
+    border-radius: 2px;
+    background-color: $theme_pearl_gray; /* 背景の色変更 お好きな色を */
+}
+/* チェックが入った時のレ点 */
+.c-search-tab__checkbox .checkbox:checked+label::after{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: -9px;
+    top: 50%;
+    left: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-color:  $theme_light_black; /* チェックの色変更 お好きな色を */
+}

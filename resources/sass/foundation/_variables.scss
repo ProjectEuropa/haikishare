@@ -1,0 +1,71 @@
+
+$space_s : 5px;
+$space_m : 10px;
+$space_l : 15px;
+$space_2l : 20px;
+$space_2xl : 25px;
+$space_3l : 30px;
+$space_3xl : 35px;
+$space_4l : 40px;
+$space_4xl : 45px;
+$space_5l : 50px;
+$space_6l : 60px;
+$space_7l : 70px;
+$space_7xl : 75px;
+$space_8l : 80px;
+$space_9l : 90px;
+$space_10l : 100px;
+$space_20l : 200px;
+
+$font_s : 14px;
+$font_m : 18px;
+$font_l : 22px;
+$font_xl : 24px;
+$font_2l : 28px;
+$font_3l : 32px;
+$font_3xl : 36px;
+$font_4l : 42px;
+$font_4xl : 48px;
+
+
+$font_family_hero: 'Noto Serif JP', serif;
+$font_family_body: "Noto Sans Japanese";
+
+
+$theme_yellow: #DFD000;
+$theme_dark_yellow: #9F9400;
+$theme_light_yellow: #F1EA91;
+$theme_white: #FFFFFF;
+
+$theme_black: #111111;
+$theme_light_black: #333333;
+
+$theme_dark_gray: #757575;
+$theme_gray: #808080;
+$theme_light_gray: #E7E7E7;
+$theme_pearl_gray: #F8F8F8;
+$theme_super_light_gray: #F2F2F2;
+
+$theme_gray_word_bottom: #EAEAEA;
+$theme_gray_sub_head: #F1F2F6;
+$theme_gray_background: #F8FAFC;
+$theme_dark_header: #585F64;
+
+$theme_light_red: #DD4A4A;
+$theme_red: #DE3737;
+$theme_dark_red: #BF0000;
+
+$theme_green: #79BE2D;
+
+$blue: #1fb5bf;
+
+body {
+  background: $theme_gray_background;
+  font-family: $font_family_body;
+  color: $theme_light_black;
+}
+
+a {
+  text-decoration: none;
+  color: $theme_light_black;
+}

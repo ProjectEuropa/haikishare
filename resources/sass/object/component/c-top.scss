@@ -1,0 +1,168 @@
+.c-top__hero {
+  align-items: center;
+  background-image: url('img/hero.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 700px;
+  justify-content: center;
+}
+.c-top__hero-title-box {
+  padding-top: 100px;
+}
+.c-top__hero-title {
+  color: $theme_black;
+  display: inline-block;
+  background: $theme_white;
+  font-size: $font_4l;
+  font-weight: bold;
+  font-family: $font_family_hero;
+  height: $space_3l;
+  line-height: $space_3l;
+  margin: $space_m 0;
+  padding: $space_2l $space_3l;
+}
+.c-top__container {
+  margin: 100px auto;
+  width: 1200px;
+  text-align: center;
+}
+.c-top__ask {
+  font-size: $font_4xl;
+  font-weight: bold;
+  color: $theme_light_black;
+  margin: $space_5l 0;
+}
+.c-top__answer {
+  font-size: $font_3xl;
+  color: $theme_gray;
+  height: 80px;
+  line-height: 80px;
+}
+.c-top__title-small-underline{
+  border-bottom: 5px solid $theme_yellow;
+}
+.c-top__color1 {
+  color: $theme_yellow;
+}
+.c-top__color2 {
+  color: $theme_dark_yellow;
+  padding-right: 10px;
+}
+.c-top__img-box {
+  align-items: center;
+  border-radius: 3px;
+  background: $theme_light_yellow;
+  display: flex;
+  height: 200px;
+  justify-content: space-around;
+  list-style: none;
+  margin: 100px auto 150px;
+  position: relative;
+  width: 800px;
+}
+
+.c-top__hukidashi-foods-img {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+}
+.c-top__hukidashi-foods-word {
+  color: $theme_white;
+  font-weight: bold;
+  font-size: $font_l;
+  position: absolute;
+  top: -30px;
+  right: -80px;
+}
+.c-top__desc {
+  font-size: $font_4xl;
+  font-weight: bold;
+  color: $theme_light_black;
+  margin: 100px 0;
+}
+
+.c-top__card-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+}
+.c-top__user-card {
+  width: 300px;
+  height: 300px;
+  background: $theme_white;
+  border-radius: 50%;
+  color: $theme_light_black;
+  box-sizing: border-box;
+  padding: $space_6l;
+  position: relative;
+}
+.c-top__owner-card {
+  width: 300px;
+  height: 300px;
+  background: $theme_white;
+  border-radius: 50%;
+  color: $theme_light_black;
+  box-sizing: border-box;
+  padding: $space_4l;
+  position: relative;
+  background: $theme_light_gray;
+  border-radius: 20px;
+}
+
+.c-top__hukidashi-box-img {
+  position: absolute;
+  top: 20px;
+  right: -100px;
+}
+.c-top__hukidashi-box-word {
+  color: $theme_white;
+  font-weight: bold;
+  font-size: $font_l;
+  position: absolute;
+  top: 65px;
+  right: -100px;
+}
+
+.c-top__user-card-title {
+  font-size: $font_3xl;
+  width: 200px;
+  font-weight: bold;
+}
+.c-top__owner-card-title {
+  font-size: $font_3xl;
+  width: 200px;
+  padding-bottom: $space_m;
+  font-weight: bold;
+  color: $theme_light_red;
+}
+.c-top__owner-card-subtitle {
+  font-size: $font_3xl;
+  width: 200px;
+  font-weight: bold;
+  padding-left: 5px;
+}
+.c-top__card-img-box {
+  text-align: center;
+  margin: $space_m 0;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.2));
+}
+.c-top__btn {
+  background-color: $theme_light_black;
+  border: 2px solid $theme_light_black;
+  color: $theme_white;
+  cursor: pointer;
+  display: block;
+  font-size: $font_m;
+  line-height: $space_5l;
+  margin: 100px auto;
+  transition: .3s;
+  width: 300px;
+}
+.c-top__btn:hover {
+  background-color: $theme_white;
+  border-color: $theme_light_black;
+  color: $theme_light_black;
+  transition: .3s;
+}

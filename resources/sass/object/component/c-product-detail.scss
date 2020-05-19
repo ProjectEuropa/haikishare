@@ -1,0 +1,106 @@
+.c-prodcut-detail__container {
+  margin: $space_5l auto;
+  width: 1000px;
+  color: $theme_light_black;
+  font-weight: bold;
+}
+
+.c-product-detail__body {
+  padding: 0 300px;
+  font-size: $font_m;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+.c-product-detail__name {
+  font-size: $font_4xl;
+  font-weight: bold;
+  text-align: center;
+  padding: $space_5l 0 $space_m;
+  text-overflow: ellipsis;
+}
+.c-product-detail__item {
+  padding-bottom: $space_m;
+  border-bottom: 2px solid $theme_gray_word_bottom;
+}
+.c-product-detail__status {
+  color: $theme_white;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  right: 100px;
+}
+.c-product-detail__status--normal {
+  background: $theme_yellow;
+}
+.c-product-detail__status--check {
+  background: $theme_green;
+}
+.c-product-detail__expiration {
+  color: $theme_gray;
+  padding: $space_2l 0 $space_m;
+}
+.c-product-detail__category {
+  font-size: $font_s;
+  color: $theme_gray;
+  padding-left: $space_3l;
+}
+.c-product-detail__address {
+  color: $theme_gray;
+  padding-top: $space_s;
+}
+
+.c-product-detail__discount {
+  color: $theme_dark_red;
+  font-size: $font_2l;
+  font-weight: bold;
+}
+.c-product-detail__discount-letter {
+  color: $theme_dark_red;
+}
+
+.c-product-detail__price-gray {
+  color: $theme_gray;
+  text-decoration: line-through;
+}
+.c-product-detail__img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+  .c-product-detail__btn {
+    display: block;
+    width: 300px;
+    font-size: 16px;
+    height: $space_4xl;
+    color: $theme_white;
+    font-weight: bold;
+    line-height: $space_4xl;
+    margin: $space_2l 0 100px;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    box-sizing: border-box;
+    &:focus {
+      outline: none;
+    }
+  }
+
+    .c-product-detail__btn--normal {
+      background: $theme_yellow;
+    }
+    .c-product-detail__btn--hover-normal {
+      background: $theme_yellow;
+    }
+    .c-product-detail__btn--hover-normal:hover {
+      background: darken($theme_yellow, 7%);
+    }
+    .c-product-detail__btn--check {
+      background: $theme_green;
+      padding-right: $space_m;
+    }
+    .c-product-detail__btn--warning {
+      background: $theme_red;
+    }

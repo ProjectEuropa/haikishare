@@ -1,0 +1,162 @@
+.c-mypage-container {
+  padding: 0 $space_20l;
+  overflow: hidden;
+}
+
+.c-mypage-small-container {
+  padding: 0 $space_20l;
+  overflow: hidden;
+}
+
+.c-mypage__head-info {
+  font-size: $font_l;
+  padding: 5px 20px;
+  border-bottom: 3px solid $theme_light_black;
+  margin-bottom: $space_3l;
+  box-sizing: border-box;
+}
+
+.c-mypage-small-container__title-box {
+  text-align: center;
+  padding: $space_5l;
+  box-sizing: border-box;
+}
+.c-mypage-small-container__title {
+  font-size: $font_2l;
+}
+.c-mypage-small-container__title:after {
+  display: block;
+	background-color: $theme_black;
+	content: "";
+	width: 50px;
+	height: 1px;
+	margin: 20px auto 0;
+}
+
+.c-mypage-small-container__btn-box {
+  float: left;
+  width: 450px;
+  height: 240px;
+  position: relative;
+}
+
+.c-mypage-small-container__btn{
+  display: block;
+  padding: $space_2l $space_3l;
+  width: 220px;
+  margin: 50px auto;
+  border: 1px solid #999999;
+  cursor: pointer;
+  background: $theme_white;
+  text-decoration: none;
+  color: $theme_gray;
+}
+
+.c-mypage-small-container__btn:hover {
+  border: 1px solid $theme_black;
+  color: $theme_black;
+}
+
+.c-mypage-small-container__btn-logo {
+  color: $theme_gray;
+  position:absolute;
+}
+
+.c-mypage-small-container__btn-logo {
+  color: $theme_black;
+  position:absolute;
+}
+
+
+.c-mypage-box {
+  border: 1px solid #999999;
+  float: left;
+  width: 450px;
+  height: 150px;
+  margin: 0 $space_5l $space_5l 0;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 0 8px $theme_gray;
+    border: 1px solid $theme_black;
+  }
+}
+
+.c-mypage-box__link {
+  text-decoration: none;
+  color: #333;
+}
+
+.c-mypage-box__title {
+  background: $theme_yellow;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  display: flex;
+  height: $space_4l;
+  justify-content: space-between;
+  line-height: $space_4l;
+  padding: 0 $space_m;
+}
+
+
+.c-mypage-box__body {
+  background: $theme_gray_background;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.c-mypage-box__info {
+  text-align: center;
+  width: 300px;
+}
+.c-mypage-box__item {
+  padding: $space_s;
+  white-space:nowrap;
+  width:100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  box-sizing: border-box;
+}
+
+.c-mypage-box__btn-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: $space_m;
+}
+
+.c-mypage-box__btn {
+  border: none;
+  color: $theme_white;
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  height: $space_3l;
+  line-height: $space_3l;
+  letter-spacing: 0.1em;
+  transition: .2s;
+  width: 150px;
+  margin: 0;
+  float: left;
+}
+.c-mypage-box__btn--normal {
+  background: $theme_yellow;
+}
+.c-mypage-box__btn--normal:hover {
+  transition: .2s;
+  background: darken($theme_yellow, 3%);
+}
+.c-mypage-box__btn--check {
+  background: darken($theme_green, 7%);
+}
+
+
+.c-mypage-box__img {
+  height: 149px;
+  width: 149px;
+  object-fit: cover;
+  box-sizing: border-box;
+}

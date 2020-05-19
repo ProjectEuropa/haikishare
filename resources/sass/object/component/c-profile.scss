@@ -1,0 +1,120 @@
+.c-profile__container {
+  margin: 100px auto;
+}
+
+.c-profile__main-container {
+  background: white;
+  margin: $space_3l auto;
+  padding: $space_2l $space_2l $space_5l; 
+  overflow: hidden;
+  width: 500px;
+}
+
+.c-profile__item {
+  align-items: center;
+  display: flex;
+  height: $space_5l;
+  justify-content: space-between;
+  margin-top: $space_3l;
+}
+
+.c-profile__warning {
+  color: $theme_black;
+  text-align: right;
+  width: 140px;
+}
+.c-profile__input {
+  box-sizing: border-box;
+  background: $theme_super_light_gray;
+  border: none;
+  font-size: $font_s;
+  outline: none;
+  padding: $space_l;
+  width: 320px;
+}
+
+.c-profile__create-btn-box {
+  margin: $space_3l auto;
+  position: relative;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.c-profile__create-btn {
+  align-items: center;
+  background: $theme_yellow;
+  border: 0;
+  color: $theme_white;
+  cursor: pointer;
+  font-size: $font_s;
+  height: $space_4l;
+  letter-spacing: 0.1em;
+  outline: none;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  width: 100%;
+}
+
+.c-profile__logo {
+  color: $theme_white;
+  position: absolute;
+  right: 10px;
+  top: 11px;
+}
+
+.c-profile__password {
+  color: $theme_gray;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  margin-top: $space_m;
+  transition: .4s;
+  &:hover {
+    color: $theme_yellow;
+    transition: .4s;
+  }
+}
+
+.c-profile__select-box {
+	overflow: hidden;
+	margin: 0 220px 0 0;
+	text-align: center;
+  font-size: $font_m;
+  box-sizing: border-box;
+  background: $theme_super_light_gray;
+  border: none;
+  outline: none;
+  width: 100px;
+  padding: $space_m 0 $space_m $space_m;
+}
+.c-profile__select-box select {
+  width: 200px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+  font-size: $font_s;
+}
+.c-profile__select-box select::-ms-expand {
+    display: none;
+}
+.c-profile__select-box {
+	position: relative;
+	border-bottom: 3px solid $theme_gray_word_bottom;
+	background: $theme_super_light_gray;
+}
+.c-profile__select-box:before {
+	position: absolute;
+	top: 17px;
+	right: 13px;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid $theme_black;
+	pointer-events: none;
+}

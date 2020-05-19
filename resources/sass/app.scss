@@ -1,0 +1,45 @@
+
+//foundation
+@import 'foundation/reset';
+@import 'foundation/variables';
+
+//layout
+@import 'layout/l-header';
+@import 'layout/l-footer';
+
+//component
+@import 'object/component/c-mypage';
+@import 'object/component/c-sub-head';
+@import 'object/component/c-flash-message';
+@import 'object/component/c-auth';
+@import 'object/component/c-login';
+@import 'object/component/c-register';
+@import 'object/component/c-profile';
+@import 'object/component/c-search-tab';
+@import 'object/component/c-product-list';
+@import 'object/component/c-product-detail';
+@import 'object/component/c-product';
+@import 'object/component/c-owner-product-list';
+@import 'object/component/c-owner-product-sell';
+@import 'object/component/c-top';
+@import 'object/component/c-price';
+
+//project
+@import 'object/project/p-mypage-btn-animation-01';
+@import 'object/project/p-auth-btn-animation-02';
+@import 'object/project/p-sub-head-modal';
+@import 'object/project/p-pagination';
+
+
+//utility
+@import 'object/utility/u-padding';
+@import 'object/utility/u-margin';
+@import 'object/utility/u-color';
+@import 'object/utility/u-border';
+@import 'object/utility/u-display';
+
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+// @import "~@fortawesome/fontawesome-free/scss/brands.scss";
