@@ -211,9 +211,9 @@
 }
 
 .c-mypage-small-container__btn{
-  border: 1px solid #999999;
+  border: 1px solid $theme_black;
   background: $theme_white;
-  color: $theme_gray;
+  color: $theme_black;
   cursor: pointer;
   display: block;
   margin: $space_5l auto;
@@ -228,8 +228,8 @@
 }
 
 .c-mypage-small-container__btn:hover {
-  border: 1px solid $theme_black;
-  color: $theme_black;
+  border: 1px solid #999999;
+  color: $theme_gray;
 }
 
 .c-mypage-small-container__btn-logo {

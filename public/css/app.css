@@ -828,9 +828,9 @@ select:-moz-focusring {
 }
 
 .c-mypage-small-container__btn {
-  border: 1px solid #999999;
+  border: 1px solid #111111;
   background: #FFFFFF;
-  color: #808080;
+  color: #111111;
   cursor: pointer;
   display: block;
   margin: 50px auto;
@@ -848,8 +848,8 @@ select:-moz-focusring {
 }
 
 .c-mypage-small-container__btn:hover {
-  border: 1px solid #111111;
-  color: #111111;
+  border: 1px solid #999999;
+  color: #808080;
 }
 
 .c-mypage-small-container__btn-logo {
@@ -2288,6 +2288,7 @@ select:-moz-focusring {
     color: #111111;
     font-size: 14px;
     padding: 10px;
+    border-bottom: none;
   }
 }
 
@@ -3155,6 +3156,10 @@ select:-moz-focusring {
 
 .u-bgc-gray {
   background: #F2F2F2;
+}
+
+.u-c-gray {
+  color: #808080;
 }
 
 @media screen and (max-width: 550px) {
