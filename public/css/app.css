@@ -1148,7 +1148,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-search-tab__label-for-price {
-    margin-bottom: 20px;
+    padding-top: 8px;
     margin-right: 10px;
     width: 20%;
   }
@@ -1178,7 +1178,6 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-search-tab__input-for-price {
-    box-sizing: border-box;
     font-size: 12px;
     width: 20%;
   }
@@ -1247,6 +1246,12 @@ select:-moz-focusring {
   position: absolute;
   right: 10px;
   top: 11px;
+}
+
+@media screen and (max-width: 550px) {
+  .c-search-tab__logo {
+    top: 13px;
+  }
 }
 
 .c-search-tab__select-box {
