@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
           $table->integer('price');
           $table->integer('discount');
           // $table->string('pic1');
-          $table->text('pic1');
+          $table->longText('pic1');
           $table->integer('year');
           $table->integer('month');
           $table->integer('day');

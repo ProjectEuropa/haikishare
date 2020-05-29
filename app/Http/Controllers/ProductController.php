@@ -167,8 +167,7 @@ class ProductController extends Controller
       //ローカルの場合はファイルの保存先をstorage下にするために文字列からpublic/を除外する
       // $filePath = $request->pic1->store('public');
       // $path = str_replace('public/', '', $filePath);
-
-      $path = base64_encode(file_get_contents($request->pic1->getRealPath()));
+      $path = base64_encode(file_get_contents($request->pic1));
 
       //expirationを保存する時に、月と日にちがもし一桁だった場合にそれぞれ０を付け加えるようにする
       $validatedMonth = sprintf('%02d', $request->month);
