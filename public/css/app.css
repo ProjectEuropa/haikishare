@@ -1178,6 +1178,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-search-tab__input-for-price {
+    padding: 5px;
     font-size: 12px;
     width: 20%;
     height: 25px;
