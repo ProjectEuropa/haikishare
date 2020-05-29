@@ -167,7 +167,7 @@ class ProductController extends Controller
       //ファイルの保存先をstorage下にするために文字列からpublic/を除外する
       // $filePath = $request->pic1->store('public');
       // $path = str_replace('public/', '', $filePath);
-      
+
       // 画像のバイナリデータを直接入れる
       $path = base64_encode(file_get_contents($request->pic1));
 
@@ -279,8 +279,9 @@ class ProductController extends Controller
       $product = Product::find($id);
       //ファイルがある時にはstorage下に保存するために文字列からpublic/を除外する
       if (isset($request->pic1)){
-        $filePath = $request->pic1->store('public');
-        $path = str_replace('public/', '', $filePath);
+        // $filePath = $request->pic1->store('public');
+        // $path = str_replace('public/', '', $filePath);
+        $path = base64_encode(file_get_contents($request->pic1));
       }
 
       //ファイルはバリデーション時にnullableにしているため、ここでは保存しない。
