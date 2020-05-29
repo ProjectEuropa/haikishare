@@ -10,7 +10,7 @@
     <title>haiki share</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />
@@ -29,13 +29,7 @@
 @endcomponent
 
 
-<section class="c-top__hero">
-  <ul class="c-top__hero-title-box">
-    <li class="c-top__hero-title">スマホひとつで</li><br/>
-    <li class="c-top__hero-title">今日の食事をもっと安く</li><br/>
-    <li class="c-top__hero-title">提供します。</li>
-  </ul>
-</section>
+
 
 <main class="c-top__container">
   <div class="c-top__ask">
