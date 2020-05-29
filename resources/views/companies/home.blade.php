@@ -83,7 +83,7 @@ haiki shareマイページ
 
       <!-- <img src="/storage/{{$product->pic1 }}" class="c-mypage-box__img"> -->
       <img src="data:image/png;base64,{{$product->pic1 }}" class="c-mypage-box__img">
-      
+
     <div class="c-mypage-box__info">
       <div class="c-mypage-box__item">{{ $product->product_name }}</div>
       <div class="c-mypage-box__item"><span class="c-price-red">{{ $product->discount }}円</span><span class="c-price-line">{{ $product->price }}円</span></div>
@@ -101,7 +101,8 @@ haiki shareマイページ
   @foreach( $productSell as $product)
       <a href="{{ route('products.show', $product->product_id ) }}" class="c-mypage-box">
 
-      <img src="/storage/{{$product->pic1 }}" class="c-mypage-box__img">
+      <!-- <img src="/storage/{{$product->pic1 }}" class="c-mypage-box__img"> -->
+      <img src="data:image/png;base64,{{$product->pic1 }}" class="c-mypage-box__img">
 
       <div class="c-mypage-box__info--text">
         {{ $product->date }}に販売しました
