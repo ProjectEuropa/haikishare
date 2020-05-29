@@ -97,6 +97,7 @@
 
   .c-product-detail__btn {
     box-sizing: border-box;
+    border-radius: 0;
     border: none;
     color: $theme_white;
     cursor: pointer;
@@ -108,6 +109,7 @@
     margin: $space_2l 0 100px;
     text-align: center;
     width: 300px;
+    -webkit-appearance: none;
     @include mq() {
       width: 100%;
     }

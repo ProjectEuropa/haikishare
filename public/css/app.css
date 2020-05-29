@@ -1686,6 +1686,7 @@ select:-moz-focusring {
 
 .c-product-detail__btn {
   box-sizing: border-box;
+  border-radius: 0;
   border: none;
   color: #FFFFFF;
   cursor: pointer;
@@ -1697,6 +1698,7 @@ select:-moz-focusring {
   margin: 20px 0 100px;
   text-align: center;
   width: 300px;
+  -webkit-appearance: none;
 }
 
 @media screen and (max-width: 550px) {
