@@ -51,9 +51,9 @@ haiki share商品一覧
 
         <div class="c-search-tab__item-for-price">
           <div class="c-search-tab__label-for-price">値段</div>
-          <input class="c-search-tab__input-for-price" type="text" name="price_bottom" placeholder="下限"/>
+          <input class="c-search-tab__input-for-price" type="text" name="price_bottom"/>
           <span class="c-search-tab__simbol-for-price">円　-　</span>
-          <input class="c-search-tab__input-for-price" type="text" name="price_top" placeholder="上限"/>
+          <input class="c-search-tab__input-for-price" type="text" name="price_top"/>
           <span class="c-search-tab__simbol-for-price"->円</span>
       </div>
       @error('price-top')
