@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+//ユーザー情報変更時のバリデーション
 class UpdateUserRequest extends FormRequest
 {
     /**
@@ -22,6 +23,7 @@ class UpdateUserRequest extends FormRequest
      * @return array
      */
     public function rules()
+    //ユーザー情報変更時のバリデーションルール
     {
         return [
           'name' => 'required|max:255',

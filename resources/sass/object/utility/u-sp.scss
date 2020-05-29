@@ -1,0 +1,18 @@
+.u-sp-no-display{
+  @include mq() {
+    display: none;
+  }
+}
+.u-sp-display{
+  display: none;
+  @include mq() {
+    display: block;
+  }
+}
+
+.u-sp-test-center{
+  @include mq() {
+    display: block;
+    text-align: center;
+  }
+}

@@ -1,13 +1,14 @@
 .c-profile__container {
-  margin: 100px auto;
-}
-
-.c-profile__main-container {
   background: white;
-  margin: $space_3l auto;
-  padding: $space_2l $space_2l $space_5l; 
+  margin: $space_10l auto;
+  padding: $space_2l $space_2l $space_5l;
   overflow: hidden;
   width: 500px;
+  @include mq(){
+    padding: 0 0px $space_2l 0;
+    margin: $space_5l auto;
+    width: 95%;
+  }
 }
 
 .c-profile__item {
@@ -16,12 +17,19 @@
   height: $space_5l;
   justify-content: space-between;
   margin-top: $space_3l;
+  @include mq(){
+    justify-content: space-around;
+  }
 }
 
-.c-profile__warning {
+.c-profile__label {
   color: $theme_black;
   text-align: right;
   width: 140px;
+  @include mq(){
+    text-align: center;
+    width: 115px;
+  }
 }
 .c-profile__input {
   box-sizing: border-box;
@@ -31,6 +39,9 @@
   outline: none;
   padding: $space_l;
   width: 320px;
+  @include mq(){
+    width: 60%;
+  }
 }
 
 .c-profile__create-btn-box {
@@ -86,35 +97,43 @@
   outline: none;
   width: 100px;
   padding: $space_m 0 $space_m $space_m;
+  @include mq(){
+    margin: 0;
+    margin-right: 35%;
+    width: 25%;
+  }
 }
 .c-profile__select-box select {
-  width: 200px;
-	cursor: pointer;
+  appearance: none;
 	border: none;
-	outline: none;
+  cursor: pointer;
 	box-shadow: none;
-	-webkit-appearance: none;
-	appearance: none;
   font-size: $font_s;
+  outline: none;
+  -webkit-appearance: none;
+  width: 200px;
 }
 .c-profile__select-box select::-ms-expand {
-    display: none;
+  display: none;
 }
 .c-profile__select-box {
-	position: relative;
 	border-bottom: 3px solid $theme_gray_word_bottom;
 	background: $theme_super_light_gray;
+  position: relative;
 }
 .c-profile__select-box:before {
-	position: absolute;
-	top: 17px;
-	right: 13px;
-	width: 0;
-	height: 0;
-	padding: 0;
-	content: '';
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
 	border-top: 6px solid $theme_black;
+  content: '';
+  height: 0;
 	pointer-events: none;
+  position: absolute;
+  padding: 0;
+  top: 17px;
+  right: 13px;
+  width: 0;
+  @include mq(){
+    left: 57px;
+  }
 }

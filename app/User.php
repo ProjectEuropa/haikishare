@@ -36,11 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
+    //Orderと一対多のリレーション
     public function orders(){
       return $this->hasMany('App\Order');
     }
 
+    //Orderを仲介してProductへアクセスするリレーション
     public function product() {
       return $this->hasManyThrough('App\Product', 'App\Order', 'user_id', 'id', null, 'product_id' );
     }

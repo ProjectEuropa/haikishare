@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
+//ユーザーのログインに関するクラス
 {
     /*
     |--------------------------------------------------------------------------
@@ -28,18 +29,21 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/home';
 
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
     public function __construct()
+    //ガードの指定をユーザーにする
     {
         $this->middleware('guest:user')->except('logout');
     }
 
     /** 以下追記 **/
    public function showLoginForm()
+   //ユーザーログインのviewそを指定する
    {
        return view('auth.login');
    }
@@ -50,6 +54,7 @@ class LoginController extends Controller
    }
 
    public function logout(Request $request)
+   //ユーザーがログアウトする時のメソッド
    {
        \Auth::guard('user')->logout();
        return redirect('/login');

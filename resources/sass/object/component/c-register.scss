@@ -4,4 +4,7 @@
 
 .c-register__container {
   width: 500px;
+  @include mq() {
+    width: 80%;
+  }
 }

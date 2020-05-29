@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+//オーナー情報変更時のバリデーション
 class UpdateCompanyRequest extends FormRequest
 {
     /**
@@ -22,6 +23,7 @@ class UpdateCompanyRequest extends FormRequest
      * @return array
      */
     public function rules()
+    //オーナー情報変更時のバリデーションルール
     {
         return [
           'name' => 'required|string|max:255',

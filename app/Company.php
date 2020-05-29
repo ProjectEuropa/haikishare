@@ -14,6 +14,7 @@ class Company extends Authenticatable
 {
     use Notifiable;
 
+    //オーナー用のメールを送信するために必要なメソッド
     public function sendPasswordResetNotification($token)
 {
     $this->notify(new CompanyPasswordResetNotification($token));
@@ -47,11 +48,18 @@ class Company extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    //Orderと一対多のリレーション
     public function orders(){
       return $this->hasMany('App\Order');
     }
+    //Productと一対多のリレーション
     public function products(){
       return $this->hasMany('App\Product');
+    }
+
+    //Productと一対一のリレーション
+    public function prefecture(){
+      return $this->belongsTo('App\Prefecture');
     }
 
   }

@@ -6,47 +6,91 @@
 .c-auth__item {
   display: flex;
   justify-content: space-between;
+  @include mq() {
+    height: 40px;
+    margin-bottom: $space_l;
+  }
+}
+.c-auth__item-for-select{
+  @include mq(){
+    display: block;
+    margin-bottom: $space_m;
+  }
 }
 
 .c-auth__warning {
-  color: $theme_white;
-  text-align: center;
-  width: $space_5l;
-  font-size: $font_s;
   background: $theme_red;
   border-radius: 5px;
-  padding: 3px;
+  color: $theme_white;
+  font-size: $font_s;
   height: $space_2l;
   line-height: $space_2l;
   margin: $space_l 0;
+  padding: 3px;
+  text-align: center;
+  width: $space_5l;
+  @include mq() {
+    border-radius: 0;
+    display: block;
+    font-size: $font_sp-s;
+    margin: $space_l $space_m 0 0;
+    padding: 1px;
+    width: 25px;
+  }
+}
+
+.c-auth__warning-for-select {
+  float: left;
+  margin: $space_l $space_m 0 0;
+  width: 51px;
+  @include mq(){
+    margin: 12px 10px 0 0;
+    width: 21px;
+  }
 }
 
 .c-auth__input {
-    font-size: $font_m;
-    width: 400px;
-    // margin-bottom: 20px;
-    padding: 20px 0;
-    border: none;
-    background: $theme_gray_background;
-    color: $theme_dark_gray;
-    &:focus {
-      outline: none;
-    }
+  border: none;
+  background: $theme_gray_background;
+  color: $theme_dark_gray;
+  font-size: $font_m;
+  padding: $space_2l 0;
+  width: 400px;
+  @include mq() {
+    font-size: $font_sp-s;
+    padding: 18px 0 0 0;
+    width: 100%;
+  }
+  &:focus {
+    outline: none;
+  }
 }
 
+.c-auth__input::-moz-placeholder {
+   color: black;
+ }
+.c-auth__input::-webkit-placeholder {
+   color: $theme_gray;
+ }
+
 .c-auth__btn {
-  font-size: $font_m;
-  display: inline-block;
-  float: right;
   background: $theme_yellow;
   border: none;
+  color: $theme_white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font_m;
+  float: right;
+  margin: $space_2l $space_m 0 0;
   padding: $space_s $space_m;
   width: 100px;
-  color: $theme_white;
-  margin: $space_2l $space_m 0 0;
-  cursor: pointer;
   height: $space_4l;
-  // box-shadow: inset 0px 1px 0px fadeout($theme_yellow, 80%);
+  @include mq() {
+    font-size: $font_s;
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+  }
   &:hover {
     background: lighten($theme_yellow, 1%);
   }
@@ -61,79 +105,82 @@
 
 .c-auth--error {
   color: $theme_red;
+  @include mq() {
+    display: block;
+  }
 }
 
 .c-auth__select-box {
-	overflow: hidden;
-	width: 150px;
-	margin: 0 250px 0 0;
-	text-align: center;
+  border-bottom: 3px solid $theme_gray_word_bottom;
+  background: $theme_gray_background;
+  box-sizing: border-box;
+  border: none;
   font-size: $font_m;
+  margin: 0 250px 0 0;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 150px;
+  @include mq() {
+    margin: 0;
+    width: 100px;
+  }
 }
+
+
 .c-auth__select-box select {
-  width: 200px;
-	cursor: pointer;
+  appearance: none;
+  background: $theme_gray_background;
 	border: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: $font_m;
 	outline: none;
-	box-shadow: none;
-	-webkit-appearance: none;
-	appearance: none;
-  font-size: $font_s;
+  padding: 17px $space_3l 0 0;
+  -webkit-appearance: none;
+  width: 150px;
+  @include mq() {
+    padding: $space_2l 0 3px 0;
+    font-size: $font_sp-s;
+    width: 100px;
+  }
 }
+
 .c-auth__select-box select::-ms-expand {
     display: none;
 }
-.c-auth__select-box {
-	position: relative;
-	border-bottom: 3px solid $theme_gray_word_bottom;
-	background: $theme_gray_background;
-}
+
 .c-auth__select-box:before {
-	position: absolute;
-	top: 30px;
-	right: 35px;
-	width: 0;
-	height: 0;
-	padding: 0;
-	content: '';
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-top: 6px solid $theme_dark_gray;
-	pointer-events: none;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid $theme_dark_gray;
   color: $theme_dark_gray;
-}
-.c-auth__select-box select {
-	padding: $space_2l $space_3l 0 0;
-  font-size: $font_m;
-	color: $theme_dark_gray;
+  content: '';
+  height: 0;
+  position: absolute;
+	padding: 0;
+  pointer-events: none;
+  right: 35px;
+  top: 30px;
+  width: 0;
+  @include mq() {
+    right: 20px;
+    top: 25px;
+  }
 }
 
 .c-auth__ask {
-  text-decoration: none;
   color: $theme_gray;
-  transition: .3s;
-  padding: 0 $space_s $space_l;
   display: block;
+  padding: 0 $space_s $space_l;
+  transition: .3s;
+  text-decoration: none;
+  @include mq() {
+    font-size: $font_sp-m;
+  }
 }
 .c-auth__ask:hover {
   color: $theme_yellow;
   transition: .3s;
-}
-
-.c-auth__forgot {
-  color: lighten($blue, 10%);
-  line-height: .5em;
-  position: relative;
-  top: 2.5em;
-  text-decoration: none;
-  font-size: $font_s;
-  margin:0;
-  padding: 0;
-  float: right;
-
-  &:hover {
-    color:darken($blue, 5%);
-  }
-  &:active{
-  }
 }

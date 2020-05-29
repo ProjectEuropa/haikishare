@@ -19,11 +19,11 @@ haiki share{{ $product->name }}編集画面
 
 
 
-<form method="post" class="c-product__container" action="{{ route('products.update', $product->id )}}" enctype="multipart/form-data">
+<form method="post" action="{{ route('products.update', $product->id )}}" enctype="multipart/form-data">
 @method('PATCH')
 @csrf
 
-  <div class="c-product__main-container">
+  <div class="c-product__container">
     <div id="picture">
       <picture-component pic="{{ $product->pic1 }}"></picture-component>
     </div>
@@ -33,8 +33,8 @@ haiki share{{ $product->name }}編集画面
     </span>
     @enderror
     <div class="c-product__item">
-      <div class="c-product__info"><div class="c-product__name">商品名</div><div class="c-product__warning">必須</div></div>
-      <input class="c-product__input" type="text" name="name" value="{{ old('name', $product->name) }}" placeholder="ex)鮭おにぎり"/>
+      <div class="c-product__info"><div class="c-product__name">商品名</div><div class="c-product__label">必須</div></div>
+      <input class="c-product__input-name" type="text" name="name" value="{{ old('name', $product->name) }}" placeholder="ex)鮭おにぎり"/>
     </div>
     @error('name')
         <span class="c-auth--error">
@@ -42,7 +42,7 @@ haiki share{{ $product->name }}編集画面
         </span>
     @enderror
     <div class="c-product__item">
-      <div class="c-product__info"><div class="c-product__name">定価</div><div class="c-product__warning">必須</div></div>
+      <div class="c-product__info"><div class="c-product__name">定価</div><div class="c-product__label">必須</div></div>
       <input class="c-product__input--small" type="text" name="price" value="{{ old('price', $product->price) }}"placeholder="ex)150"/><span class="c-product__letter-for-yen">円</span>
     </div>
     @error('price')
@@ -51,7 +51,7 @@ haiki share{{ $product->name }}編集画面
         </span>
     @enderror
     <div class="c-product__item">
-      <div class="c-product__info"><div class="c-product__name">出品価格</div><span class="c-product__warning">必須</span></div>
+      <div class="c-product__info"><div class="c-product__name">出品価格</div><span class="c-product__label">必須</span></div>
       <input class="c-product__input--small" type="text" name="discount" value="{{ old('discount', $product->discount) }}" placeholder="ex)70"/><span class="c-product__letter-for-yen">円</span>
     </div>
     @error('discount')
@@ -62,7 +62,7 @@ haiki share{{ $product->name }}編集画面
 
     <div class="c-product__item">
       <div class="c-product__info">
-        <div class="c-product__name">種類</div><div class="c-product__warning">必須</div>
+        <div class="c-product__name">種類</div><div class="c-product__label">必須</div>
       </div>
       <div class="c-product__select-box">
         <select class="u-bgc-gray" name="category_id">
@@ -84,10 +84,10 @@ haiki share{{ $product->name }}編集画面
     @enderror
 
     <div class="c-product__item">
-      <div class="c-product__info"><div class="c-product__name">賞味期限</div><div class="c-product__warning">必須</div></div>
+      <div class="c-product__info"><div class="c-product__name">賞味期限</div><div class="c-product__label">必須</div></div>
       <input class="c-product__input-for-expiration" type="text" name="year" value="{{ old('year', $product->year) }}" placeholder="ex)2020"/><div class="c-product__letter">年</div>
-      <input class="c-product__input-for-expiration" type="text" name="month" value="{{ old('month', $product->month) }}" placeholder="ex)05"/><div class="c-product__letter">月</div>
-      <input class="c-product__input-for-expiration" type="text" name="day" value="{{ old('day', $product->day) }}" placeholder="ex)01"/><div class="c-product__letter">日</div>
+      <input class="c-product__input-for-expiration-small" type="text" name="month" value="{{ old('month', $product->month) }}" placeholder="ex)05"/><div class="c-product__letter">月</div>
+      <input class="c-product__input-for-expiration-small" type="text" name="day" value="{{ old('day', $product->day) }}" placeholder="ex)01"/><div class="c-product__letter">日</div>
     </div>
     @error('year')
     <span class="c-auth--error">
@@ -103,6 +103,16 @@ haiki share{{ $product->name }}編集画面
     <span class="c-auth--error">
       <strong>{{ $message }}</strong>
     </span>
+    @enderror
+
+    <div class="c-product__item">
+      <div class="c-product__info"><div class="c-product__name">賞味期限</div><div class="c-product__label c-product__label--blank">任意</div></div>
+      <input class="c-product__input-for-expiration-small" type="text" name="hour" value="{{ old('hour', $product->hour) }}" placeholder="ex)21"/><div class="c-product__letter">時</div>
+    </div>
+    @error('hour')
+        <span class="c-auth--error">
+            <strong>{{ $message }}</strong>
+        </span>
     @enderror
   </div>
 

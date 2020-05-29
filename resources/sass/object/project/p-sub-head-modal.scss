@@ -1,6 +1,6 @@
 .p-sub-head-modal__container {
-  height: $space_7l;
   background: $theme_black;
+  height: $space_7l;
   overflow: hidden;
 }
 
@@ -8,6 +8,11 @@
   float: right;
   list-style: none;
   overflow: hidden;
+  display: flex;
+  @include mq(){
+    float: none;
+    justify-content: space-around;
+  }
 }
 
 .p-sub-head-modal__box {
@@ -18,17 +23,27 @@
     transition: .4s;
     opacity: .8;
   }
+  @include mq(){
+    margin-right: 0px;
+  }
 }
 
 .p-sub-head-modal__title {
   color: $theme_white;
   font-size: $font_m;
-  padding-right: $space_2l;;
+  padding-right: $space_2l;
   text-decoration: none;
   transition: .4s;
+  @include mq(){
+    font-size: $font_s;
+    padding-right: 1px;
+  }
 }
 
 .p-sub-head-modal__logo {
   color: $theme_white;
   font-size: $font_m;
+  @include mq(){
+    font-size: $font_s;
+  }
 }

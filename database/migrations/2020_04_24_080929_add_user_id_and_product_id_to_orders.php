@@ -18,6 +18,8 @@ class AddUserIdAndProductIdToOrders extends Migration
           $table->foreign('user_id')->references('id')->on('users');
           $table->unsignedBigInteger('product_id');
           $table->foreign('product_id')->references('id')->on('products');
+          $table->unsignedBigInteger('company_id');
+          $table->foreign('company_id')->references('id')->on('companies');
         });
     }
 
@@ -33,6 +35,8 @@ class AddUserIdAndProductIdToOrders extends Migration
           $table->dropColumn('user_id');
           $table->dropForeign(['product_id']);
           $table->dropColumn('product_id');
+          $table->dropForeign(['company_id']);
+          $table->dropColumn('company_id');
         });
     }
 }

@@ -18,16 +18,16 @@ haiki share オーナーパスワードリセット
 
 
 
-<form method="post" action="{{ route('company_auth.password.email') }}" class="c-profile__container">
+<form method="post" action="{{ route('company_auth.password.email') }}">
 @csrf
 
-  <main class="c-profile__main-container">
+  <main class="c-profile__container">
         <div class="c-profile__item">
-          <div class="c-profile__warning">メールアドレス</div>
+          <div class="c-profile__label">メールアドレス</div>
           <input class="c-profile__input" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus/>
         </div>
         @error('email')
-            <span class="c-auth--error u-pl-180">
+            <span class="c-auth--error u-pl-180-sp-40">
                 <strong>{{ $message }}</strong>
             </span>
         @enderror

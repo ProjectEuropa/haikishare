@@ -1,3 +1,10 @@
+.c-top__background {
+    background: linear-gradient(180deg,white 0%,white 1500px,#808080 1500px,#808080 2200px,white 2200px, white 2500px);
+    @include mq() {
+      background: linear-gradient(180deg,white 0%,white 750px,#808080 750px,#808080 1100px,white 1100px, white 1400px);
+    }
+}
+
 .c-top__hero {
   align-items: center;
   background-image: url('img/hero.jpg');
@@ -7,9 +14,15 @@
   display: flex;
   height: 700px;
   justify-content: center;
+  @include mq() {
+    height: 300px;
+  }
 }
 .c-top__hero-title-box {
   padding-top: 100px;
+  @include mq() {
+    height: 125px;
+  }
 }
 .c-top__hero-title {
   color: $theme_black;
@@ -22,23 +35,52 @@
   line-height: $space_3l;
   margin: $space_m 0;
   padding: $space_2l $space_3l;
+  @include mq() {
+    font-size: 20px;
+    margin: $space_s 0;
+    padding: $space_s $space_m;
+  }
 }
 .c-top__container {
   margin: 100px auto;
   width: 1200px;
   text-align: center;
+  @include mq() {
+    margin: $space_5l auto;
+    width: 100%;
+  }
 }
 .c-top__ask {
   font-size: $font_4xl;
   font-weight: bold;
   color: $theme_light_black;
   margin: $space_5l 0;
+  @include mq() {
+    font-size: $font_m;
+  }
 }
+
+.c-top__ask-img{
+  @include mq() {
+    width: 30px;
+  }
+}
+
 .c-top__answer {
   font-size: $font_3xl;
   color: $theme_gray;
   height: 80px;
   line-height: 80px;
+  @include mq() {
+    font-size: $font_m;
+    height: 70px;
+    line-height: 30px;
+  }
+}
+.c-top__answer-img{
+  @include mq() {
+    width: 30px;
+  }
 }
 .c-top__title-small-underline{
   border-bottom: 5px solid $theme_yellow;
@@ -48,7 +90,10 @@
 }
 .c-top__color2 {
   color: $theme_dark_yellow;
-  padding-right: 10px;
+  padding-right: $space_m;
+  @include mq() {
+    padding-right: $space_s;
+  }
 }
 .c-top__img-box {
   align-items: center;
@@ -61,92 +106,168 @@
   margin: 100px auto 150px;
   position: relative;
   width: 800px;
+  @include mq() {
+    height: 100px;
+    margin: $space_5l auto;
+    width: 90%;
+  }
+}
+
+.c-top__food-img{
+  @include mq() {
+    width: 40px;
+  }
 }
 
 .c-top__hukidashi-foods-img {
   position: absolute;
-  top: -80px;
   right: -80px;
+  top: -80px;
+  @include mq() {
+    right: -12px;
+    top: -42px;
+    width: 65px;
+  }
 }
 .c-top__hukidashi-foods-word {
   color: $theme_white;
   font-weight: bold;
   font-size: $font_l;
   position: absolute;
-  top: -30px;
   right: -80px;
+  top: -30px;
+  @include mq() {
+    font-size: $font_sp-m;
+    top: -22px;
+    right: -12px;
+  }
 }
 .c-top__desc {
+  color: $theme_light_black;
   font-size: $font_4xl;
   font-weight: bold;
-  color: $theme_light_black;
   margin: 100px 0;
+  @include mq() {
+    font-size: $font_xl;
+    margin: $space_6l 0;
+  }
 }
 
 .c-top__card-container {
   display: flex;
   justify-content: space-between;
   width: 1200px;
+  @include mq() {
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 .c-top__user-card {
-  width: 300px;
-  height: 300px;
   background: $theme_white;
   border-radius: 50%;
-  color: $theme_light_black;
   box-sizing: border-box;
+  color: $theme_light_black;
+  height: 300px;
   padding: $space_6l;
   position: relative;
+  width: 300px;
+  @include mq() {
+    width: 90px;
+    height: 90px;
+    padding: 0;
+  }
 }
 .c-top__owner-card {
-  width: 300px;
-  height: 300px;
   background: $theme_white;
   border-radius: 50%;
-  color: $theme_light_black;
   box-sizing: border-box;
-  padding: $space_4l;
-  position: relative;
   background: $theme_light_gray;
+  color: $theme_light_black;
+  height: 300px;
+  position: relative;
+  padding: $space_4l;
   border-radius: 20px;
+  width: 300px;
+  @include mq() {
+    height: 90px;
+    padding: 0;
+    width: 90px;
+  }
 }
 
 .c-top__hukidashi-box-img {
   position: absolute;
-  top: 20px;
   right: -100px;
+  top: 20px;
+  @include mq() {
+    right: -52px;
+    top: -52px;
+    width: 65px;
+    z-index: 2;
+  }
 }
 .c-top__hukidashi-box-word {
   color: $theme_white;
   font-weight: bold;
   font-size: $font_l;
   position: absolute;
-  top: 65px;
   right: -100px;
+  top: 65px;
+  @include mq() {
+    font-size: $font_sp-m;
+    right: -52px;
+    top: -30px;
+    width: 60px;
+    z-index: 2;
+  }
 }
 
 .c-top__user-card-title {
   font-size: $font_3xl;
-  width: 200px;
   font-weight: bold;
+  width: 200px;
+  @include mq() {
+    font-size: $font_s;
+    margin-top: 20px;
+    width: 100%;
+  }
 }
 .c-top__owner-card-title {
-  font-size: $font_3xl;
-  width: 200px;
-  padding-bottom: $space_m;
-  font-weight: bold;
   color: $theme_light_red;
+  font-size: $font_3xl;
+  font-weight: bold;
+  padding-bottom: $space_m;
+  width: 200px;
+  @include mq() {
+    font-size: $font_s;
+    margin-top: 5px;
+    padding-bottom: $space_s;
+    width: 100%;
+  }
 }
 .c-top__owner-card-subtitle {
   font-size: $font_3xl;
-  width: 200px;
   font-weight: bold;
   padding-left: 5px;
+  width: 200px;
+  @include mq() {
+    font-size: $font_s;
+    padding-left: 0;
+    width: 100%;
+  }
 }
 .c-top__card-img-box {
-  text-align: center;
-  margin: $space_m 0;
   filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.2));
+  margin: $space_m 0;
+  text-align: center;
+  @include mq() {
+    margin: $space_s 0;
+  }
+}
+.c-top__card-img{
+  @include mq() {
+    width: 40px;
+  }
 }
 .c-top__btn {
   background-color: $theme_light_black;
@@ -159,7 +280,13 @@
   margin: 100px auto;
   transition: .3s;
   width: 300px;
+  @include mq() {
+    font-size: $font_s;
+    margin: 50px auto;
+    width: 80%;
+  }
 }
+
 .c-top__btn:hover {
   background-color: $theme_white;
   border-color: $theme_light_black;

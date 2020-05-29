@@ -8,13 +8,22 @@ class Order extends Model
 {
     protected $table = 'orders';
 
-    protected $fillable = ['delete_flg', 'user_id', 'product_id'];
+    protected $dates = [
+    'public_date',
+];
 
-    public function users(){
+    protected $fillable = ['delete_flg', 'user_id', 'product_id', 'company_id'];
+    //Userと一対多のリレーション
+    public function user(){
       return $this->belongsTo('App\User');
     }
 
+    //Productと一対多のリレーション
     public function product(){
       return $this->belongsTo('App\Product');
+    }
+    //Productと一対多のリレーション
+    public function company(){
+      return $this->belongsTo('App\Company');
     }
 }

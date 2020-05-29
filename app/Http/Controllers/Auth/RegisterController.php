@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
+//ユーザー登録に関するクラス
 {
     /*
     |--------------------------------------------------------------------------
@@ -47,6 +48,7 @@ class RegisterController extends Controller
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
+    //ユーザー登録情報のバリデーションルール
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
@@ -62,6 +64,7 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
+    //バリデーション後のユーザー情報をデータベースに保存する
     {
         return User::create([
             'name' => $data['name'],

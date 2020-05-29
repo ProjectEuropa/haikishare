@@ -1,30 +1,41 @@
 .c-flash-message {
   background: #79BE2D;
-  color: white;
-  position: fixed;
-  opacity: .95;
-  width: 300px;
-  height: 50px;
-  top: 39%;
-  left: 42%;
-  line-height: 50px;
-  text-align: center;
-  z-index: 1;
   border-radius: 5px;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+  left: 42%;
+  opacity: .95;
+  position: fixed;
+  top: 39%;
+  text-align: center;
+  width: 300px;
+  z-index: 1;
+  @include mq() {
+    left: 20%;
+    top: 36%;
+    width: 60%;
+  }
 }
 .c-flash-message--status {
+  border-radius: 5px;
   background: #79BE2D;
   color: white;
-  position: fixed;
-  opacity: .95;
-  width: 500px;
   height: 50px;
-  top: 47%;
   left: 37%;
   line-height: 50px;
+  opacity: .95;
+  position: fixed;
+  top: 47%;
   text-align: center;
+  width: 500px;
   z-index: 1;
-  border-radius: 5px;
+  @include mq(){
+    font-size: $font_sp-s;
+    left: 8%;
+    top: 34%;
+    width: 85%;
+  }
 }
 .c-flash-message-animation {
   animation : fadeOut 3s;

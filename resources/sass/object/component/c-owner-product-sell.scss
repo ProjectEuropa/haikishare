@@ -1,15 +1,32 @@
 .c-owner-product-sell__container {
-  width: 1200px;
   margin: 100px auto;
   overflow: hidden;
+  width: 1200px;
+  @include mq(){
+    width: 95%;
+    margin: 0 auto $space_5l;
+  }
 }
+.c-owner-product-sell__head-info {
+  font-size: $font_xl;
+  color: $theme_gray;
+  padding: $space_s;
+  border-bottom: 3px solid $theme_gray_word_bottom;
+  box-sizing: border-box;
+  @include mq() {
+    color: $theme_black;
+    font-size: $font_s;
+    padding: $space_m;
+  }
+}
+
 .c-owner-product-sell__box{
-  width: 280px;
+  box-sizing: border-box;
   height: 250px;
   float: left;
-  text-align: center;
   margin: $space_2l $space_2l 0 0;
-  box-sizing: border-box;
+  text-align: center;
+  width: 280px;
 }
 .c-owner-product-sell__sell-date{
   box-sizing: border-box;
@@ -18,77 +35,70 @@
   padding-left: $space_2l;
 }
 .c-owner-product-sell__img-box {
-  width:	280px;
   height:	200px;
-  overflow:	hidden;
   margin:	$space_l $space_2l;
+  overflow:	hidden;
   position:	relative;
+  width:	280px;
 }
 .c-owner-product-sell__img {
-  width:	280px;
   height:	200px;
   object-fit: cover;
+  width:	280px;
 }
 .c-owner-product-sell__img-word {
+  color:	$theme_white;
   font-size: $font_m;
   letter-spacing: .1em;
-  text-align:	center;
-  color:	$theme_white;
-  padding: $space_m 0 $space_l;
-  white-space:nowrap;
-  width:100%;
   overflow:hidden;
+  padding: $space_m 0 $space_l;
+  text-align:	center;
   text-overflow:ellipsis;
+  width:100%;
+  white-space:nowrap;
 }
 
 .c-owner-product-sell__btn {
+  border: 1px solid;
+  background: $theme_white;
+  color: $theme_black;
+  cursor: pointer;
   display: block;
   padding: $space_2l $space_3l;
-  border: 1px solid;
-  cursor: pointer;
-  background: $theme_white;
-  text-decoration: none;
-  color: $theme_black;
-  margin: 0 auto;
-  width: 100px;
   position: relative;
+  margin: 0 auto;
+  text-decoration: none;
+  width: 100px;
 }
 
 .c-owner-product-sell__btn:hover {
+  background: $theme_white;
   transition: all 0.1s ease 0s;
-  background: $theme_white
 }
 .c-owner-product-sell__btn-box {
   margin: $space_m auto 0;
-  width: 200px;
   position: relative;
+  width: 200px;
 }
 .c-owner-product-sell__btn-logo {
   color: $theme_light_black;
   position: absolute;
-  top: 22px;
   right: 10px;
+  top: 22px;
 }
 
 .c-owner-product-sell__img-mask {
-  width: 100%;
+  background-color:	rgba(0,0,0,0.4);
+  left:	0;
   height:	100%;
+  opacity: 0;	/* マスクを表示しない */
   position:	absolute;
   top:	0;
-  left:	0;
-  opacity: 0;	/* マスクを表示しない */
-  background-color:	rgba(0,0,0,0.4);
-  -webkit-transition:	all 0.2s ease;
   transition:		all 0.2s ease;
+  -webkit-transition:	all 0.2s ease;
+  width: 100%;
 }
 .c-owner-product-sell__img-box:hover .c-owner-product-sell__img-mask {
   opacity:	1;	/* マスクを表示する */
   padding-top:	$space_3l;	/* ホバーで下にずらす */
-}
-.c-owner-product-sell__head-info {
-  font-size: $font_xl;
-  color: $theme_gray;
-  padding: 5px;
-  border-bottom: 3px solid $theme_gray_word_bottom;
-  box-sizing: border-box;
 }

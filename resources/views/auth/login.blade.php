@@ -40,8 +40,8 @@ haiki shareユーザーログイン
           </span>
       @enderror
 
-      <a class="c-auth__ask u-mgt-30" href="{{ route('register') }}">ユーザー登録はこちら</a>
-      <a class="c-auth__ask" href="{{ route('password.request')}}"><i class="fas fa-lock u-pr-10"></i>パスワードを忘れた方はこちら</a>
+      <a class="c-auth__ask u-mgt-30-sp-10" href="{{ route('register') }}"><i class="fas fa-user-plus u-pr-10-sp-5"></i>ユーザー登録はこちら</a>
+      <a class="c-auth__ask" href="{{ route('password.request')}}"><i class="far fa-question-circle u-pr-10-sp-5"></i>パスワードを忘れた方はこちら</a>
       <input class="c-auth__btn" type="submit" name="submit" value="ログイン">
   </form>
 

@@ -7,22 +7,29 @@
   height: $space_7xl;
   padding: 0 $space_3l;
   position: relative;
+  @include mq() {
+    padding: 0 $space_2xl;
+  }
 }
 
-.l-header__title {
+@include mq() {
+  .l-header__sp-left-box{
+    width: 25px;
+  }
+}
+
+.l-header__center-box {
   display: block;
-  height: 35px;
-  width: 140px;
-}
-
-.l-header__left-box {
   align-items: center;
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
-  height: $space_7xl;
+  height: $space_3xl;
+  width: 250px;
   cursor: pointer;
-  width: 120px;
+  @include mq() {
+    width: 200px;
+  }
 }
 
 .l-header__right-box {
@@ -34,6 +41,9 @@
   list-style: none;
   position: relative;
   width: 180px;
+  @include mq() {
+    width: 25px;
+  }
 }
 
 .l-header__user-logo {

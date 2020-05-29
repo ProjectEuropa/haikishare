@@ -1,14 +1,18 @@
 .c-search-tab {
-  max-height: 250px;
   background: $theme_white;
+  max-height: 250px;
   overflow: hidden;
 }
 
 .c-search-tab__main-container {
   margin: 0 auto;
+  overflow: hidden;
   padding: $space_2l 0;
   width: 500px;
-  overflow: hidden;
+  @include mq() {
+    width: 100%;
+    font-size: $font_sp-m;
+  }
 }
 
 .c-search-tab__item {
@@ -17,12 +21,47 @@
   height: $space_3l;
   justify-content: space-between;
   margin-bottom: $space_m;
+  @include mq() {
+    justify-content: flex-start;
+    margin-bottom: $space_s;
+  }
 }
 
-.c-search-tab__warning {
+.c-search-tab__label {
   color: black;
   text-align: right;
   width: 140px;
+  @include mq() {
+    text-align: center;
+    margin: 0 $space_3l;
+    width: 20%;
+  }
+}
+
+.c-search-tab__label-for-checkbox {
+  color: $theme_black;
+  float: left;
+  margin-right: $space_4l;
+  text-align: right;
+  width: 140px;
+  @include mq() {
+    margin: 0 $space_m $space_2l;
+    width: 25%;
+  }
+}
+
+.c-search-tab__label-for-price {
+  color: $theme_black;
+  text-align: right;
+  width: 140px;
+  float: left;
+  margin-right: $space_4l;
+  @include mq() {
+    margin-bottom: $space_2l;
+    margin-right: $space_m;
+    width: 20%;
+  }
+
 }
 .c-search-tab__input {
   box-sizing: border-box;
@@ -33,12 +72,50 @@
   padding: $space_m;
   width: 320px;
 }
+.c-search-tab__input-for-price {
+  box-sizing: border-box;
+  background: $theme_pearl_gray;
+  border: none;
+  font-size: $font_s;
+  outline: none;
+  padding: $space_s;
+  width: 100px;
+  text-align: right;
+  @include mq() {
+    font-size: $font_sp-m;
+    width: 20%;
+  }
+}
+
+.c-search-tab__item-for-price {
+  height: $space_3l;
+  line-height: $space_3l;
+  margin-bottom: $space_m;
+  overflow: hidden;
+  @include mq() {
+    margin-bottom: $space_s;
+  }
+}
+.c-search-tab__item-for-checkbox {
+  height: $space_3l;
+  line-height: $space_3l;
+  margin-bottom: $space_m;
+  overflow: hidden;
+  user-select: none;
+  @include mq() {
+    margin-bottom: $space_s;
+  }
+}
 
 .c-search-tab__create-btn-box {
   margin: $space_2l auto 0;
   position: relative;
   text-align: center;
   width: 200px;
+  @include mq() {
+    margin: $space_m auto 0;
+    width: 60%;
+  }
 }
 .c-search-tab__create-btn {
   align-items: center;
@@ -61,89 +138,59 @@
 }
 
 .c-search-tab__select-box {
-	overflow: hidden;
-	margin: 0 220px 0 0;
-	text-align: center;
-  font-size: $font_m;
   box-sizing: border-box;
   background: $theme_super_light_gray;
+  border-bottom: 3px solid $theme_gray_word_bottom;
   border: none;
+  font-size: $font_m;
+  margin: 0 220px 0 0;
   outline: none;
-  width: 100px;
   padding: $space_s 0 0 $space_s;
   position: relative;
-  border-bottom: 3px solid $theme_gray_word_bottom;
-  background: $theme_super_light_gray;
+  text-align: center;
+  overflow: hidden;
+  width: 100px;
+  @include mq() {
+    margin: 0;
+  }
 }
 .c-search-tab__select--bigger {
 	margin: 0 170px 0 0;
   width: 150px;
-
+  @include mq() {
+    margin: 0;
+  }
 }
 .c-search-tab__select-box select {
-  width: 200px;
-	cursor: pointer;
+  appearance: none;
 	border: none;
+  box-shadow: none;
+  cursor: pointer;
 	outline: none;
-	box-shadow: none;
-	-webkit-appearance: none;
-	appearance: none;
   font-size: $font_s;
+  -webkit-appearance: none;
+  width: 200px;
 }
 .c-search-tab__select-box select::-ms-expand {
     display: none;
 }
 .c-search-tab__select-box:before {
-	position: absolute;
-	top: 12px;
-	right: 14px;
-	width: 0;
-	height: 0;
-	padding: 0;
-	content: '';
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
 	border-top: 6px solid black;
+  content: '';
+  height: 0;
+  position: absolute;
+  padding: 0;
 	pointer-events: none;
+  right: 14px;
+  top: 12px;
+  width: 0;
 }
 
-.c-search-tab__input-for-price {
-  box-sizing: border-box;
-  background: $theme_pearl_gray;
-  border: none;
-  font-size: $font_s;
-  outline: none;
-  padding: $space_s;
-  width: 100px;
-  text-align: right;
-}
-
-.c-search-tab__item-for-price {
-  margin-bottom: $space_m;
-  overflow: hidden;
-  height: $space_3l;
-  line-height: $space_3l;
-}
-
-
-.c-search-tab__warning-for-price {
-  color: $theme_black;
-  text-align: right;
-  width: 140px;
-  float: left;
-  margin-right: $space_4l;
-}
 
 .c-search-tab__simbol-for-price {
   color: $theme_gray;
-}
-
-.c-search-tab__item-for-checkbox {
-  margin-bottom: $space_m;
-  overflow: hidden;
-  height: $space_3l;
-  line-height: $space_3l;
-  user-select: none;
 }
 
 .c-search-tab__checkbox {
@@ -156,40 +203,43 @@
 }
 /* チェックボックスの代わりを成すラベル */
 .c-search-tab__checkbox .checkbox+label{
-    display: none;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    padding-left: $space_2xl;
-    padding-right: $space_m;
+  cursor: pointer;
+  display: none;
+  display: inline-block;
+  position: relative;
+  padding-left: $space_2xl;
+  padding-right: $space_m;
+  @include mq() {
+    padding-right: 0;
+  }
 }
 /* ラベルの左に表示させる正方形のボックス□ */
 .c-search-tab__checkbox .checkbox+label::before{
-    content: "";
-    position: absolute;
-    display: block;
-    box-sizing: border-box;
-    width: 20px;
-    height: $space_2l;
-    margin-top: -10px;
-    left: 0;
-    top: 50%;
-    border-radius: 2px;
-    background-color: $theme_pearl_gray; /* 背景の色変更 お好きな色を */
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 20px;
+  height: $space_2l;
+  margin-top: -10px;
+  left: 0;
+  top: 50%;
+  border-radius: 2px;
+  background-color: $theme_pearl_gray; /* 背景の色変更 お好きな色を */
 }
 /* チェックが入った時のレ点 */
 .c-search-tab__checkbox .checkbox:checked+label::after{
-    content: "";
-    position: absolute;
-    display: block;
-    box-sizing: border-box;
-    width: 18px;
-    height: 9px;
-    margin-top: -9px;
-    top: 50%;
-    left: 3px;
-    transform: rotate(-45deg);
-    border-bottom: 3px solid;
-    border-left: 3px solid;
-    border-color:  $theme_light_black; /* チェックの色変更 お好きな色を */
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 18px;
+  height: 9px;
+  margin-top: -9px;
+  top: 50%;
+  left: 3px;
+  transform: rotate(-45deg);
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+  border-color:  $theme_light_black; /* チェックの色変更 お好きな色を */
 }

@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Support\Facades\Auth;
 
 class CheckCompanyLoggedIn
+//オーナーがログインしているかチェックするクラス
 {
     /**
      * Handle an incoming request.
@@ -15,10 +16,10 @@ class CheckCompanyLoggedIn
      * @return mixed
      */
     public function handle($request, Closure $next)
+    //コントローラーの処理の前にオーナーがログインしているかチェックするメソッド
     {
-      $response = $next($request);
 
-      if (!Auth::guard('company')->user()->check()){
+      if (!Auth::guard('company')->check()){
         return redirect('/companies/login');
       }
 

@@ -10,6 +10,7 @@ class Category extends Model
 
   protected $fillable = ['name'];
 
+  //Productと一対多のリレーション
   public function products(){
     return $this->hasMany('App\Product');
   }

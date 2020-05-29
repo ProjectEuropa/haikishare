@@ -1,3 +1,15 @@
+$breakpoints: (
+  'sm': 'screen and (max-width: 550px)',
+) !default;
+
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+
 
 $space_s : 5px;
 $space_m : 10px;
@@ -17,6 +29,8 @@ $space_9l : 90px;
 $space_10l : 100px;
 $space_20l : 200px;
 
+$font_sp-s: 10px;
+$font_sp-m: 12px;
 $font_s : 14px;
 $font_m : 18px;
 $font_l : 22px;
@@ -56,16 +70,3 @@ $theme_red: #DE3737;
 $theme_dark_red: #BF0000;
 
 $theme_green: #79BE2D;
-
-$blue: #1fb5bf;
-
-body {
-  background: $theme_gray_background;
-  font-family: $font_family_body;
-  color: $theme_light_black;
-}
-
-a {
-  text-decoration: none;
-  color: $theme_light_black;
-}

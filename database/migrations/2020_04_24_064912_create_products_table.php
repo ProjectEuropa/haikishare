@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
           $table->integer('year');
           $table->integer('month');
           $table->integer('day');
+          $table->integer('hour')->nullable()->default('0');
           $table->string('expiration');
           $table->boolean('sold_flg')->default('0');
           $table->boolean('delete_flg')->default('0');

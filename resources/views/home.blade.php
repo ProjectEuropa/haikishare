@@ -31,31 +31,35 @@ haiki shareマイページ
 
 <main class="c-mypage-container">
 
-  <div class="c-mypage-small-container__title-box">
-    <div class="c-mypage-small-container__title">注文履歴</div>
+  <div class="c-mypage-container__title-box">
+    <div class="c-mypage-container__title">注文履歴</div>
   </div>
-  <div class="c-mypage__head-info">購入商品{{ $productCount }}件のうち {{ $productList->firstItem() }}-{{ $productList->lastItem() }}件</div>
+  <div class="c-mypage__head-info">
+    @if ($productList->total() == 0)
+    購入した商品はありません
+    @else
+    購入商品{{ $productList->total() }}件のうち {{ $productList->firstItem() }}-{{ $productList->lastItem() }}件
+    @endif
+  </div>
 
 
 
   @foreach( $productList as $product)
   <div class="c-mypage-box">
     <a href="{{ route('products.show', $product->id ) }}">
-    <div class="c-mypage-box__body">
 
-        <img src="/storage/{{$product->pic1 }}" class="c-mypage-box__img">
+    <img src="/storage/{{$product->pic1 }}" class="c-mypage-box__img">
 
-      <div class="c-mypage-box__info pt-20">
-        <div class="c-mypage-box__item">{{ $product->name }}</div>
-        <div class="c-mypage-box__item"><span class="c-price-red">{{ $product->discount }}円</span><span class="c-price-line">{{ $product->price }}円</span></div>
-        <div class="c-mypage-box__item">購入日：{{ $product->date }}</div>
-        <div class="c-mypage-box__btn-container">
+    <div class="c-mypage-box__info">
+      <div class="c-mypage-box__item">{{ $product->name }}</div>
+      <div class="c-mypage-box__item"><span class="c-price-red">{{ $product->discount }}円</span><span class="c-price-line">{{ $product->price }}円</span></div>
+      <div class="c-mypage-box__item">購入日：{{ $product->date }}</div>
+      <div class="c-mypage-box__btn-container">
 
-          <a class="c-mypage-box__btn c-mypage-box__btn--check"><i class="fas fa-check"></i>　購入済</a>
-          <div>
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-url="http://homestead.test/products" data-hashtags="コンビニ廃棄"
-            data-text="{{$product->company}}で{{$product->name}}を{{$product->discountRate}}％割引の{{$product->discount}}円で買いました！">Tweet</a>
-          </div>
+        <a class="c-mypage-box__btn c-mypage-box__btn--check c-mypage-box__user-sp-size-btn"><i class="fas fa-check u-pr-10-sp-5"></i>購入済</a>
+        <div>
+          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-url="http://homestead.test/products" data-hashtags="コンビニ廃棄"
+          data-text="{{$product->company}}で{{$product->name}}を{{$product->discountRate}}％割引の{{$product->discount}}円で買いました！">Tweet</a>
         </div>
       </div>
     </div>

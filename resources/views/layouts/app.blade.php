@@ -18,17 +18,7 @@
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <style>
-    body,
-    #app {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
 
-
-
-    </style>
 
 </head>
 <body>
@@ -47,6 +37,8 @@
         @endif
       </div>
 
+
+      <!-- メインコンテンツ -->
         <main>
             @yield('content')
         </main>

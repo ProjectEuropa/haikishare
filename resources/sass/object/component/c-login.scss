@@ -4,4 +4,7 @@
 
 .c-login__container {
   width: 400px;
+  @include mq() {
+    width: 80%;
+  }
 }

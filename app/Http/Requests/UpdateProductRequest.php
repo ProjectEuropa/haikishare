@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+//商品情報変更時のバリデーション
 class UpdateProductRequest extends FormRequest
 {
     /**
@@ -22,6 +23,7 @@ class UpdateProductRequest extends FormRequest
      * @return array
      */
      public function rules()
+     //ユーザー情報変更時のバリデーションルール
      {
          return [
              'name' => 'required|max:20',
@@ -31,6 +33,7 @@ class UpdateProductRequest extends FormRequest
              'year' => 'required|regex:/^([0-9]{4})$/',
              'month' => 'required|regex:/^([0-9]{1,2})$/',
              'day' => 'required|regex:/^([0-9]{1,2})$/',
+             'hour' => 'regex:/^([0-9]{1,2})$/',
              'category_id' => 'required',
          ];
      }

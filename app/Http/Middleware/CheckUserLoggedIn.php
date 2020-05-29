@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Support\Facades\Auth;
 
 class CheckUserLoggedIn
+//ユーザーがログインしているかチェックするクラス
 {
     /**
      * Handle an incoming request.
@@ -15,8 +16,8 @@ class CheckUserLoggedIn
      * @return mixed
      */
     public function handle($request, Closure $next)
+    //コントローラーの処理の前にユーザーがログインしているかチェックするメソッド
     {
-      $response = $next($request);
 
       if (!Auth::check()){
         return redirect('login');

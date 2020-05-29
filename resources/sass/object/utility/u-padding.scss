@@ -1,17 +1,25 @@
-.pt-20 {
-  padding-top: 20px;
-}
-
-.u-pr-10 {
+.u-pr-10-sp-5 {
   padding-right: 10px;
+  @include mq(){
+    padding-right: 5px;
+  }
 }
 
-.u-pr-20 {
+.u-pr-20-sp-10 {
   padding-right: 20px;
+  @include mq() {
+    padding-right: 10px;
+  }
 }
-.u-pl-180{
+.u-pl-180-sp-40{
   padding-left: 180px;
+  @include mq() {
+    padding-left: 40%;
+  }
 }
-.u-pl-100{
+.u-pl-100-sp-50{
   padding-left: 100px;
+  @include mq() {
+  padding-left: 50px;
+  }
 }

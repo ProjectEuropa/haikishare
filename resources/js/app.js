@@ -6,6 +6,7 @@
 
 // require('./bootstrap');
 require('./flash-message');
+require('./form-submit');
 
 window.Vue = require('vue');
 

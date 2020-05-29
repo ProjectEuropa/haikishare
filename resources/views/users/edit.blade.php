@@ -18,18 +18,18 @@ haiki shareアカウント情報編集
 
 
 
-<form method="post" action="{{ route('users.update', Auth::user()->id )}}" class="c-profile__container">
+<form method="post" action="{{ route('users.update', Auth::user()->id )}}">
 @csrf
-  <main class="c-profile__main-container">
-        <div class="c-profile__item"><div class="c-profile__warning">名前</div><input class="c-profile__input" type="text" name="name" value="{{ old('name', $user->name) }}"/></div>
+  <main class="c-profile__container">
+        <div class="c-profile__item"><div class="c-profile__label">名前</div><input class="c-profile__input" type="text" name="name" value="{{ old('name', $user->name) }}"/></div>
         @error('name')
-            <span class="c-auth--error u-pl-180">
+            <span class="c-auth--error u-pl-180-sp-40">
                 <strong>{{ $message }}</strong>
             </span>
         @enderror
-        <div class="c-profile__item"><div class="c-profile__warning">メールアドレス</div><input class="c-profile__input" type="text" name="email" value="{{ old('email', $user->email) }}"/></div>
+        <div class="c-profile__item"><div class="c-profile__label">メールアドレス</div><input class="c-profile__input" type="text" name="email" value="{{ old('email', $user->email) }}"/></div>
         @error('email')
-            <span class="c-auth--error u-pl-180">
+            <span class="c-auth--error u-pl-180-sp-40">
                 <strong>{{ $message }}</strong>
             </span>
         @enderror

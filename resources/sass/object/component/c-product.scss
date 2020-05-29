@@ -1,80 +1,172 @@
 .c-product__container {
-  font-size: $font-m;
-}
-
-.c-product__main-container {
+  font-size: $font_m;
   padding: $space_5l 0 0;
   margin: 0 auto;
   width: 500px;
+  @include mq() {
+    padding: $space_3l 0 0;
+    width: 65%;
+    font-size: $font_s;
+  }
 }
 
 .c-product__item {
   margin: $space_m auto $space_l;
   overflow: hidden;
+  @include mq() {
+    margin: $space_s auto;
+  }
 }
 
 .c-product__info {
-  overflow: hidden;
-  margin-bottom: $space_m;
   height: $space_3l;
   line-height: $space_3l;
+  margin-bottom: $space_m;
+  overflow: hidden;
+  @include mq() {
+    margin-bottom: $space_s;
+  }
 }
 
-.c-product__warning {
-  color: $theme_white;
-  text-align: center;
-  width: $space_4l;
+.c-product__label{
   background: $theme_red;
   border-radius: 5px;
+  color: $theme_white;
   float: left;
   font-size: $font_s;
+  text-align: center;
+  width: $space_4l;
+  @include mq() {
+    font-size: $font_sp-m;
+    height: 20px;
+    line-height: $space_2l;
+    width: 30px;
+    margin-top: $space_s;
+  }
+}
+
+.c-product__label--blank{
+  background: $theme_gray;
 }
 .c-product__name {
   color: black;
   float: left;
   width: 100px;
+  @include mq() {
+    width: 60px;
+  }
 }
-.c-product__input {
+.c-product__input-name{
   box-sizing: border-box;
   background: $theme_super_light_gray;
   border: none;
-  outline: none;
-  padding: $space_l;
-  height: $space_6l;
-  width: 300px;
   font-size: $font_m;
+  height: $space_6l;
+  padding: $space_l;
+  outline: none;
+  width: 300px;
+  @include mq() {
+    font-size: $font_sp-s;
+    width: 100%;
+    height: 40px;
+  }
 }
+
+  .c-product__img-container {
+    height: 300px;
+    position: relative;
+    width: 300px;
+    @include mq() {
+      height: 150px;
+      margin: 0 auto;
+      width: 150px;
+    }
+  }
+ .c-product__input-file {
+   height: 100%;
+   opacity: 0;
+   position: absolute;
+   width: 100%;
+ }
+
+ .c-product__img {
+   background: #f2f2f2;
+   height: 300px;
+   object-fit: cover;
+   width: 300px;
+   @include mq() {
+     height: 150px;
+     width: 150px;
+   }
+ }
+
 .c-product__input--small {
   box-sizing: border-box;
   background: $theme_super_light_gray;
   border: none;
+  font-size: $font_m;
+  height: $space_6l;
   outline: none;
   padding: $space_l;
-  height: $space_6l;
-  width: 100px;
   text-align: right;
-  font-size: $font_m;
+  width: 100px;
+  @include mq(){
+    font-size: $font_sp-s;
+    height: 40px;
+    width: 40%;
+  }
 }
 .c-product__input-for-expiration {
   box-sizing: border-box;
   background: $theme_super_light_gray;
   border: none;
+  font-size: $font_m;
+  height: $space_6l;
   outline: none;
   padding: $space_l;
-  width: 100px;
-  height: $space_6l;
+  padding: $space_2l 0 $space_2l $space_m;
   float: left;
-  padding: 20px 0 20px 10px;
+  width: 100px;
+  @include mq(){
+    font-size: $font_sp-s;
+    height: 40px;
+    padding: $space_s;
+    width: 27%;
+  }
+}
+.c-product__input-for-expiration-small {
+  box-sizing: border-box;
+  background: $theme_super_light_gray;
+  border: none;
   font-size: $font_m;
+  float: left;
+  outline: none;
+  padding: $space_l;
+  padding: $space_2l 0 $space_2l $space_m;
+  height: $space_6l;
+  width: 100px;
+  @include mq(){
+    font-size: $font_sp-s;
+    height: 40px;
+    padding: $space_s;
+    width: 17%;
+  }
 }
 .c-product__letter {
   color: $theme_gray;
   padding: $space_2l $space_3l $space_2l $space_m;
   float: left;
+  @include mq() {
+    padding: 16px $space_s $space_m $space_s;
+    font-size: $font_sp-s;
+  }
 }
 .c-product__letter-for-yen {
   color: $theme_gray;
   padding-left: $space_s;
+  @include mq() {
+    font-size: $font_sp-s;
+  }
 
 }
 
@@ -83,6 +175,9 @@
   position: relative;
   text-align: center;
   width: 250px;
+  @include mq(){
+    width: 80%;
+  }
 }
 .c-product__btn {
   align-items: center;
@@ -94,9 +189,14 @@
   letter-spacing: 0.1em;
   line-height: $space_5l;
   outline: none;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  width: 250px;
+  @include mq(){
+    height: $space_4l;
+    line-height: $space_4l;
+    width: 100%;
+  }
 }
 .c-product__create-btn {
   background: $theme_yellow;
@@ -109,21 +209,23 @@
 
 }
 .c-product__warning-btn {
-  display: block;
+  background: $theme_red;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   color: $theme_white;
-  text-align: center;
-  cursor: pointer;
+  display: block;
   height: $space_5l;
   font-size: $font_s;
   letter-spacing: 0.1em;
-  line-height: $space_5l;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  width: 250px;
   margin: 0 auto 100px;
-  height: $space_5l;
-  background: $theme_red;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  transition: all 0.3s ease;
+  text-align: center;
+  width: 250px;
+  -webkit-transition: all 0.3s ease;
+  @include mq(){
+    height: $space_4l;
+    line-height: $space_4l;
+    width: 80%;
+  }
 }
 .c-product__warning-btn:hover {
   -webkit-transition: all 0.2s ease;
@@ -132,44 +234,57 @@
 }
 
 .c-product__select-box {
-	overflow: hidden;
-	margin: 0 220px 0 0;
-	text-align: center;
+  border-bottom: 3px solid $theme_gray_word_bottom;
+  background: $theme_super_light_gray;
   box-sizing: border-box;
   background: $theme_super_light_gray;
   border: none;
-  font-size: $font_m;
-  outline: none;
-  width: 250px;
   height: $space_6l;
+  margin: 0 220px 0 0;
+  outline: none;
+  overflow: hidden;
   padding: $space_2l 0 $space_2l $space_2l;
-  border-bottom: 3px solid $theme_gray_word_bottom;
-  background: $theme_super_light_gray;
   position: relative;
+  text-align: center;
+  width: 250px;
+  @include mq() {
+    height: 40px;
+    padding: $space_m $space_s;
+    font-size: $font_s;
+    width: 160px;
+  }
 }
 .c-product__select-box select {
+  appearance: none;
   box-shadow: none;
+  border: none;
 	cursor: pointer;
-	border: none;
   font-size: $font_m;
 	outline: none;
 	-webkit-appearance: none;
-	appearance: none;
   width: 200px;
+  @include mq() {
+    font-size: $font_sp-s;
+    width: 160px;
+  }
 }
 .c-product__select-box select::-ms-expand {
     display: none;
 }
 .c-product__select-box:before {
-	position: absolute;
-	top: 30px;
-	right: 20px;
-	width: 0;
-	height: 0;
-	padding: 0;
-	content: '';
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
 	border-top: 6px solid $theme_black;
-	pointer-events: none;
+  content: '';
+  height: 0;
+  position: absolute;
+  padding: 0;
+  pointer-events: none;
+  right: 20px;
+  top: 30px;
+  width: 0;
+  @include mq() {
+    right: 25px;
+    top: 18px;
+  }
 }

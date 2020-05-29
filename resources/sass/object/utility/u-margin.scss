@@ -1,12 +1,21 @@
-.u-mgt-20 {
+.u-mgt-20-sp-0 {
   margin-top: 20px;
+  @include mq() {
+    margin-top: 0px;
+  }
 }
-.u-mgt-30 {
+.u-mgt-30-sp-10 {
   margin-top: 30px;
+  @include mq() {
+    margin-top: 10px;
+  }
 }
 .u-mgb-20 {
   margin-bottom: 20px;
 }
-.u-mgr-40 {
+.u-mgr-40-sp-0 {
   margin-right: 40px;
+  @include mq() {
+    margin-right: 0px;
+  }
 }

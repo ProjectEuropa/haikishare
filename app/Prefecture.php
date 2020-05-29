@@ -10,6 +10,7 @@ class Prefecture extends Model
 
   protected $fillable = ['name'];
 
+  //Companyと一対多のリレーション
   public function companies(){
     return $this->hasMany('App\Company');
   }

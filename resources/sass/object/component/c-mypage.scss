@@ -1,84 +1,115 @@
 .c-mypage-container {
-  padding: 0 $space_20l;
+  padding: 0 $space_8l;
   overflow: hidden;
+  @include mq(){
+    padding: $space_2l 0;
+    margin: 0 auto;
+    width: 95%;
+  }
 }
 
-.c-mypage-small-container {
-  padding: 0 $space_20l;
-  overflow: hidden;
+.c-price-red {
+  color: $theme_red;
+}
+.c-price-line {
+  color: $theme_gray;
+  text-decoration: line-through;
 }
 
+.c-mypage-container__title-box {
+  box-sizing: border-box;
+  padding: $space_5l;
+  text-align: center;
+  @include mq(){
+    padding: $space_2l 0;
+  }
+}
+.c-mypage-container__title {
+  font-size: $font_2l;
+  @include mq(){
+    font-size: $font_l;
+    font-weight: bold;
+  }
+}
+.c-mypage-container__title:after {
+	background-color: $theme_black;
+	content: "";
+  display: block;
+	height: 1px;
+	margin: $space_2l auto 0;
+  width: 50px;
+  @include mq(){
+    margin: $space_s auto 0;
+  }
+}
 .c-mypage__head-info {
   font-size: $font_l;
-  padding: 5px 20px;
+  padding: $space_s $space_2l;
   border-bottom: 3px solid $theme_light_black;
   margin-bottom: $space_3l;
   box-sizing: border-box;
-}
-
-.c-mypage-small-container__title-box {
-  text-align: center;
-  padding: $space_5l;
-  box-sizing: border-box;
-}
-.c-mypage-small-container__title {
-  font-size: $font_2l;
-}
-.c-mypage-small-container__title:after {
-  display: block;
-	background-color: $theme_black;
-	content: "";
-	width: 50px;
-	height: 1px;
-	margin: 20px auto 0;
-}
-
-.c-mypage-small-container__btn-box {
-  float: left;
-  width: 450px;
-  height: 240px;
-  position: relative;
-}
-
-.c-mypage-small-container__btn{
-  display: block;
-  padding: $space_2l $space_3l;
-  width: 220px;
-  margin: 50px auto;
-  border: 1px solid #999999;
-  cursor: pointer;
-  background: $theme_white;
-  text-decoration: none;
-  color: $theme_gray;
-}
-
-.c-mypage-small-container__btn:hover {
-  border: 1px solid $theme_black;
-  color: $theme_black;
-}
-
-.c-mypage-small-container__btn-logo {
-  color: $theme_gray;
-  position:absolute;
-}
-
-.c-mypage-small-container__btn-logo {
-  color: $theme_black;
-  position:absolute;
+  @include mq(){
+    margin: $space_s auto $space_m;
+    font-size: $font_s;
+  }
 }
 
 
 .c-mypage-box {
   border: 1px solid #999999;
+  box-sizing: border-box;
+  display: flex;
   float: left;
-  width: 450px;
   height: 150px;
-  margin: 0 $space_5l $space_5l 0;
+  justify-content: space-between;
+  margin: 0 $space_2l $space_2l 0;
   position: relative;
-
+  width: 400px;
+  @include mq(){
+    height: 100px;
+    margin: 0 0 $space_m 0;
+    width: 100%;
+  }
   &:hover {
-    box-shadow: 0 0 8px $theme_gray;
+    box-shadow: 0 0 6px $theme_gray;
     border: 1px solid $theme_black;
+  }
+}
+
+.c-mypage-box__info {
+  padding-top: $space_2l;
+  text-align: center;
+  width: 250px;
+  @include mq(){
+    padding-top: $space_s;
+    width: 65%;
+  }
+}
+.c-mypage-box__info--text {
+  @include mq(){
+    box-sizing: border-box;
+    float: left;
+    font-size: $font_sp-m;
+    height: 100px;
+    line-height: 100px;
+    overflow:hidden;
+    padding-top: $space_s;
+    text-overflow:ellipsis;
+    text-align: center;
+    white-space:nowrap;
+    width: 65%;
+  }
+}
+
+.c-mypage-box__img {
+  box-sizing: border-box;
+  height: 148px;
+  object-fit: cover;
+  width: 150px;
+  @include mq(){
+    float: left;
+    height: 98px;
+    width: 100px;
   }
 }
 
@@ -99,33 +130,27 @@
 }
 
 
-.c-mypage-box__body {
-  background: $theme_gray_background;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  width: 450px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-.c-mypage-box__info {
-  text-align: center;
-  width: 300px;
-}
 .c-mypage-box__item {
-  padding: $space_s;
-  white-space:nowrap;
-  width:100%;
-  overflow:hidden;
-  text-overflow:ellipsis;
   box-sizing: border-box;
+  overflow:hidden;
+  padding: $space_s;
+  text-overflow:ellipsis;
+  width:100%;
+  white-space:nowrap;
+  @include mq(){
+    padding: 0 0 $space_s 0;
+  }
 }
 
 .c-mypage-box__btn-container {
+  align-items: center;
   display: flex;
   justify-content: space-around;
-  align-items: center;
   margin-top: $space_m;
+  @include mq(){
+    margin-top: $space_s;
+    width: 100%;
+  }
 }
 
 .c-mypage-box__btn {
@@ -133,15 +158,35 @@
   color: $theme_white;
   cursor: pointer;
   display: block;
-  font-size: 12px;
+  font-size: $font_sp-m;
+  float: left;
   height: $space_3l;
   line-height: $space_3l;
   letter-spacing: 0.1em;
   transition: .2s;
-  width: 150px;
   margin: 0;
-  float: left;
+  width: 150px;
+  @include mq(){
+    height: $space_2xl;
+    line-height: $space_2xl;
+  }
 }
+.c-mypage-box__company-btn{
+  margin: 0 auto;
+}
+
+.c-mypage-box__company-sp-size-btn{
+  @include mq(){
+    width: 60%;
+  }
+}
+.c-mypage-box__user-sp-size-btn{
+  @include mq(){
+    width: 50%;
+  }
+}
+
+
 .c-mypage-box__btn--normal {
   background: $theme_yellow;
 }
@@ -153,10 +198,39 @@
   background: darken($theme_green, 7%);
 }
 
+.c-mypage-small-container__btn-box {
+  float: left;
+  height: 150px;
+  position: relative;
+  width: 400px;
+  @include mq() {
+    width: 100%;
+  }
+}
 
-.c-mypage-box__img {
-  height: 149px;
-  width: 149px;
-  object-fit: cover;
-  box-sizing: border-box;
+.c-mypage-small-container__btn{
+  border: 1px solid #999999;
+  background: $theme_white;
+  color: $theme_gray;
+  cursor: pointer;
+  display: block;
+  margin: $space_5l auto;
+  padding: $space_2l $space_3l;
+  text-decoration: none;
+  text-align: center;
+  width: 220px;
+  @include mq() {
+    width: 60%;
+    padding: $space_l $space_2l;
+  }
+}
+
+.c-mypage-small-container__btn:hover {
+  border: 1px solid $theme_black;
+  color: $theme_black;
+}
+
+.c-mypage-small-container__btn-logo {
+  color: $theme_gray;
+  position:absolute;
 }

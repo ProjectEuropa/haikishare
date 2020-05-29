@@ -2,18 +2,18 @@
 //foundation
 @import 'foundation/reset';
 @import 'foundation/variables';
+@import 'foundation/base';
 
 //layout
 @import 'layout/l-header';
 @import 'layout/l-footer';
 
 //component
-@import 'object/component/c-mypage';
-@import 'object/component/c-sub-head';
-@import 'object/component/c-flash-message';
 @import 'object/component/c-auth';
 @import 'object/component/c-login';
 @import 'object/component/c-register';
+@import 'object/component/c-mypage';
+@import 'object/component/c-sub-head';
 @import 'object/component/c-profile';
 @import 'object/component/c-search-tab';
 @import 'object/component/c-product-list';
@@ -22,7 +22,7 @@
 @import 'object/component/c-owner-product-list';
 @import 'object/component/c-owner-product-sell';
 @import 'object/component/c-top';
-@import 'object/component/c-price';
+@import 'object/component/c-flash-message';
 
 //project
 @import 'object/project/p-mypage-btn-animation-01';
@@ -35,8 +35,7 @@
 @import 'object/utility/u-padding';
 @import 'object/utility/u-margin';
 @import 'object/utility/u-color';
-@import 'object/utility/u-border';
-@import 'object/utility/u-display';
+@import 'object/utility/u-sp';
 
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";

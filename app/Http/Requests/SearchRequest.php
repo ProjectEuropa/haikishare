@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+//商品検索条件のバリデーション
 class SearchRequest extends FormRequest
 {
     /**
@@ -22,6 +23,7 @@ class SearchRequest extends FormRequest
      * @return array
      */
     public function rules()
+    //商品検索条件のバリデーション
     {
         return [
             'category_id' => 'nullable|regex:/^([0-9]{1,2})$/',

@@ -41,6 +41,8 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
         ],
+        'usercheck' => [\App\Http\Middleware\CheckUserLoggedIn::class],//追加
+        'companycheck' => [\App\Http\Middleware\CheckCompanyLoggedIn::class],//追加
     ];
 
     /**
@@ -61,8 +63,8 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
 
-        'usercheck' => \App\Http\Middleware\CheckUserLoggedIn::class,
-        'companycheck' => \App\Http\Middleware\CheckCompanyLoggedIn::class,
+        'usercheck' => \App\Http\Middleware\CheckUserLoggedIn::class,//追加
+        'companycheck' => \App\Http\Middleware\CheckCompanyLoggedIn::class,//追加
     ];
 
     /**

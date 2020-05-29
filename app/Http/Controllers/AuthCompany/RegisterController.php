@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
+//オーナー登録に関するクラス
 {
     /*
     |--------------------------------------------------------------------------
@@ -43,8 +44,9 @@ class RegisterController extends Controller
     }
 
     public function showRegisterForm() {
+      //オーナー登録画面に必要な情報をviewに渡している
       $prefectures = Prefecture::all();
-      return view('company_auth.register', compact('prefectures')); //登録フォーム
+      return view('company_auth.register', compact('prefectures'));
     }
 
     /**
@@ -54,6 +56,7 @@ class RegisterController extends Controller
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
+    //オーナー登録情報のバリデーションルール
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
@@ -73,6 +76,7 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
+    //バリデーション後のオーナー情報をデータベースに保存する
     {
         return \App\Company::create([
             'name' => $data['name'],
@@ -85,6 +89,6 @@ class RegisterController extends Controller
         ]);
     }
     protected function guard() {
-      return Auth::guard('company'); //先生用のguardを設定
+      return Auth::guard('company'); //オーナー用のguardを設定
     }
 }

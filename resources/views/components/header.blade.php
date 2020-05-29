@@ -1,19 +1,38 @@
 <div class="l-header">
-  <div class="l-header__left-box">
-    <a href="{{ url('/')}}" class="l-header__title"><img style="height: 100%;"src="{{ asset('img/logo.png')}}"></a>
-  </div>
-  <ul class="l-header__right-box">
-    @php
 
-    @endphp
-    <li><a
+  <!-- スマホのみ表示ここから-->
+  <div class="l-header__sp-left-box u-sp-display">
+    <a
           @if(!Auth::guard('company')->check())
             href="{{ route('home') }}"
           @elseif(Auth::guard('company')->check())
             href="{{ route('companies.home') }}"
           @endif
         >
-          <i class="fas fa-user l-header__user-logo"></i></a></li>
-    <li><a href="{{ route('products.index' )}}"><i class="fas fa-search l-header__search-logo"></i></a></li>
+          <i class="fas fa-user l-header__user-logo"></i>
+    </a>
+  </div>
+  <!-- スマホのみ表示ここまで-->
+
+  <a href="{{ url('/')}}" class="l-header__center-box"><img style="width: 100%;"src="{{ asset('img/logo.png')}}"></a>
+
+
+  <ul class="l-header__right-box">
+    <!-- スマホのみ非表示ここから-->
+    <li class="u-sp-no-display"><a
+          @if(!Auth::guard('company')->check())
+            href="{{ route('home') }}"
+          @elseif(Auth::guard('company')->check())
+            href="{{ route('companies.home') }}"
+          @endif
+        >
+          <i class="fas fa-user l-header__user-logo"></i></a>
+    </li>
+    <!-- スマホのみ非表示ここまで-->
+
+    <li>
+      <a href="{{ route('products.index' )}}"><i class="fas fa-search l-header__search-logo"></i></a>
+    </li>
   </ul>
+
 </div>

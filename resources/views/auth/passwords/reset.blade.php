@@ -18,31 +18,31 @@ haiki share パスワード変更
 
 
 
-<form method="post" action="{{ route('password.update') }}" class="c-profile__container">
+<form method="post" action="{{ route('password.update') }}">
 @csrf
 <input type="hidden" name="token" value="{{ $token }}">
 
-  <main class="c-profile__main-container">
+  <main class="c-profile__container">
         <div class="c-profile__item">
-          <div class="c-profile__warning">メールアドレス</div>
+          <div class="c-profile__label">メールアドレス</div>
           <input class="c-profile__input" type="email" name="email" value="{{ old('email') }}" autocomplete="email" autofocus/>
         </div>
         @error('email')
-            <span class="c-auth--error u-pl-180">
+            <span class="c-auth--error u-pl-180-sp-40">
                 <strong>{{ $message }}</strong>
             </span>
         @enderror
         <div class="c-profile__item">
-          <div class="c-profile__warning">新しいパスワード</div>
+          <div class="c-profile__label">新しいパスワード</div>
           <input class="c-profile__input" type="password" name="password" autocomplete="new-password" autofocus/>
         </div>
         @error('password')
-        <span class="c-auth--error u-pl-180">
+        <span class="c-auth--error u-pl-180-sp-40">
           <strong>{{ $message }}</strong>
         </span>
         @enderror
         <div class="c-profile__item">
-          <div class="c-profile__warning">再入力</div>
+          <div class="c-profile__label">再入力</div>
           <input class="c-profile__input" type="password" name="password_confirmation"  autocomplete="new-password" autofocus/>
         </div>
   </main>

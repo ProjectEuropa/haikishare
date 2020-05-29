@@ -5,15 +5,15 @@ namespace App\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Auth\Notifications\ResetPassword;
-
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
 
-
+//オーナー用のメールを送信するためのクラス
 class CompanyPasswordResetNotification extends ResetPassword
 {
 
+    //オーナー用のメール内容
     public function toMail($notifiable)
     {
         if (static::$toMailCallback) {

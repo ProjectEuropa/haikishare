@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
+//ユーザーのログインに関するクラス
 {
     /*
     |--------------------------------------------------------------------------
@@ -35,6 +36,7 @@ class LoginController extends Controller
      * @return void
      */
     public function __construct()
+    //ガードの指定をオーナーにする
     {
         $this->middleware('guest:company')->except('logout');
     }
@@ -43,6 +45,7 @@ class LoginController extends Controller
 
 
     public function showLoginForm()
+    //オーナーログインのviewそを指定する
 {
     return view('company_auth.login');
 }
@@ -53,6 +56,7 @@ protected function guard()
 }
 
 public function logout(Request $request)
+//オーナーがログアウトする時のメソッド
 {
     \Auth::guard('company')->logout();
     // $this->guard()->logout();
