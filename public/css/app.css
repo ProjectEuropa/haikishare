@@ -384,7 +384,7 @@ select:-moz-focusring {
   font-size: 18px;
   padding: 15px 0;
   width: 400px;
-  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
 }
 
 @media screen and (max-width: 550px) {
