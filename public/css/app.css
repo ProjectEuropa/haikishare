@@ -373,7 +373,7 @@ select:-moz-focusring {
 @media screen and (max-width: 550px) {
   .c-auth__warning-for-select {
     margin: 12px 10px 0 0;
-    width: 21px;
+    width: 26px;
   }
 }
 
