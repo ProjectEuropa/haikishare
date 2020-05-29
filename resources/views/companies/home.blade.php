@@ -42,7 +42,7 @@ haiki shareマイページ
   <div class="c-mypage-box">
     <a href="{{ route('products.show', $product->id ) }}">
 
-    <img src="/storage/{{$product->pic1 }}" class="c-mypage-box__img">
+    <!-- <img src="/storage/{{$product->pic1 }}" class="c-mypage-box__img"> -->
     <img src="data:image/png;base64,{{$product->pic1 }}" class="c-mypage-box__img">
 
     <div class="c-mypage-box__info">
