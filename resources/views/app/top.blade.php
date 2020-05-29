@@ -29,7 +29,13 @@
 @endcomponent
 
 
-
+<section class="c-top__hero">
+  <ul class="c-top__hero-title-box">
+    <li class="c-top__hero-title">スマホひとつで</li><br/>
+    <li class="c-top__hero-title">今日の食事をもっと安く</li><br/>
+    <li class="c-top__hero-title">提供します。</li>
+  </ul>
+</section>
 
 <main class="c-top__container">
   <div class="c-top__ask">
