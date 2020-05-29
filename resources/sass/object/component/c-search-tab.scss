@@ -84,8 +84,6 @@
   height: 30px;
   @include mq() {
     font-size: $font_sp-m;
-    height: 25px;
-    margin-bottom: 2px 0 3px 0;
     width: 20%;
   }
 }
