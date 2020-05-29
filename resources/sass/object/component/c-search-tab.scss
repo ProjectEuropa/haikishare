@@ -83,7 +83,7 @@
   text-align: right;
   height: 30px;
   @include mq() {
-    padding: $space_s;
+    padding: $space_m;
     font-size: $font_sp-m;
     width: 20%;
     height: 25px;
