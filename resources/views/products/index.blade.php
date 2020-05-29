@@ -106,7 +106,8 @@ haiki share商品一覧
   @foreach( $productList as $product )
   <a href="{{ route('products.show', $product->product_id )}}" class="c-product-list__box">
 
-    <img src="/storage/{{$product->pic1 }}" class="c-product-list__img">
+    <!-- <img src="/storage/{{$product->pic1 }}" class="c-product-list__img"> -->
+    <img src="data:image/png;base64,{{$product->pic1 }}" class="c-product-list__img">
     <div class="c-product-list__body">
       <div class="c-procut-list__item"><i class="fas fa-yen-sign"></i><span class="c-product-list__discount">{{ $product->discount }}</span><span class="c-product-list__price">{{ $product->price }}</span></div>
       <div class="c-procut-list__item c-product-list__name">{{ $product->product_name }}</div>

@@ -33,7 +33,7 @@ class UpdateProductRequest extends FormRequest
              'year' => 'required|regex:/^([0-9]{4})$/',
              'month' => 'required|regex:/^([0-9]{1,2})$/',
              'day' => 'required|regex:/^([0-9]{1,2})$/',
-             'hour' => 'regex:/^([0-9]{1,2})$/',
+             'hour' => 'nullable|regex:/^([0-9]{1,2})$/',
              'category_id' => 'required',
          ];
      }

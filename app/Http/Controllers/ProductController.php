@@ -164,9 +164,11 @@ class ProductController extends Controller
 
       $company_id = Auth::guard('company')->user()->id;
 
-      //ローカルの場合はファイルの保存先をstorage下にするために文字列からpublic/を除外する
+      //ファイルの保存先をstorage下にするために文字列からpublic/を除外する
       // $filePath = $request->pic1->store('public');
       // $path = str_replace('public/', '', $filePath);
+      
+      // 画像のバイナリデータを直接入れる
       $path = base64_encode(file_get_contents($request->pic1));
 
       //expirationを保存する時に、月と日にちがもし一桁だった場合にそれぞれ０を付け加えるようにする

@@ -25,7 +25,7 @@ haiki share{{ $product->name }}編集画面
 
   <div class="c-product__container">
     <div id="picture">
-      <picture-component pic="{{ $product->pic1 }}"></picture-component>
+      <picture-component pic="data:image/png;base64,{{ $product->pic1 }}"></picture-component>
     </div>
     @error('pic1')
     <span class="c-auth--error">

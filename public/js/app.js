@@ -105,6 +105,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['pic'],
   data: function data() {
@@ -630,10 +631,7 @@ var render = function() {
         on: { change: _vm.setImage }
       }),
       _vm._v(" "),
-      _c("img", {
-        staticClass: "c-product__img",
-        attrs: { src: /storage/ + _vm.pic }
-      }),
+      _c("img", { staticClass: "c-product__img", attrs: { src: _vm.pic } }),
       _vm._v("\n    画像\n  ")
     ])
   ])

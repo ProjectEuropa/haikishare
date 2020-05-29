@@ -11,7 +11,8 @@ haiki share{{ $product->name}}
 
 <main class="c-prodcut-detail__container">
 
-  <img src="/storage/{{$product->pic1 }}" class="c-product-detail__img">
+  <!-- <img src="/storage/{{$product->pic1 }}" class="c-product-detail__img"> -->
+  <img src="data:image/png;base64,{{$product->pic1 }}" class="c-product-detail__img">
   <div class="c-product-detail__name">{{ $product->name}}</div>
   <div class="c-product-detail__body">
     <div class="c-product-detail__item">

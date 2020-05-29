@@ -3,7 +3,8 @@
     <div class="c-product__info"><div class="c-product__name">画像</div><div class="c-product__label">必須</div></div>
     <div class="c-product__img-container">
       <input type="file" ref="file" @change="setImage" class="c-product__input-file" name="pic1"/>
-      <img :src="/storage/ + pic" class="c-product__img">
+      <!-- <img :src="/storage/ + pic" class="c-product__img"> -->
+      <img :src="pic" class="c-product__img">
       画像
     </div>
   </div>
