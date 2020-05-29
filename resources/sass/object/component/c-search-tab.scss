@@ -57,10 +57,9 @@
   float: left;
   margin-right: $space_4l;
   @include mq() {
-    padding-top: 8px;
+    margin-bottom: $space_2l;
     margin-right: $space_m;
     width: 20%;
-
   }
 
 }
@@ -96,7 +95,6 @@
   overflow: hidden;
   @include mq() {
     margin-bottom: $space_s;
-    line-height: 0;
   }
 }
 .c-search-tab__item-for-checkbox {
@@ -194,6 +192,9 @@
   right: 14px;
   top: 12px;
   width: 0;
+  @include mq() {
+    top: 13px;
+  }
 }
 
 
