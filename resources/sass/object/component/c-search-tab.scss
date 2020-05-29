@@ -119,6 +119,7 @@
 }
 .c-search-tab__create-btn {
   align-items: center;
+  border-radius: 0;
   background: $theme_pearl_gray;
   border: 0;
   cursor: pointer;
@@ -129,6 +130,7 @@
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   width: 100%;
+  -webkit-appearance: none;
 }
 
 .c-search-tab__logo {

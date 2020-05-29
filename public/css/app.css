@@ -491,7 +491,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-auth__select-box select {
-    padding: 20px 0 3px 0;
+    padding: 20px 0 3px 10px;
     font-size: 10px;
     width: 100px;
   }
@@ -975,6 +975,7 @@ select:-moz-focusring {
 }
 
 .c-profile__create-btn {
+  border-radius: 0;
   align-items: center;
   background: #DFD000;
   border: 0;
@@ -986,6 +987,7 @@ select:-moz-focusring {
   outline: none;
   transition: all 0.3 ease;
   width: 100%;
+  -webkit-appearance: none;
 }
 
 .c-profile__logo {
@@ -1226,6 +1228,7 @@ select:-moz-focusring {
 
 .c-search-tab__create-btn {
   align-items: center;
+  border-radius: 0;
   background: #F8F8F8;
   border: 0;
   cursor: pointer;
@@ -1235,6 +1238,7 @@ select:-moz-focusring {
   outline: none;
   transition: all 0.3 ease;
   width: 100%;
+  -webkit-appearance: none;
 }
 
 .c-search-tab__logo {
