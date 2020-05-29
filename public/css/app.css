@@ -1173,12 +1173,14 @@ select:-moz-focusring {
   padding: 5px;
   width: 100px;
   text-align: right;
+  height: 30px;
 }
 
 @media screen and (max-width: 550px) {
   .c-search-tab__input-for-price {
     font-size: 12px;
     width: 20%;
+    height: 25px;
   }
 }
 
