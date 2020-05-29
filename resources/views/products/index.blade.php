@@ -92,7 +92,14 @@ haiki share商品一覧
 <div class="c-product-list__container">
 
   <div class="c-product-list__head-info">
-    検索結果{{ $productList->total() }}件のうち {{ $productList->firstItem() }}-{{ $productList->lastItem() }}件<br />
+    検索結果{{ $productList->total() }}件のうち
+    {{ $productList->firstItem() }}
+    @if ($productList->total() === 0)
+    0
+    @else
+    -
+    @endif
+    {{ $productList->lastItem() }}件<br />
     @if ($searchConditions)
     <div class="c-product-list__head-info-conditions">
       検索条件 >
