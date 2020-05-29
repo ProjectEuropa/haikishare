@@ -378,13 +378,11 @@ select:-moz-focusring {
 }
 
 .c-auth__input {
-  border: none;
   background: #F8FAFC;
   color: #757575;
   font-size: 18px;
   padding: 15px 0;
   width: 400px;
-  -webkit-appearance: none;
 }
 
 @media screen and (max-width: 550px) {

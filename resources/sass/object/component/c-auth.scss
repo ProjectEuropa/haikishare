@@ -50,13 +50,12 @@
 }
 
 .c-auth__input {
-  border: none;
+  // border: none;
   background: $theme_gray_background;
   color: $theme_dark_gray;
   font-size: $font_m;
   padding: $space_l 0;
   width: 400px;
-  -webkit-appearance: none;
   @include mq() {
     font-size: $font_sp-s;
     padding: 18px 0 $space_s $space_m;
