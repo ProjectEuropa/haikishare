@@ -74,6 +74,7 @@
  }
 
 .c-auth__btn {
+  border-radius: 0;
   background: $theme_yellow;
   border: none;
   color: $theme_white;
@@ -85,6 +86,7 @@
   padding: $space_s $space_m;
   width: 100px;
   height: $space_4l;
+  -webkit-appearance: none;
   @include mq() {
     font-size: $font_s;
     float: none;

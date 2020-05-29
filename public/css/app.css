@@ -407,6 +407,7 @@ select:-moz-focusring {
 }
 
 .c-auth__btn {
+  border-radius: 0;
   background: #DFD000;
   border: none;
   color: #FFFFFF;
@@ -418,6 +419,7 @@ select:-moz-focusring {
   padding: 5px 10px;
   width: 100px;
   height: 40px;
+  -webkit-appearance: none;
 }
 
 @media screen and (max-width: 550px) {
