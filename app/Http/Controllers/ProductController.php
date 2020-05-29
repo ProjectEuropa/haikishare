@@ -281,6 +281,8 @@ class ProductController extends Controller
       if (isset($request->pic1)){
         // $filePath = $request->pic1->store('public');
         // $path = str_replace('public/', '', $filePath);
+
+        // 画像のバイナリデータを直接入れる
         $path = base64_encode(file_get_contents($request->pic1));
       }
 
