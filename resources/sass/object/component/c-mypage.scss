@@ -83,6 +83,7 @@
   @include mq(){
     padding-top: $space_s;
     width: 65%;
+    font-weight: bold;
   }
 }
 .c-mypage-box__info--text {
@@ -90,6 +91,7 @@
     box-sizing: border-box;
     float: left;
     font-size: $font_sp-m;
+    font-weight: bold;
     height: 100px;
     line-height: 100px;
     overflow:hidden;

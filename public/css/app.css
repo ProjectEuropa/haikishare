@@ -681,6 +681,7 @@ select:-moz-focusring {
   .c-mypage-box__info {
     padding-top: 5px;
     width: 65%;
+    font-weight: bold;
   }
 }
 
@@ -689,6 +690,7 @@ select:-moz-focusring {
     box-sizing: border-box;
     float: left;
     font-size: 12px;
+    font-weight: bold;
     height: 100px;
     line-height: 100px;
     overflow: hidden;
