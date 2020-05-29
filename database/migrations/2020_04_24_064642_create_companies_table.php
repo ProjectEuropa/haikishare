@@ -19,7 +19,7 @@ class CreateCompaniesTable extends Migration
           $table->string('store');
           $table->string('address');
           $table->integer('zip');
-          $table->string('email', '191');
+          $table->string('email', '191')->unique();
           $table->timestamp('email_verified_at');
           $table->string('password');
           $table->rememberToken();
