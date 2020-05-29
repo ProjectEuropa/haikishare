@@ -83,6 +83,7 @@
   text-align: right;
   height: 30px;
   @include mq() {
+    box-sizing: border-box;
     font-size: $font_sp-m;
     width: 20%;
   }
