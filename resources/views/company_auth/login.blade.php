@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki shareオーナーログイン
+haiki share | オーナーログイン
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@ haiki shareオーナーログイン
 
 @component('components.sub-head')
   @slot('title')
-   ログイン
+   オーナーログイン
   @endslot
 @endcomponent
 
