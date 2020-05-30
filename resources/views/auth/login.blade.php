@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-config('app.url') | ユーザーログイン
+{{config('app.name')}} | ユーザーログイン
 @endsection
 
 @section('content')

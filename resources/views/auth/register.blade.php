@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki share | ユーザー登録
+{{config('app.name')}} | ユーザー登録
 @endsection
 
 @section('content')

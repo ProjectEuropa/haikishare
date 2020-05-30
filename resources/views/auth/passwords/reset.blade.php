@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki share | パスワード変更
+{{config('app.name')}} | パスワード変更
 @endsection
 
 @section('content')

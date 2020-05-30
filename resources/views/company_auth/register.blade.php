@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki share | オーナー登録
+{{config('app.name')}}| オーナー登録
 @endsection
 
 @section('content')

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki share | オーナーログイン
+{{config('app.name')}} | オーナーログイン
 @endsection
 
 @section('content')

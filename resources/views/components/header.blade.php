@@ -2,14 +2,8 @@
 
   <!-- スマホのみ表示ここから-->
   <div class="l-header__sp-left-box u-sp-display">
-    <a
-          @if(!Auth::guard('company')->check())
-            href="{{ route('home') }}"
-          @elseif(Auth::guard('company')->check())
-            href="{{ route('companies.home') }}"
-          @endif
-        >
-          <i class="fas fa-user l-header__user-logo"></i>
+    <a href="{{ route('route') }}">
+      <i class="fas fa-user l-header__user-logo"></i>
     </a>
   </div>
   <!-- スマホのみ表示ここまで-->

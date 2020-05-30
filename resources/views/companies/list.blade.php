@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki share | 出品商品一覧
+{{config('app.name')}} | 出品商品一覧
 @endsection
 
 @section('content')

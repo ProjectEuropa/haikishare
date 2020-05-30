@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki share | マイページ
+{{config('app.name')}} | マイページ
 @endsection
 
 @section('content')

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki share | アカウント情報編集
+{{config('app.name')}} | アカウント情報編集
 @endsection
 
 @section('content')
