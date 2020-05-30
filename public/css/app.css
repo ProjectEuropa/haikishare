@@ -2008,7 +2008,7 @@ select:-moz-focusring {
 
 .c-product__btn {
   align-items: center;
-  border: 0;
+  border: none;
   color: #FFFFFF;
   cursor: pointer;
   height: 50px;
@@ -2019,6 +2019,7 @@ select:-moz-focusring {
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   width: 250px;
+  -webkit-appearance: none;
 }
 
 @media screen and (max-width: 550px) {
@@ -2132,7 +2133,7 @@ select:-moz-focusring {
 @media screen and (max-width: 550px) {
   .c-product__select-box:before {
     right: 25px;
-    top: 18px;
+    top: 16px;
   }
 }
 

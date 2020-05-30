@@ -181,7 +181,7 @@
 }
 .c-product__btn {
   align-items: center;
-  border: 0;
+  border: none;
   color: $theme_white;
   cursor: pointer;
   height: $space_5l;
@@ -192,6 +192,7 @@
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   width: 250px;
+  -webkit-appearance: none;
   @include mq(){
     height: $space_4l;
     line-height: $space_4l;
@@ -285,6 +286,6 @@
   width: 0;
   @include mq() {
     right: 25px;
-    top: 18px;
+    top: 16px;
   }
 }
