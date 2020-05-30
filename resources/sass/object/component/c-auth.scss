@@ -114,10 +114,9 @@
 }
 
 .c-auth__select-box {
-  border-bottom: 3px solid $theme_gray_word_bottom;
-  background: $theme_gray_background;
   box-sizing: border-box;
   border: none;
+  border-bottom: 3px solid #eaeaea;
   font-size: $font_m;
   margin: 0 250px 0 0;
   outline: none;

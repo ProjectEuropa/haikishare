@@ -456,10 +456,9 @@ select:-moz-focusring {
 }
 
 .c-auth__select-box {
-  border-bottom: 3px solid #EAEAEA;
-  background: #F8FAFC;
   box-sizing: border-box;
   border: none;
+  border-bottom: 3px solid #eaeaea;
   font-size: 18px;
   margin: 0 250px 0 0;
   outline: none;
