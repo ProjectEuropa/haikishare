@@ -32,7 +32,7 @@ class CompaniesController extends Controller
   }
   public function list($id) {
     //オーナーが出品した商品一覧情報をviewに渡すためのメソッド
-    $productList = Product::where('company_id', $id)->where('delete_flg', '0')->orderBy('id', 'desc')->paginate(30);
+    $productList = Product::where('company_id', $id)->where('delete_flg', '0')->orderBy('id', 'desc')->paginate(10);
     $productCount = Product::where('company_id', $id)->where('delete_flg', '0')->count();
     foreach($productList as $key){
       $key->date = $key->created_at->format('Y年n月j日');
@@ -55,7 +55,7 @@ class CompaniesController extends Controller
                                    'sold_flg')
                                    ->leftjoin('orders', 'orders.product_id', '=', 'products.id')
                                    ->orderBy('order_time', 'desc')
-                                   ->paginate(30);
+                                   ->paginate(10);
     foreach($productList as $key){
       $key->date = $key->order_time->format('Y年n月j日');
     }

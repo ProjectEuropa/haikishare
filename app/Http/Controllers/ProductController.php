@@ -42,7 +42,7 @@ class ProductController extends Controller
                                      'sold_flg')
                                      ->leftjoin('companies', 'companies.id', '=', 'products.company_id')
                                      ->leftjoin('prefectures', 'prefectures.id', '=', 'companies.prefecture_id')
-                                     ->orderBy('product_id', 'desc')->paginate(50);
+                                     ->orderBy('product_id', 'desc')->paginate(10);
       $categories = Category::all();
       $prefectures = Prefecture::all();
       $searchConditions[] = '賞味期限切れ：含む';
@@ -122,7 +122,7 @@ class ProductController extends Controller
        ->when($prefecture_id, function($query) use ($prefecture_id){
         return $query->where('prefecture_id', $prefecture_id);
       });
-       $productList = $productList->paginate(50);
+       $productList = $productList->paginate(10);
        $categories = Category::all();
        $prefectures = Prefecture::all();
         return view('/products/index', compact('productList', 'categories', 'prefectures', 'searchConditions'));
