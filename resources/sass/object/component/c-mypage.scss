@@ -81,7 +81,7 @@
   text-align: center;
   width: 250px;
   @include mq(){
-    padding-top: $space_s;
+    padding-top: $space_m;
     width: 65%;
     font-weight: bold;
   }
