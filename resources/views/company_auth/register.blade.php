@@ -41,7 +41,11 @@
           <select name="prefecture">
           	<option value="" hidden>都道府県</option>
             @foreach ($prefectures as $prefecture)
-          	<option value="{{{ $prefecture->id }}}">{{{ $prefecture->name }}}</option>
+            @if ( old('prefecture') == $prefecture->id)
+            <option value="{{{ $prefecture->id }}}" selected>{{{ $prefecture->name }}}</option>
+            @else
+            <option value="{{{ $prefecture->id }}}">{{{ $prefecture->name }}}</option>
+            @endif
             @endforeach
           </select>
         </div>
