@@ -515,6 +515,7 @@ select:-moz-focusring {
   right: 35px;
   top: 30px;
   width: 0;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 550px) {
@@ -1085,9 +1086,10 @@ select:-moz-focusring {
   pointer-events: none;
   position: absolute;
   padding: 0;
-  bottom: 17px;
+  top: 17px;
   right: 13px;
   width: 0;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 550px) {

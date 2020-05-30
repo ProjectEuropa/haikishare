@@ -167,6 +167,7 @@
   right: 35px;
   top: 30px;
   width: 0;
+  pointer-events: none;
   @include mq() {
     right: 20px;
     top: 25px;
