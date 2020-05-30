@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-{{config('app.name')}} | アカウント情報編集
+{{config('app.name')}} | オーナーアカウント情報編集
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
 
 @component('components.sub-head')
   @slot('title')
-   アカウント情報編集
+   オーナーアカウント情報編集
   @endslot
 @endcomponent
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-{{config('app.name')}} | パスワード変更
+{{config('app.name')}} | ユーザーパスワード変更
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 
 @component('components.sub-head')
   @slot('title')
-   パスワード変更
+   ユーザーパスワード変更
   @endslot
 @endcomponent
 

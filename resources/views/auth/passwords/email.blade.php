@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-{{config('app.name')}} | パスワードリセット
+{{config('app.name')}} | ユーザーパスワードリセット
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 
 @component('components.sub-head')
   @slot('title')
-   パスワードリセット
+   ユーザーパスワードリセット
   @endslot
 @endcomponent
 

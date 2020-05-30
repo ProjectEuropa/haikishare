@@ -12,7 +12,7 @@
 
 @component('components.sub-head')
   @slot('title')
-   出品商品リスト
+   出品商品一覧
   @endslot
 @endcomponent
 

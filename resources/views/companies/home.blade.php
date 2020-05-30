@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-{{config('app.name')}} | マイページ
+{{config('app.name')}} | オーナーマイページ
 @endsection
 
 @section('content')

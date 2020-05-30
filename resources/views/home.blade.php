@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-{{config('app.name')}} | マイページ
+{{config('app.name')}} | ユーザーマイページ
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 
 @component('components.sub-head')
   @slot('title')
-   マイページ
+   ユーザーマイページ
   @endslot
 @endcomponent
 
