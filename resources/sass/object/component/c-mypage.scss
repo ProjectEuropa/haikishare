@@ -8,7 +8,6 @@
   }
 }
 
-
 .c-mypage-container__title-box {
   box-sizing: border-box;
   padding: $space_5l;
@@ -17,6 +16,7 @@
     padding: $space_2l 0;
   }
 }
+
 .c-mypage-container__title {
   font-size: $font_2l;
   @include mq(){
@@ -109,23 +109,6 @@
     width: 100px;
   }
 }
-
-.c-mypage-box__link {
-  text-decoration: none;
-  color: #333;
-}
-
-.c-mypage-box__title {
-  background: $theme_yellow;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-  display: flex;
-  height: $space_4l;
-  justify-content: space-between;
-  line-height: $space_4l;
-  padding: 0 $space_m;
-}
-
 
 .c-mypage-box__item {
   box-sizing: border-box;
