@@ -170,7 +170,7 @@ class ProductController extends Controller
       // 画像のバイナリデータを直接入れる
       $path = base64_encode(file_get_contents($request->pic1));
 
-      //expirationを保存する時に、月と日にちがもし一桁だった場合にそれぞれ０を付け加えるようにする
+      //expirationを保存する時に、月と日にちがもし一桁だった場合にそれぞれ０を付け加えるようにする(format関数で比較する時に必要になる)
       $validatedMonth = sprintf('%02d', $request->month);
       $validatedDay = sprintf('%02d', $request->day);
 

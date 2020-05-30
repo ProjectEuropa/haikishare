@@ -35,7 +35,7 @@ class CompaniesController extends Controller
     $productList = Product::where('company_id', $id)->where('delete_flg', '0')->orderBy('id', 'desc')->paginate(30);
     $productCount = Product::where('company_id', $id)->where('delete_flg', '0')->count();
     foreach($productList as $key){
-      $key->date = $key->created_at->format('Y年m月d日');
+      $key->date = $key->created_at->format('Y年n月j日');
     }
 
     return view('/companies/list', compact('productList', 'productCount'));
@@ -57,7 +57,7 @@ class CompaniesController extends Controller
                                    ->orderBy('order_time', 'desc')
                                    ->paginate(30);
     foreach($productList as $key){
-      $key->date = $key->order_time->format('Y年m月d日');
+      $key->date = $key->order_time->format('Y年n月j日');
     }
     return view('/companies/sell', compact('productList'));
   }

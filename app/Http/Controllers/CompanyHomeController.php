@@ -31,7 +31,7 @@ class CompanyHomeController extends Controller
     {
       $productList = Auth::guard('company')->user()->products()->where('delete_flg', '0')->take(5)->orderBy('id', 'desc')->get();
       foreach($productList as $product){
-        $product->createDay = $product->created_at->format('Y年m月d日');
+        $product->createDay = $product->created_at->format('Y年n月j日');
       }
       $productSell = Product::where('products.sold_flg', '1')
                             ->where('orders.delete_flg', '0')
@@ -49,7 +49,7 @@ class CompanyHomeController extends Controller
                                      ->take(5)
                                      ->get();
      foreach($productSell as $key){
-       $key->date = $key->order_time->format('Y年m月d日');
+       $key->date = $key->order_time->format('Y年n月j日');
      }
         return view('companies.home', compact('productList', 'productSell'));
     }

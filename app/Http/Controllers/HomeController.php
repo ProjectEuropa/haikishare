@@ -36,7 +36,7 @@ class HomeController extends Controller
 
       $productList = Auth::user()->product()->where('orders.delete_flg', '0')->orderBy('orders.created_at', 'desc')->paginate(30);
       foreach($productList as $key){
-        $key->date = $key->orders()->value('created_at')->format('Y年m月d日');
+        $key->date = $key->orders()->value('created_at')->format('Y年n月j日');
         $key->discountRate = round(($key->price - $key->discount) / $key->price * 100);
 
         $company_id = Product::find($key->id)->company_id;
