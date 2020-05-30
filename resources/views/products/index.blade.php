@@ -18,7 +18,7 @@ haiki share商品一覧
           <div class="c-search-tab__label">都道府県</div>
           <div class="c-search-tab__select-box">
             <select name="prefecture_id" class="u-bgc-gray">
-            	<option value="" hidden>なし</option>
+            	<option value="" hidden>-未選択-</option>
               @foreach ($prefectures as $prefecture)
             	<option value="{{{ $prefecture->id }}}">{{{ $prefecture->name }}}</option>
               @endforeach
@@ -35,7 +35,7 @@ haiki share商品一覧
           <div class="c-search-tab__label">カテゴリー</div>
           <div class="c-search-tab__select-box c-search-tab__select--bigger">
             <select name="category_id" class="u-bgc-gray">
-              <option value="" hidden>なし</option>
+              <option value="" hidden>-未選択-</option>
               @foreach ($categories as $category)
               <option value="{{{ $category->id }}}">{{{ $category->name }}}</option>
               @endforeach

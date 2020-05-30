@@ -1349,6 +1349,7 @@ select:-moz-focusring {
 @media screen and (max-width: 550px) {
   .c-search-tab__select-box:before {
     top: 15px;
+    display: none;
   }
 }
 
