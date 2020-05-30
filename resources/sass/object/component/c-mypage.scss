@@ -77,13 +77,13 @@
 }
 
 .c-mypage-box__info {
-  padding-top: $space_2l;
+  padding-top: $space_m;
   text-align: center;
   width: 250px;
   @include mq(){
+    font-weight: bold;
     padding-top: $space_s;
     width: 65%;
-    font-weight: bold;
   }
 }
 .c-mypage-box__info--text {
@@ -142,15 +142,15 @@
     padding: 0 0 $space_s 0;
   }
 }
-.c-mypage-box__item-for-expiration {
+.c-mypage-box__item-for-date {
   box-sizing: border-box;
   overflow:hidden;
-  padding: $space_s;
+  padding-bottom: $space_s;
   text-overflow:ellipsis;
   width:100%;
   white-space:nowrap;
   @include mq(){
-    padding: 0 0 2px 0;
+    padding-bottom: 2px;
     color: $theme_gray;
     font-size: $font_sp-m;
   }
@@ -160,7 +160,7 @@
   align-items: center;
   display: flex;
   justify-content: space-around;
-  margin-top: $space_m;
+  margin-top: $space_s;
   @include mq(){
     margin-top: 2px;
     width: 100%;
