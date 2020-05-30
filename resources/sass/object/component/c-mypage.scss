@@ -95,7 +95,6 @@
     height: 100px;
     line-height: 100px;
     overflow:hidden;
-    padding-top: $space_s;
     text-overflow:ellipsis;
     text-align: center;
     white-space:nowrap;
@@ -143,6 +142,19 @@
     padding: 0 0 $space_s 0;
   }
 }
+.c-mypage-box__item-for-expiration {
+  box-sizing: border-box;
+  overflow:hidden;
+  padding: $space_s;
+  text-overflow:ellipsis;
+  width:100%;
+  white-space:nowrap;
+  @include mq(){
+    padding: 0 0 $space_s 0;
+    color: $theme_gray;
+    font-size: $font_sp-m;
+  }
+}
 
 .c-mypage-box__btn-container {
   align-items: center;
@@ -161,6 +173,7 @@
   cursor: pointer;
   display: block;
   font-size: $font_sp-m;
+  font-weight: normal;
   float: left;
   height: $space_3l;
   line-height: $space_3l;

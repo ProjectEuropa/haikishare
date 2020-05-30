@@ -694,7 +694,6 @@ select:-moz-focusring {
     height: 100px;
     line-height: 100px;
     overflow: hidden;
-    padding-top: 5px;
     text-overflow: ellipsis;
     text-align: center;
     white-space: nowrap;
@@ -749,6 +748,23 @@ select:-moz-focusring {
   }
 }
 
+.c-mypage-box__item-for-expiration {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 5px;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 550px) {
+  .c-mypage-box__item-for-expiration {
+    padding: 0 0 5px 0;
+    color: #808080;
+    font-size: 12px;
+  }
+}
+
 .c-mypage-box__btn-container {
   align-items: center;
   display: flex;
@@ -769,6 +785,7 @@ select:-moz-focusring {
   cursor: pointer;
   display: block;
   font-size: 12px;
+  font-weight: normal;
   float: left;
   height: 30px;
   line-height: 30px;
@@ -3156,10 +3173,6 @@ select:-moz-focusring {
 
 .u-bgc-gray {
   background: #F2F2F2;
-}
-
-.u-c-gray {
-  color: #808080;
 }
 
 @media screen and (max-width: 550px) {
