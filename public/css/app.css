@@ -653,7 +653,7 @@ select:-moz-focusring {
   display: flex;
   float: left;
   height: 150px;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0 20px 20px 0;
   position: relative;
   width: 400px;
@@ -683,7 +683,9 @@ select:-moz-focusring {
   .c-mypage-box__info {
     font-weight: bold;
     padding-top: 5px;
-    width: 65%;
+    padding-left: 10%;
+    text-align: left;
+    width: 57%;
   }
 }
 
@@ -747,6 +749,7 @@ select:-moz-focusring {
 @media screen and (max-width: 550px) {
   .c-mypage-box__item {
     padding: 0 0 5px 0;
+    width: 90%;
   }
 }
 
@@ -802,16 +805,17 @@ select:-moz-focusring {
     font-size: 10px;
     height: 20px;
     line-height: 20px;
+    text-align: center;
   }
 }
 
 .c-mypage-box__company-btn {
-  margin: 0 auto;
+  margin: 0 10% 0 0;
 }
 
 @media screen and (max-width: 550px) {
   .c-mypage-box__company-sp-size-btn {
-    width: 60%;
+    width: 90%;
   }
 }
 

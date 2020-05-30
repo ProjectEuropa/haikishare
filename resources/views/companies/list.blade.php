@@ -37,6 +37,7 @@ haiki share出品商品一覧
           <div class="c-owner-product-list__name">{{ $product->name }}</div>
           <div class="c-owner-product-list__item"><span>割引価格</span><span class="c-owner-product-list__discount">{{ $product->discount }}</span><span class="c-owner-product-list__discount-letter">円</span><span>(税込み)</span><span class="c-owner-product-list__price-gray">{{ $product->price }}円</span>
           </div>
+
           <div class="c-owner-product-list__expiration">
             賞味期限：{{ $product->year }}年{{ $product->month }}月{{ $product->day }}日
             @if( $product->hour )
@@ -72,12 +73,13 @@ haiki share出品商品一覧
       <div class="c-mypage-box__info">
         <div class="c-mypage-box__item">{{ $product->name }}</div>
         <div class="c-mypage-box__item"><span class="c-price-red">{{ $product->discount }}円</span><span class="c-price-line">{{ $product->price }}円</span></div>
-        <div class="c-mypage-box__item">
+        <div class="c-mypage-box__item-for-date">
           賞味期限：{{ $product->year }}年{{ $product->month }}月{{ $product->day }}日
           @if( $product->hour )
           {{ $product->hour}}時
           @endif
         </div>
+        <div class="c-mypage-box__item-for-date">出品日：{{ $product->date }}</div>
         <div class="c-mypage-box__btn-container">
           @if ( $product->sold_flg == '0' )
           <a href="{{ route('products.edit', $product->id ) }}" class="c-mypage-box__btn c-mypage-box__btn--normal c-mypage-box__company-btn c-mypage-box__company-sp-size-btn">商品情報の変更</a>

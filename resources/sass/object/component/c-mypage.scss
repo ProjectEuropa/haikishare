@@ -61,7 +61,7 @@
   display: flex;
   float: left;
   height: 150px;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0 $space_2l $space_2l 0;
   position: relative;
   width: 400px;
@@ -84,7 +84,9 @@
   @include mq(){
     font-weight: bold;
     padding-top: $space_s;
-    width: 65%;
+    padding-left: 10%;
+    text-align: left;
+    width: 57%;
   }
 }
 .c-mypage-box__info--text {
@@ -141,6 +143,7 @@
   white-space:nowrap;
   @include mq(){
     padding: 0 0 $space_s 0;
+    width:90%;
   }
 }
 .c-mypage-box__item-for-date {
@@ -186,15 +189,16 @@
     font-size: $font_sp-s;
     height: $space_2l;
     line-height: $space_2l;
+    text-align: center;
   }
 }
 .c-mypage-box__company-btn{
-  margin: 0 auto;
+  margin: 0 10% 0 0;
 }
 
 .c-mypage-box__company-sp-size-btn{
   @include mq(){
-    width: 60%;
+    width: 90%;
   }
 }
 .c-mypage-box__user-sp-size-btn{
