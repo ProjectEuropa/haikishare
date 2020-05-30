@@ -19,14 +19,7 @@
 
   <ul class="l-header__right-box">
     <!-- スマホのみ非表示ここから-->
-    <li class="u-sp-no-display"><a
-          @if(!Auth::guard('company')->check())
-            href="{{ route('home') }}"
-          @elseif(Auth::guard('company')->check())
-            href="{{ route('companies.home') }}"
-          @endif
-        >
-          <i class="fas fa-user l-header__user-logo"></i></a>
+    <li class="u-sp-no-display"><a href="{{ route('route') }}"><i class="fas fa-user l-header__user-logo"></i></a>
     </li>
     <!-- スマホのみ非表示ここまで-->
 

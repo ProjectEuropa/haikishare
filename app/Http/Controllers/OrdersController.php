@@ -84,4 +84,5 @@ class OrdersController extends Controller
 
       return redirect('/home')->with('flash_message', '商品をキャンセルしました');
     }
+
 }

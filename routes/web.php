@@ -54,3 +54,5 @@ Route::group(['middleware' => ['usercheck']], function() {
   Route::post('/orders/{id}', 'OrdersController@create')->name('orders.create');
   Route::post('/orders/destroy/{id}', 'OrdersController@destroy')->name('orders.destroy');
 });
+
+Route::get('/route', 'RouteController@index')->name('route');
