@@ -1098,7 +1098,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-profile__select-box:before {
-    left: 57px;
+    display: none;
   }
 }
 
@@ -1348,7 +1348,6 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-search-tab__select-box:before {
-    top: 15px;
     display: none;
   }
 }

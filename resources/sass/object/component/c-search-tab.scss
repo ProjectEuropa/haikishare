@@ -195,7 +195,6 @@
   top: 12px;
   width: 0;
   @include mq() {
-    top: 15px;
     display: none;
   }
 }

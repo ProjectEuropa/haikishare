@@ -137,6 +137,6 @@
   width: 0;
   pointer-events: none;
   @include mq(){
-    left: 57px;
+    display: none;
   }
 }
