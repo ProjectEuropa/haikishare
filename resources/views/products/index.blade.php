@@ -76,7 +76,7 @@ haiki share | 商品一覧
 
         <div class="c-search-tab__label-for-checkbox">在庫なし</div>
         <div class="c-search-tab__checkbox">
-          <input id="sold" value="1" name="sold" type="checkbox" class="checkbox"checked><label for="sold">表示</label>
+          <input id="sold" value="1" name="sold" type="checkbox" class="checkbox"><label for="sold">表示</label>
         </div>
       </div>
 
@@ -102,9 +102,9 @@ haiki share | 商品一覧
     {{ $productList->lastItem() }}件<br />
     @if ($searchConditions)
     <div class="c-product-list__head-info-conditions">
-      検索条件 >
+      検索条件
       @foreach ( $searchConditions as $list)
-      <span>{{$list}} ></span>
+      <span> > {{$list}}</span>
       @endforeach
     </div>
     @endif

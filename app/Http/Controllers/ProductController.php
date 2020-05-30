@@ -26,6 +26,7 @@ class ProductController extends Controller
     //商品一覧画面で表示させる商品情報をviewに返すためのメソッド
     {
       $productList = Product::where('products.delete_flg', '0')
+                            ->where('products.sold_flg', '0')
                             ->select('products.name as product_name',
                                      'companies.name as company_name',
                                      'prefectures.name as prefecture_name',
@@ -45,7 +46,6 @@ class ProductController extends Controller
       $categories = Category::all();
       $prefectures = Prefecture::all();
       $searchConditions[] = '賞味期限切れ：含む';
-      $searchConditions[] = '在庫なし：含む';
 
 
 
@@ -79,8 +79,8 @@ class ProductController extends Controller
      if (isset($sold)){
        $searchConditions[] = '在庫なし：含む';
      }else{
-       $searchConditions[] = '在庫なし：含まない';
      }
+
 
      $date = Carbon::now()->format('Y-m-d');
 
@@ -115,7 +115,6 @@ class ProductController extends Controller
        ->when($price_bottom && $price_top, function($query) use ($price_top, $price_bottom){
         return $query->whereBetween('discount', [$price_bottom, $price_top]);
        })
-
        ->when(!$sold, function($query) use ($sold){
          return $query->where('sold_flg', '0');
        })
