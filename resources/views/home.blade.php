@@ -54,7 +54,13 @@ haiki shareマイページ
     <div class="c-mypage-box__info">
       <div class="c-mypage-box__item">{{ $product->name }}</div>
       <div class="c-mypage-box__item"><span class="c-price-red">{{ $product->discount }}円</span><span class="c-price-line">{{ $product->price }}円</span></div>
-      <div class="c-mypage-box__item">購入日：{{ $product->date }}</div>
+      <div class="c-mypage-box__item-for-date">購入日：{{ $product->date }}</div>
+      <div class="c-mypage-box__item-for-date">
+        賞味期限：{{ $product->year }}年{{ $product->month }}月{{ $product->day }}日
+        @if( $product->hour )
+        {{ $product->hour}}時
+        @endif
+      </div>
       <div class="c-mypage-box__btn-container">
 
         <a class="c-mypage-box__btn c-mypage-box__btn--check c-mypage-box__user-sp-size-btn"><i class="fas fa-check u-pr-10-sp-5"></i>購入済</a>
