@@ -48,6 +48,9 @@ haiki shareマイページ
       <div class="c-mypage-box__item">{{ $product->name }}</div>
       <div class="c-mypage-box__item"><span class="c-price-red">{{ $product->discount }}円</span><span class="c-price-line">{{ $product->price }}円</span></div>
       <div class="c-mypage-box__item-for-expiration">
+        販売日：{{ $product->createDay }}
+      </div>
+      <div class="c-mypage-box__item-for-expiration">
         賞味期限：{{ $product->year }}年{{ $product->month }}月{{ $product->day }}日
         @if( $product->hour )
         {{ $product->hour}}時

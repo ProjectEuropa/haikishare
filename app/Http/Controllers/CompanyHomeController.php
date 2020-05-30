@@ -30,10 +30,9 @@ class CompanyHomeController extends Controller
     //販売商品、出品商品を表示するための情報をオーナーのマイページに渡すためのメソッド
     {
       $productList = Auth::guard('company')->user()->products()->where('delete_flg', '0')->take(5)->orderBy('id', 'desc')->get();
-      $list_flg = ( Auth::guard('company')->user()->products()->first() ) ? true : false;
-      // dd($productList);
-      // $productSell = Auth::guard('company')->user()->products()->where('delete_flg', '0')->where('sold_flg', '1')->take(5)->orderBy('id', 'desc')->get();
-      // $productSell = Auth::guard('company')->user()->products()->where('delete_flg', '0')->where('sold_flg', '1')->take(5)->orderBy('id', 'desc')->get();
+      foreach($productList as $product){
+        $product->createDay = $product->created_at->format('Y年m月d日');
+      }
       $productSell = Product::where('products.sold_flg', '1')
                             ->where('orders.delete_flg', '0')
                             ->where('products.company_id', Auth::guard('company')->user()->id )
@@ -50,13 +49,8 @@ class CompanyHomeController extends Controller
                                      ->take(5)
                                      ->get();
      foreach($productSell as $key){
-       // $key->date = $key->value('order_time')->format('Y年m月d日');
        $key->date = $key->order_time->format('Y年m月d日');
-       // $key->date = $key->order()->value('orders.created_at')->format('Y年m月d日');
-       // dd($key->order_time->format('Y年m月d日'));
      }
-      // dd($productSell);
-      $sell_flg = ( Auth::guard('company')->user()->products()->where('sold_flg', '1')->first() ) ? true : false;
-        return view('companies.home', compact('productList', 'productSell', 'list_flg', 'sell_flg'));
+        return view('companies.home', compact('productList', 'productSell'));
     }
 }

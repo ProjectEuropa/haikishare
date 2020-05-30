@@ -679,7 +679,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-mypage-box__info {
-    padding-top: 10px;
+    padding-top: 5px;
     width: 65%;
     font-weight: bold;
   }
@@ -759,7 +759,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-mypage-box__item-for-expiration {
-    padding: 0 0 5px 0;
+    padding: 0 0 2px 0;
     color: #808080;
     font-size: 12px;
   }
@@ -774,7 +774,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-mypage-box__btn-container {
-    margin-top: 5px;
+    margin-top: 2px;
     width: 100%;
   }
 }
@@ -797,8 +797,9 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-mypage-box__btn {
-    height: 25px;
-    line-height: 25px;
+    font-size: 10px;
+    height: 20px;
+    line-height: 20px;
   }
 }
 
