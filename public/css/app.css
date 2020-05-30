@@ -1190,7 +1190,7 @@ select:-moz-focusring {
 
 .c-search-tab__input-for-price {
   box-sizing: border-box;
-  background: #F8F8F8;
+  background: #F2F2F2;
   border: none;
   font-size: 14px;
   outline: none;
@@ -1254,7 +1254,7 @@ select:-moz-focusring {
 .c-search-tab__create-btn {
   align-items: center;
   border-radius: 0;
-  background: #F8F8F8;
+  background: #F2F2F2;
   border: 0;
   cursor: pointer;
   font-size: 14px;
@@ -1391,7 +1391,7 @@ select:-moz-focusring {
   left: 0;
   top: 50%;
   border-radius: 2px;
-  background-color: #F8F8F8;
+  background-color: #F2F2F2;
   /* 背景の色変更 お好きな色を */
 }
 

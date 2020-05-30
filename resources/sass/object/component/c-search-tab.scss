@@ -74,7 +74,7 @@
 }
 .c-search-tab__input-for-price {
   box-sizing: border-box;
-  background: $theme_pearl_gray;
+  background: $theme_super_light_gray;
   border: none;
   font-size: $font_s;
   outline: none;
@@ -121,7 +121,7 @@
 .c-search-tab__create-btn {
   align-items: center;
   border-radius: 0;
-  background: $theme_pearl_gray;
+  background: $theme_super_light_gray;
   border: 0;
   cursor: pointer;
   font-size: $font_s;
@@ -235,7 +235,7 @@
   left: 0;
   top: 50%;
   border-radius: 2px;
-  background-color: $theme_pearl_gray; /* 背景の色変更 お好きな色を */
+  background-color: $theme_super_light_gray; /* 背景の色変更 お好きな色を */
 }
 /* チェックが入った時のレ点 */
 .c-search-tab__checkbox .checkbox:checked+label::after{
