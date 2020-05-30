@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki share オーナーパスワードリセット
+haiki share | オーナーパスワードリセット
 @endsection
 
 @section('content')

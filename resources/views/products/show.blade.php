@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki share{{ $product->name}}
+haiki share | {{ $product->name}}
 @endsection
 
 @section('content')

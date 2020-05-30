@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki share商品出品
+haiki share | 商品出品
 @endsection
 
 @section('content')
@@ -67,7 +67,7 @@ haiki share商品出品
       </div>
       <div class="c-product__select-box">
         <select class="u-bgc-gray" name="category_id">
-          <option value="" hidden>種類</option>
+          <option value="" hidden>-未選択-</option>
           @foreach ($categories as $category)
           @if ( old('category_id') == $category->id)
           <option value="{{{ $category->id }}}" selected >{{{ $category->name }}}</option>

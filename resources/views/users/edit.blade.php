@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki shareアカウント情報編集
+haiki share | アカウント情報編集
 @endsection
 
 @section('content')

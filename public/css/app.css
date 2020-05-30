@@ -584,15 +584,6 @@ select:-moz-focusring {
   }
 }
 
-.c-price-red {
-  color: #DE3737;
-}
-
-.c-price-line {
-  color: #808080;
-  text-decoration: line-through;
-}
-
 .c-mypage-container__title-box {
   box-sizing: border-box;
   padding: 50px;
@@ -783,6 +774,21 @@ select:-moz-focusring {
   }
 }
 
+.c-mypage-box__user-btn-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 550px) {
+  .c-mypage-box__user-btn-container {
+    justify-content: flex-start;
+    margin-top: 2px;
+    width: 100%;
+  }
+}
+
 .c-mypage-box__btn {
   border: none;
   color: #FFFFFF;
@@ -821,6 +827,7 @@ select:-moz-focusring {
 @media screen and (max-width: 550px) {
   .c-mypage-box__user-sp-size-btn {
     width: 50%;
+    margin-right: 5%;
   }
 }
 
@@ -878,6 +885,15 @@ select:-moz-focusring {
 .c-mypage-small-container__btn-logo {
   color: #808080;
   position: absolute;
+}
+
+.c-mypage__price-red {
+  color: #DE3737;
+}
+
+.c-mypage__price-line {
+  color: #808080;
+  text-decoration: line-through;
 }
 
 .c-sub-head__container {
@@ -2814,7 +2830,7 @@ select:-moz-focusring {
   .c-flash-message {
     left: 20%;
     top: 36%;
-    width: 60%;
+    width: 65%;
   }
 }
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki shareマイページ
+haiki share | マイページ
 @endsection
 
 @section('content')
@@ -46,7 +46,7 @@ haiki shareマイページ
 
     <div class="c-mypage-box__info">
       <div class="c-mypage-box__item">{{ $product->name }}</div>
-      <div class="c-mypage-box__item"><span class="c-price-red">{{ $product->discount }}円</span><span class="c-price-line">{{ $product->price }}円</span></div>
+      <div class="c-mypage-box__item"><span class="c-mypage__price-red">{{ $product->discount }}円</span><span class="c-mypage__price-line">{{ $product->price }}円</span></div>
       <div class="c-mypage-box__item-for-date">
         出品日：{{ $product->createDay }}
       </div>
@@ -89,7 +89,7 @@ haiki shareマイページ
 
     <div class="c-mypage-box__info">
       <div class="c-mypage-box__item">{{ $product->product_name }}</div>
-      <div class="c-mypage-box__item"><span class="c-price-red">{{ $product->discount }}円</span><span class="c-price-line">{{ $product->price }}円</span></div>
+      <div class="c-mypage-box__item"><span class="c-mypage__price-red">{{ $product->discount }}円</span><span class="c-mypage__price-line">{{ $product->price }}円</span></div>
       <div class="c-mypage-box__item">販売日：{{ $product->date }}</div>
       <div class="c-mypage-box__btn-container">
         <a class="c-mypage-box__btn c-mypage-box__btn--check c-mypage-box__company-btn c-mypage-box__company-sp-size-btn"><i class="fas fa-check u-pr-10-sp-5"></i>販売済</a>

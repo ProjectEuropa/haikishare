@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-haiki share出品商品一覧
+haiki share | 出品商品一覧
 @endsection
 
 @section('content')
@@ -72,7 +72,7 @@ haiki share出品商品一覧
 
       <div class="c-mypage-box__info">
         <div class="c-mypage-box__item">{{ $product->name }}</div>
-        <div class="c-mypage-box__item"><span class="c-price-red">{{ $product->discount }}円</span><span class="c-price-line">{{ $product->price }}円</span></div>
+        <div class="c-mypage-box__item"><span class="c-mypage__price-red">{{ $product->discount }}円</span><span class="c-mypage__price-line">{{ $product->price }}円</span></div>
         <div class="c-mypage-box__item-for-date">
           賞味期限：{{ $product->year }}年{{ $product->month }}月{{ $product->day }}日
           @if( $product->hour )
