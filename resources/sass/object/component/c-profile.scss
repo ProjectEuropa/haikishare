@@ -132,7 +132,8 @@
 	pointer-events: none;
   position: absolute;
   padding: 0;
-  top: 17px;
+  // top: 17px;
+  bottom: 17px;
   right: 13px;
   width: 0;
   @include mq(){
