@@ -1267,6 +1267,7 @@ select:-moz-focusring {
 }
 
 .c-search-tab__logo {
+  pointer-events: none;
   position: absolute;
   right: 10px;
   top: 11px;
