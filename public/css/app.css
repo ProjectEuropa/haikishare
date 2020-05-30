@@ -660,6 +660,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-mypage-box {
+    border: 1px solid #111111;
     height: 100px;
     margin: 0 0 10px 0;
     width: 100%;

@@ -66,6 +66,7 @@
   position: relative;
   width: 400px;
   @include mq(){
+    border: 1px solid $theme_black;
     height: 100px;
     margin: 0 0 $space_m 0;
     width: 100%;
