@@ -139,7 +139,7 @@ return [
   "host" => "smtp.mailtrap.io",
   "port" => 2525,
   "from" => array(
-      "address" => "from@example.com",
+      "address" => "haikishare@example.com",
       "name" => "Example"
   ),
   "username" => "f4d0b81f2f9038",
