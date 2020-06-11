@@ -108,7 +108,7 @@
 
     <div class="c-product__item">
       <div class="c-product__info"><div class="c-product__name">賞味期限</div><div class="c-product__label c-product__label--blank">任意</div></div>
-      <input class="c-product__input-for-expiration-small" type="text" name="hour" value="{{ old('hour')}}" placeholder="ex)21"/><div class="c-product__letter">時</div>
+      <input class="c-product__input-for-expiration-small" type="text" name="hour" value="{{ old('hour')}}" placeholder="例)21"/><div class="c-product__letter">時</div>
     </div>
     @error('hour')
         <span class="c-auth--error">
