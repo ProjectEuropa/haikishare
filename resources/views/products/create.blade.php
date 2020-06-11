@@ -45,7 +45,7 @@
     @enderror
     <div class="c-product__item">
       <div class="c-product__info"><div class="c-product__name">定価</div><div class="c-product__label">必須</div></div>
-      <input class="c-product__input--small" type="text" name="price" value="{{ old('price')}}" placeholder="ex)150"/><span class="c-product__letter-for-yen">円</span>
+      <input class="c-product__input--small" type="text" name="price" value="{{ old('price')}}" placeholder="例)150"/><span class="c-product__letter-for-yen">円</span>
     </div>
     @error('price')
         <span class="c-auth--error">
