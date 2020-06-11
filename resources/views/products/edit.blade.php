@@ -34,7 +34,7 @@
     @enderror
     <div class="c-product__item">
       <div class="c-product__info"><div class="c-product__name">商品名</div><div class="c-product__label">必須</div></div>
-      <input class="c-product__input-name" type="text" name="name" value="{{ old('name', $product->name) }}" placeholder="ex)鮭おにぎり"/>
+      <input class="c-product__input-name" type="text" name="name" value="{{ old('name', $product->name) }}" placeholder="例)鮭おにぎり"/>
     </div>
     @error('name')
         <span class="c-auth--error">
@@ -43,7 +43,7 @@
     @enderror
     <div class="c-product__item">
       <div class="c-product__info"><div class="c-product__name">定価</div><div class="c-product__label">必須</div></div>
-      <input class="c-product__input--small" type="text" name="price" value="{{ old('price', $product->price) }}"placeholder="ex)150"/><span class="c-product__letter-for-yen">円</span>
+      <input class="c-product__input--small" type="text" name="price" value="{{ old('price', $product->price) }}"placeholder="例)150"/><span class="c-product__letter-for-yen">円</span>
     </div>
     @error('price')
         <span class="c-auth--error">
@@ -52,7 +52,7 @@
     @enderror
     <div class="c-product__item">
       <div class="c-product__info"><div class="c-product__name">出品価格</div><span class="c-product__label">必須</span></div>
-      <input class="c-product__input--small" type="text" name="discount" value="{{ old('discount', $product->discount) }}" placeholder="ex)70"/><span class="c-product__letter-for-yen">円</span>
+      <input class="c-product__input--small" type="text" name="discount" value="{{ old('discount', $product->discount) }}" placeholder="例)70"/><span class="c-product__letter-for-yen">円</span>
     </div>
     @error('discount')
         <span class="c-auth--error">
@@ -85,9 +85,9 @@
 
     <div class="c-product__item">
       <div class="c-product__info"><div class="c-product__name">賞味期限</div><div class="c-product__label">必須</div></div>
-      <input class="c-product__input-for-expiration" type="text" name="year" value="{{ old('year', $product->year) }}" placeholder="ex)2020"/><div class="c-product__letter">年</div>
-      <input class="c-product__input-for-expiration-small" type="text" name="month" value="{{ old('month', $product->month) }}" placeholder="ex)05"/><div class="c-product__letter">月</div>
-      <input class="c-product__input-for-expiration-small" type="text" name="day" value="{{ old('day', $product->day) }}" placeholder="ex)01"/><div class="c-product__letter">日</div>
+      <input class="c-product__input-for-expiration" type="text" name="year" value="{{ old('year', $product->year) }}" placeholder="例)2020"/><div class="c-product__letter">年</div>
+      <input class="c-product__input-for-expiration-small" type="text" name="month" value="{{ old('month', $product->month) }}" placeholder="例)05"/><div class="c-product__letter">月</div>
+      <input class="c-product__input-for-expiration-small" type="text" name="day" value="{{ old('day', $product->day) }}" placeholder="例)01"/><div class="c-product__letter">日</div>
     </div>
     @error('year')
     <span class="c-auth--error">
@@ -107,7 +107,7 @@
 
     <div class="c-product__item">
       <div class="c-product__info"><div class="c-product__name">賞味期限</div><div class="c-product__label c-product__label--blank">任意</div></div>
-      <input class="c-product__input-for-expiration-small" type="text" name="hour" value="{{ old('hour', $product->hour) }}" placeholder="ex)21"/><div class="c-product__letter">時</div>
+      <input class="c-product__input-for-expiration-small" type="text" name="hour" value="{{ old('hour', $product->hour) }}" placeholder="例)21"/><div class="c-product__letter">時</div>
     </div>
     @error('hour')
         <span class="c-auth--error">
