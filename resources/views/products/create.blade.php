@@ -36,7 +36,7 @@
 
     <div class="c-product__item">
       <div class="c-product__info"><div class="c-product__name">商品名</div><div class="c-product__label">必須</div></div>
-      <input class="c-product__input-name" type="text" name="name" value="{{ old('name')}}" placeholder="ex)鮭おにぎり"/>
+      <input class="c-product__input-name" type="text" name="name" value="{{ old('name')}}" placeholder="例)鮭おにぎり"/>
     </div>
     @error('name')
         <span class="c-auth--error">
