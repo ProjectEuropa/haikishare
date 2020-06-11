@@ -88,7 +88,7 @@
       <div class="c-product__info"><div class="c-product__name">賞味期限</div><div class="c-product__label">必須</div></div>
       <input class="c-product__input-for-expiration" type="text" name="year" value="{{ old('year')}}" placeholder="例”)2020"/><div class="c-product__letter">年</div>
       <input class="c-product__input-for-expiration-small" type="text" name="month" value="{{ old('month')}}" placeholder="例)5"/><div class="c-product__letter">月</div>
-      <input class="c-product__input-for-expiration-small" type="text" name="day" value="{{ old('day')}}" placeholder="ex)1"/><div class="c-product__letter">日</div>
+      <input class="c-product__input-for-expiration-small" type="text" name="day" value="{{ old('day')}}" placeholder="例)1"/><div class="c-product__letter">日</div>
     </div>
     @error('year')
         <span class="c-auth--error">
