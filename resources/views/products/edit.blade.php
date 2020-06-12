@@ -120,7 +120,7 @@
     <input class="c-product__btn c-product__create-btn" type="submit" name="submit" value="この内容で商品を再出品する">
   </div>
 
-  <a class="c-product__btn c-product__warning-btn" href="{{ route('products.destroytoggle', $product->id )}}">この商品の出品をキャンセル</a>
+  <a class="c-product__btn c-product__warning-btn" href="{{ route('products.destroytoggle', $product->id )}}" onClick="confirm()">この商品の出品をキャンセル</a>
   </div>
 
 </form>

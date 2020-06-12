@@ -1,101 +1,94 @@
-.c-prodcut-detail__container {
-  color: $theme_light_black;
-  font-weight: bold;
-  margin: $space_5l auto;
-  width: 1000px;
-  @include mq() {
-    width: 100%;
+.c-product-detail{
+  &__container {
+    color: $theme_light_black;
+    font-weight: bold;
+    margin: $space_5l auto;
+    width: 1000px;
+    @include mq() {
+      width: 100%;
+    }
   }
-}
-
-.c-product-detail__img {
-  display: block;
-  height: 500px;
-  object-fit: cover;
-  margin: 0 auto;
-  width: 500px;
-  @include mq() {
-    width: 100%;
-    height: auto;
+  &__img {
+    display: block;
+    height: 500px;
+    object-fit: cover;
+    margin: 0 auto;
+    width: 500px;
+    @include mq() {
+      width: 100%;
+      height: auto;
+    }
   }
-}
-
-.c-product-detail__name {
-  font-size: $font_4xl;
-  font-weight: bold;
-  padding: $space_5l 0 $space_m;
-  text-align: center;
-  @include mq() {
+  &__name {
+    font-size: $font_4xl;
+    font-weight: bold;
+    padding: $space_5l 0 $space_m;
+    text-align: center;
+    @include mq() {
+      font-size: $font_m;
+    }
+  }
+  &__body {
     font-size: $font_m;
+    padding: 0 300px;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    @include mq() {
+      padding: 0 $space_3l;
+      font-size: $font_s;
+    }
   }
-}
-
-.c-product-detail__body {
-  font-size: $font_m;
-  padding: 0 300px;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
-  @include mq() {
-    padding: 0 $space_3l;
+  &__status {
+    color: $theme_white;
+    padding: 10px 20px;
+    position: absolute;
+    right: 360px;
+    top: 0;
+    @include mq() {
+      padding: $space_s $space_m;
+      right: 30px;
+      top: 0px;
+    }
+    &--normal {
+      background: $theme_yellow;
+    }
+    &--check {
+      background: $theme_green;
+    }
+  }
+  &__expiration {
+    color: $theme_gray;
+    padding: $space_2l 0 $space_m;
+  }
+  &__category {
+    color: $theme_gray;
     font-size: $font_s;
+    padding-top: 5px;
+    @include mq() {
+      font-size: $font_sp-m;
+    }
   }
-}
-.c-product-detail__item {
-
-}
-.c-product-detail__status {
-  color: $theme_white;
-  padding: 10px 20px;
-  position: absolute;
-  right: 360px;
-  top: 0;
-  @include mq() {
-    padding: $space_s $space_m;
-    right: 30px;
-    top: 0px;
+  &__address {
+    color: $theme_gray;
+    padding-top: $space_s;
   }
-}
-.c-product-detail__status--normal {
-  background: $theme_yellow;
-}
-.c-product-detail__status--check {
-  background: $theme_green;
-}
-.c-product-detail__expiration {
-  color: $theme_gray;
-  padding: $space_2l 0 $space_m;
-}
-.c-product-detail__category {
-  color: $theme_gray;
-  font-size: $font_s;
-  padding-top: 5px;
-  @include mq() {
-    font-size: $font_sp-m;
+
+  &__discount {
+    color: $theme_dark_red;
+    font-size: $font_2l;
+    font-weight: bold;
+    @include mq() {
+      font-size: $font_l;
+    }
   }
-}
-.c-product-detail__address {
-  color: $theme_gray;
-  padding-top: $space_s;
-}
-
-.c-product-detail__discount {
-  color: $theme_dark_red;
-  font-size: $font_2l;
-  font-weight: bold;
-  @include mq() {
-    font-size: $font_l;
+  &__discount-letter {
+    color: $theme_dark_red;
   }
-}
-.c-product-detail__discount-letter {
-  color: $theme_dark_red;
-}
-
-.c-product-detail__price-gray {
-  color: $theme_gray;
-  text-decoration: line-through;
-}
-
-  .c-product-detail__btn {
+  &__price-gray {
+    color: $theme_gray;
+    text-decoration: line-through;
+  }
+  &__btn {
     box-sizing: border-box;
     border-radius: 0;
     border: none;
@@ -116,27 +109,27 @@
     &:focus {
       outline: none;
     }
+    &--normal {
+      background: $theme_yellow;
+    }
+    &--hover-normal {
+      background: $theme_yellow;
+    }
+    &--hover-normal:hover {
+      background: darken($theme_yellow, 7%);
+    }
+    &--check {
+      background: $theme_green;
+      padding-right: $space_m;
+    }
+    &--warning {
+      background: $theme_red;
+    }
+    &--hover-warning {
+      background: $theme_red;
+    }
+    &--hover-warning:hover {
+      background: darken($theme_red, 7%);;
+    }
   }
-
-.c-product-detail__btn--normal {
-  background: $theme_yellow;
-}
-.c-product-detail__btn--hover-normal {
-  background: $theme_yellow;
-}
-.c-product-detail__btn--hover-normal:hover {
-  background: darken($theme_yellow, 7%);
-}
-.c-product-detail__btn--check {
-  background: $theme_green;
-  padding-right: $space_m;
-}
-.c-product-detail__btn--warning {
-  background: $theme_red;
-}
-.c-product-detail__btn--hover-warning {
-  background: $theme_red;
-}
-.c-product-detail__btn--hover-warning:hover {
-  background: darken($theme_red, 7%);;
 }

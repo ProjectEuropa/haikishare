@@ -35,7 +35,7 @@
 
         <div class="c-owner-product-list__body">
           <div class="c-owner-product-list__name">{{ $product->name }}</div>
-          <div class="c-owner-product-list__item"><span>割引価格</span><span class="c-owner-product-list__discount">{{ $product->discount }}</span><span class="c-owner-product-list__discount-letter">円</span><span>(税込み)</span><span class="c-owner-product-list__price-gray">{{ $product->price }}円</span>
+          <div class="c-owner-product-list__item"><span>出品価格</span><span class="c-owner-product-list__discount">{{ $product->discount }}</span><span class="c-owner-product-list__discount-letter">円</span><span>(税込み)</span><span class="c-owner-product-list__price-gray">{{ $product->price }}円</span>
           </div>
 
           <div class="c-owner-product-list__expiration">

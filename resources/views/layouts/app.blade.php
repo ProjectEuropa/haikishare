@@ -8,9 +8,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
-
+    <meta name="description" content="コンビニで廃棄されるはずの商品を安く購入できるサービスです。スマホ一つでいつでもどこでもコンビニ商品をより安く購入できます。">
+    <meta name="keywords" content="廃棄、シェア、コンビニ、商品、食料品、もったいない、割引、低価格">
     <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" ></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css" rel="stylesheet" />

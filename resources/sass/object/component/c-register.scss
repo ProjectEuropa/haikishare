@@ -1,10 +1,11 @@
-.c-register__input {
-  border-bottom: 3px solid $theme_gray_word_bottom;
-}
-
-.c-register__container {
-  width: 500px;
-  @include mq() {
-    width: 80%;
+.c-register{
+  &__input {
+    border-bottom: 3px solid $theme_gray_word_bottom;
+  }
+  &__container {
+    width: 500px;
+    @include mq() {
+      width: 80%;
+    }
   }
 }

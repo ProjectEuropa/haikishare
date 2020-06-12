@@ -16,9 +16,9 @@ body,#app {
 a {
   text-decoration: none;
   color: $theme_light_black;
-}
-a:focus{
-  outline: none;
+  &:focus{
+    outline: none;
+  }
 }
 button,input,input,select:focus {
   outline:none;

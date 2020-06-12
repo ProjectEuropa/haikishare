@@ -113,7 +113,7 @@ return [
     ],
     'string'               => ':attribute は文字列のみ有効です',
     'timezone'             => ':attribute 正しいタイムゾーンのみ有効です',
-    'unique'               => ':attribute は既に存在します',
+    'unique'               => 'お使いの:attribute を使用することはできません',
     'uploaded'             => ':attribute アップロードに失敗しました',
     'url'                  => ':attribute は正しいURL書式のみ有効です',
 

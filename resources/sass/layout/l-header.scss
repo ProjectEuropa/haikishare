@@ -10,64 +10,59 @@
   @include mq() {
     padding: 0 $space_l;
   }
-}
-
-@include mq() {
-  .l-header__sp-left-box{
-    width: 25px;
-  }
-}
-
-.l-header__center-box {
-  display: block;
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-around;
-  height: $space_3xl;
-  width: 250px;
-  cursor: pointer;
   @include mq() {
-    width: 200px;
+    &__sp-left-box{
+      width: 25px;
+    }
   }
-}
-
-.l-header__right-box {
-  align-items: center;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  position: relative;
-  width: 180px;
-  @include mq() {
-    width: 25px;
+  &__center-box {
+    display: block;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    height: $space_3xl;
+    width: 250px;
+    cursor: pointer;
+    @include mq() {
+      width: 200px;
+    }
   }
-}
-
-.l-header__user-logo {
-  color: #f8fafc;
-  cursor: pointer;
-  font-size: $font_l;
-  filter: drop-shadow(0px 0px 10px rgba(0,0,0,.8));
-  transition: .4s;
-  &:hover {
-    color: $theme_yellow;
+  &__right-box {
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    position: relative;
+    width: 180px;
+    @include mq() {
+      width: 25px;
+    }
+  }
+  &__user-logo {
+    color: #f8fafc;
+    cursor: pointer;
+    font-size: $font_l;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.8));
     transition: .4s;
-    transform: scale(1.05) translateY(-2px);
+    &:hover {
+      color: $theme_yellow;
+      transition: .4s;
+      transform: scale(1.05) translateY(-2px);
+    }
   }
-}
-
-.l-header__search-logo {
-  color: #f8fafc;
-  cursor: pointer;
-  font-size: $font_l;
-  filter: drop-shadow(0px 0px 10px rgba(0,0,0,.8));
-  transition: .4s;
-  &:hover {
-    color: $theme_yellow;
+  &__search-logo {
+    color: #f8fafc;
+    cursor: pointer;
+    font-size: $font_l;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.8));
     transition: .4s;
-    transform: scale(1.05) translateY(-2px);
+    &:hover {
+      color: $theme_yellow;
+      transition: .4s;
+      transform: scale(1.05) translateY(-2px);
+    }
   }
 }

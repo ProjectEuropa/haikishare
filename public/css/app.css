@@ -637,6 +637,15 @@ select:-moz-focusring {
   }
 }
 
+.c-mypage__price-red {
+  color: #DE3737;
+}
+
+.c-mypage__price-line {
+  color: #808080;
+  text-decoration: line-through;
+}
+
 .c-mypage-box {
   border: 1px solid #999999;
   box-sizing: border-box;
@@ -871,15 +880,6 @@ select:-moz-focusring {
   position: absolute;
 }
 
-.c-mypage__price-red {
-  color: #DE3737;
-}
-
-.c-mypage__price-line {
-  color: #808080;
-  text-decoration: line-through;
-}
-
 .c-sub-head__container {
   overflow: hidden;
   background: #F1F2F6;
@@ -1105,6 +1105,10 @@ select:-moz-focusring {
   background: #FFFFFF;
   max-height: 250px;
   overflow: hidden;
+  /* 元々のチェックボックス（非表示） */
+  /* チェックボックスの代わりを成すラベル */
+  /* ラベルの左に表示させる正方形のボックス□ */
+  /* チェックが入った時のレ点 */
 }
 
 .c-search-tab__main-container {
@@ -1359,15 +1363,11 @@ select:-moz-focusring {
   float: left;
 }
 
-/* 元々のチェックボックス（非表示） */
-
-.c-search-tab__checkbox .checkbox {
+.c-search-tab .c-search-tab__checkbox .checkbox {
   display: none;
 }
 
-/* チェックボックスの代わりを成すラベル */
-
-.c-search-tab__checkbox .checkbox + label {
+.c-search-tab .c-search-tab__checkbox .checkbox + label {
   cursor: pointer;
   display: none;
   display: inline-block;
@@ -1377,14 +1377,12 @@ select:-moz-focusring {
 }
 
 @media screen and (max-width: 550px) {
-  .c-search-tab__checkbox .checkbox + label {
+  .c-search-tab .c-search-tab__checkbox .checkbox + label {
     padding-right: 0;
   }
 }
 
-/* ラベルの左に表示させる正方形のボックス□ */
-
-.c-search-tab__checkbox .checkbox + label::before {
+.c-search-tab .c-search-tab__checkbox .checkbox + label::before {
   content: "";
   position: absolute;
   display: block;
@@ -1399,9 +1397,7 @@ select:-moz-focusring {
   /* 背景の色変更 お好きな色を */
 }
 
-/* チェックが入った時のレ点 */
-
-.c-search-tab__checkbox .checkbox:checked + label::after {
+.c-search-tab .c-search-tab__checkbox .checkbox:checked + label::after {
   content: "";
   position: absolute;
   display: block;
@@ -1545,7 +1541,7 @@ select:-moz-focusring {
   }
 }
 
-.c-procut-list__item {
+.c-product-list__item {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1603,7 +1599,7 @@ select:-moz-focusring {
   }
 }
 
-.c-prodcut-detail__container {
+.c-product-detail__container {
   color: #333333;
   font-weight: bold;
   margin: 50px auto;
@@ -1611,7 +1607,7 @@ select:-moz-focusring {
 }
 
 @media screen and (max-width: 550px) {
-  .c-prodcut-detail__container {
+  .c-product-detail__container {
     width: 100%;
   }
 }
@@ -2207,16 +2203,16 @@ select:-moz-focusring {
   padding: 15px 0 0;
 }
 
+.c-owner-product-list__name:hover {
+  color: #DFD000;
+  width: 500px;
+}
+
 .c-owner-product-list__item {
   border-bottom: 1px solid #EAEAEA;
   margin-bottom: 10px;
   padding-bottom: 10px;
   width: 350px;
-}
-
-.c-owner-product-list__name:hover {
-  color: #DFD000;
-  width: 500px;
 }
 
 .c-owner-product-list__address {

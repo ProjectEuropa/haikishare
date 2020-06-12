@@ -2,255 +2,242 @@
   background: $theme_white;
   max-height: 250px;
   overflow: hidden;
-}
-
-.c-search-tab__main-container {
-  margin: 0 auto;
-  overflow: hidden;
-  padding: $space_2l 0;
-  width: 500px;
-  @include mq() {
-    width: 100%;
-    font-size: $font_sp-m;
+  &__main-container {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: $space_2l 0;
+    width: 500px;
+    @include mq() {
+      width: 100%;
+      font-size: $font_sp-m;
+    }
   }
-}
-
-.c-search-tab__item {
-  align-items: center;
-  display: flex;
-  height: $space_3l;
-  justify-content: space-between;
-  margin-bottom: $space_m;
-  @include mq() {
-    justify-content: flex-start;
-    margin-bottom: $space_s;
+  &__item {
+    align-items: center;
+    display: flex;
+    height: $space_3l;
+    justify-content: space-between;
+    margin-bottom: $space_m;
+    @include mq() {
+      justify-content: flex-start;
+      margin-bottom: $space_s;
+    }
   }
-}
-
-.c-search-tab__label {
-  color: black;
-  text-align: right;
-  width: 140px;
-  @include mq() {
+  &__label {
+    color: black;
+    text-align: right;
+    width: 140px;
+    @include mq() {
+      text-align: center;
+      margin: 0 $space_3l;
+      width: 20%;
+    }
+  }
+  &__label-for-checkbox {
+    color: $theme_black;
+    float: left;
+    margin-right: $space_4l;
+    text-align: right;
+    width: 140px;
+    @include mq() {
+      margin: 0 $space_m $space_2l;
+      width: 25%;
+    }
+  }
+  &__label-for-price {
+    color: $theme_black;
+    text-align: right;
+    width: 140px;
+    float: left;
+    margin-right: $space_4l;
+    @include mq() {
+      margin-bottom: $space_2l;
+      margin-right: $space_m;
+      width: 20%;
+    }
+  }
+  &__input {
+    box-sizing: border-box;
+    background: $theme_super_light_gray;
+    border: none;
+    font-size: $font_s;
+    outline: none;
+    padding: $space_m;
+    width: 320px;
+  }
+  &__input-for-price {
+    box-sizing: border-box;
+    background: $theme_super_light_gray;
+    border: none;
+    font-size: $font_s;
+    outline: none;
+    padding: $space_s;
+    width: 100px;
+    text-align: right;
+    height: 30px;
+    @include mq() {
+      font-size: $font_sp-m;
+      width: 20%;
+    }
+  }
+  &__item-for-price {
+    height: $space_3l;
+    line-height: $space_3l;
+    margin-bottom: $space_m;
+    overflow: hidden;
+    @include mq() {
+      margin-bottom: $space_s;
+    }
+  }
+  &__item-for-checkbox {
+    height: $space_3l;
+    line-height: $space_3l;
+    margin-bottom: $space_m;
+    overflow: hidden;
+    user-select: none;
+    @include mq() {
+      margin-bottom: $space_s;
+    }
+  }
+  &__create-btn-box {
+    margin: $space_2l auto 0;
+    position: relative;
     text-align: center;
-    margin: 0 $space_3l;
-    width: 20%;
+    width: 200px;
+    @include mq() {
+      margin: $space_m auto 0;
+      width: 60%;
+    }
   }
-}
-
-.c-search-tab__label-for-checkbox {
-  color: $theme_black;
-  float: left;
-  margin-right: $space_4l;
-  text-align: right;
-  width: 140px;
-  @include mq() {
-    margin: 0 $space_m $space_2l;
-    width: 25%;
+  &__create-btn {
+    align-items: center;
+    border-radius: 0;
+    background: $theme_super_light_gray;
+    border: 0;
+    cursor: pointer;
+    font-size: $font_s;
+    height: $space_4l;
+    letter-spacing: 0.1em;
+    outline: none;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    width: 100%;
+    -webkit-appearance: none;
   }
-}
-
-.c-search-tab__label-for-price {
-  color: $theme_black;
-  text-align: right;
-  width: 140px;
-  float: left;
-  margin-right: $space_4l;
-  @include mq() {
-    margin-bottom: $space_2l;
-    margin-right: $space_m;
-    width: 20%;
+  &__logo {
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    @include mq() {
+      top: 13px;
+    }
   }
-
-}
-.c-search-tab__input {
-  box-sizing: border-box;
-  background: $theme_super_light_gray;
-  border: none;
-  font-size: $font_s;
-  outline: none;
-  padding: $space_m;
-  width: 320px;
-}
-.c-search-tab__input-for-price {
-  box-sizing: border-box;
-  background: $theme_super_light_gray;
-  border: none;
-  font-size: $font_s;
-  outline: none;
-  padding: $space_s;
-  width: 100px;
-  text-align: right;
-  height: 30px;
-  @include mq() {
-    font-size: $font_sp-m;
-    width: 20%;
+  &__select-box {
+    box-sizing: border-box;
+    background: $theme_super_light_gray;
+    border-bottom: 3px solid $theme_gray_word_bottom;
+    border: none;
+    font-size: $font_m;
+    margin: 0 220px 0 0;
+    outline: none;
+    padding: $space_s 0 0 $space_s;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    width: 100px;
+    @include mq() {
+      margin: 0;
+    }
   }
-}
-
-.c-search-tab__item-for-price {
-  height: $space_3l;
-  line-height: $space_3l;
-  margin-bottom: $space_m;
-  overflow: hidden;
-  @include mq() {
-    margin-bottom: $space_s;
+  &__select--bigger {
+    margin: 0 170px 0 0;
+    width: 150px;
+    @include mq() {
+      margin: 0;
+    }
   }
-}
-.c-search-tab__item-for-checkbox {
-  height: $space_3l;
-  line-height: $space_3l;
-  margin-bottom: $space_m;
-  overflow: hidden;
-  user-select: none;
-  @include mq() {
-    margin-bottom: $space_s;
+  &__select-box select {
+    appearance: none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    outline: none;
+    font-size: $font_s;
+    -webkit-appearance: none;
+    width: 200px;
   }
-}
-
-.c-search-tab__create-btn-box {
-  margin: $space_2l auto 0;
-  position: relative;
-  text-align: center;
-  width: 200px;
-  @include mq() {
-    margin: $space_m auto 0;
-    width: 60%;
-  }
-}
-.c-search-tab__create-btn {
-  align-items: center;
-  border-radius: 0;
-  background: $theme_super_light_gray;
-  border: 0;
-  cursor: pointer;
-  font-size: $font_s;
-  height: $space_4l;
-  letter-spacing: 0.1em;
-  outline: none;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  width: 100%;
-  -webkit-appearance: none;
-}
-
-.c-search-tab__logo {
-  pointer-events: none;
-  position: absolute;
-  right: 10px;
-  top: 11px;
-  @include mq() {
-    top: 13px;
-  }
-}
-
-.c-search-tab__select-box {
-  box-sizing: border-box;
-  background: $theme_super_light_gray;
-  border-bottom: 3px solid $theme_gray_word_bottom;
-  border: none;
-  font-size: $font_m;
-  margin: 0 220px 0 0;
-  outline: none;
-  padding: $space_s 0 0 $space_s;
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  width: 100px;
-  @include mq() {
-    margin: 0;
-  }
-}
-.c-search-tab__select--bigger {
-	margin: 0 170px 0 0;
-  width: 150px;
-  @include mq() {
-    margin: 0;
-  }
-}
-.c-search-tab__select-box select {
-  appearance: none;
-	border: none;
-  box-shadow: none;
-  cursor: pointer;
-	outline: none;
-  font-size: $font_s;
-  -webkit-appearance: none;
-  width: 200px;
-}
-.c-search-tab__select-box select::-ms-expand {
-    display: none;
-}
-.c-search-tab__select-box:before {
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-top: 6px solid black;
-  content: '';
-  height: 0;
-  position: absolute;
-  pointer-events: none;
-  padding: 0;
-	pointer-events: none;
-  right: 14px;
-  top: 12px;
-  width: 0;
-  @include mq() {
+  &__select-box select::-ms-expand {
     display: none;
   }
-}
-
-
-.c-search-tab__simbol-for-price {
-  color: $theme_gray;
-}
-
-.c-search-tab__checkbox {
-  float: left;
-}
-
-/* 元々のチェックボックス（非表示） */
-.c-search-tab__checkbox .checkbox{
-    display: none;
-}
-/* チェックボックスの代わりを成すラベル */
-.c-search-tab__checkbox .checkbox+label{
-  cursor: pointer;
-  display: none;
-  display: inline-block;
-  position: relative;
-  padding-left: $space_2xl;
-  padding-right: $space_m;
-  @include mq() {
-    padding-right: 0;
+  &__select-box:before {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid black;
+    content: '';
+    height: 0;
+    position: absolute;
+    pointer-events: none;
+    padding: 0;
+    pointer-events: none;
+    right: 14px;
+    top: 12px;
+    width: 0;
+    @include mq() {
+      display: none;
+    }
   }
-}
-/* ラベルの左に表示させる正方形のボックス□ */
-.c-search-tab__checkbox .checkbox+label::before{
-  content: "";
-  position: absolute;
-  display: block;
-  box-sizing: border-box;
-  width: 20px;
-  height: $space_2l;
-  margin-top: -10px;
-  left: 0;
-  top: 50%;
-  border-radius: 2px;
-  background-color: $theme_super_light_gray; /* 背景の色変更 お好きな色を */
-}
-/* チェックが入った時のレ点 */
-.c-search-tab__checkbox .checkbox:checked+label::after{
-  content: "";
-  position: absolute;
-  display: block;
-  box-sizing: border-box;
-  width: 18px;
-  height: 9px;
-  margin-top: -9px;
-  top: 50%;
-  left: 3px;
-  transform: rotate(-45deg);
-  border-bottom: 3px solid;
-  border-left: 3px solid;
-  border-color:  $theme_light_black; /* チェックの色変更 お好きな色を */
+  &__simbol-for-price {
+    color: $theme_gray;
+  }
+  &__checkbox {
+    float: left;
+  }
+  /* 元々のチェックボックス（非表示） */
+  .c-search-tab__checkbox .checkbox{
+    display: none;
+  }
+  /* チェックボックスの代わりを成すラベル */
+  .c-search-tab__checkbox .checkbox+label{
+    cursor: pointer;
+    display: none;
+    display: inline-block;
+    position: relative;
+    padding-left: $space_2xl;
+    padding-right: $space_m;
+    @include mq() {
+      padding-right: 0;
+    }
+  }
+  /* ラベルの左に表示させる正方形のボックス□ */
+  .c-search-tab__checkbox .checkbox+label::before{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 20px;
+    height: $space_2l;
+    margin-top: -10px;
+    left: 0;
+    top: 50%;
+    border-radius: 2px;
+    background-color: $theme_super_light_gray; /* 背景の色変更 お好きな色を */
+  }
+  /* チェックが入った時のレ点 */
+  .c-search-tab__checkbox .checkbox:checked+label::after{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: -9px;
+    top: 50%;
+    left: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-color:  $theme_light_black; /* チェックの色変更 お好きな色を */
+  }
+
 }

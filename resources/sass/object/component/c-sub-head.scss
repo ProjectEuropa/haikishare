@@ -1,38 +1,38 @@
-.c-sub-head__container {
-  overflow: hidden;
-  background: $theme_gray_sub_head;
-  height: $space_20l;
-  text-align: center;
-  line-height: $space_20l;
-  @include mq() {
-    height: 100px;
-    line-height: 100px;
+.c-sub-head{
+  &__container {
+    overflow: hidden;
+    background: $theme_gray_sub_head;
+    height: $space_20l;
+    text-align: center;
+    line-height: $space_20l;
+    @include mq() {
+      height: 100px;
+      line-height: 100px;
+    }
   }
-}
-
-.c-sub-head__title {
-  font-size: $font_3xl;
-  position: relative;
-  display: inline-block;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  @include mq() {
-    font-size: $font_l;
-  }
-}
-
-.c-sub-head__title:before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: $space_5l;/*線の上下位置*/
-  display: inline-block;
-  width: $space_6l;/*線の長さ*/
-  height: $space_s;/*線の太さ*/
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);/*位置調整*/
-  background-color: $theme_yellow;/*線の色*/
-  border-radius: 2px;/*線の丸み*/
-  @include mq() {
-    bottom: $space_2l;
+  &__title {
+    font-size: $font_3xl;
+    position: relative;
+    display: inline-block;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    @include mq() {
+      font-size: $font_l;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: $space_5l;/*線の上下位置*/
+      display: inline-block;
+      width: $space_6l;/*線の長さ*/
+      height: $space_s;/*線の太さ*/
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);/*位置調整*/
+      background-color: $theme_yellow;/*線の色*/
+      border-radius: 2px;/*線の丸み*/
+      @include mq() {
+        bottom: $space_2l;
+      }
+    }
   }
 }

@@ -57,7 +57,7 @@
       <!--　ユーザーが自分が購入した商品を見る場合 -->
       <form method="post" action="{{ route('orders.destroy', $product->id )}}" class="js-form">
         @csrf
-        <input class="c-product-detail__btn c-product-detail__btn--hover-warning js-input" type="button" value="購入をキャンセルする">
+        <input class="c-product-detail__btn c-product-detail__btn--hover-warning js-input" type="button" value="購入をキャンセルする" onClick="confirm()">
       </form>
 
       @elseif ( $login_flg == 3 && $product->sold_flg == '0')

@@ -1,51 +1,61 @@
 .c-mypage-container {
-  padding: 0 $space_8l;
-  overflow: hidden;
-  @include mq(){
-    padding: $space_2l 0;
-    margin: 0 auto;
-    width: 95%;
+    padding: 0 $space_8l;
+    overflow: hidden;
+    @include mq(){
+      padding: $space_2l 0;
+      margin: 0 auto;
+      width: 95%;
+    }
+  &__title-box {
+    box-sizing: border-box;
+    padding: $space_5l;
+    text-align: center;
+    @include mq(){
+      padding: $space_2l 0;
+    }
   }
+  &__title {
+    font-size: $font_2l;
+    @include mq(){
+      font-size: $font_l;
+      font-weight: bold;
+    }
+    &:after {
+      background-color: $theme_black;
+      content: "";
+      display: block;
+      height: 1px;
+      margin: $space_2l auto 0;
+      width: 50px;
+      @include mq(){
+        margin: $space_s auto 0;
+      }
+    }
+  }
+
 }
 
-.c-mypage-container__title-box {
-  box-sizing: border-box;
-  padding: $space_5l;
-  text-align: center;
-  @include mq(){
-    padding: $space_2l 0;
-  }
-}
-
-.c-mypage-container__title {
-  font-size: $font_2l;
-  @include mq(){
+.c-mypage {
+  &__head-info {
     font-size: $font_l;
-    font-weight: bold;
+    padding: $space_s $space_2l;
+    border-bottom: 3px solid $theme_light_black;
+    margin-bottom: $space_3l;
+    box-sizing: border-box;
+    @include mq(){
+      margin: $space_s auto $space_m;
+      font-size: $font_s;
+    }
+  }
+  &__price-red {
+    color: $theme_red;
+  }
+  &__price-line {
+    color: $theme_gray;
+    text-decoration: line-through;
   }
 }
-.c-mypage-container__title:after {
-	background-color: $theme_black;
-	content: "";
-  display: block;
-	height: 1px;
-	margin: $space_2l auto 0;
-  width: 50px;
-  @include mq(){
-    margin: $space_s auto 0;
-  }
-}
-.c-mypage__head-info {
-  font-size: $font_l;
-  padding: $space_s $space_2l;
-  border-bottom: 3px solid $theme_light_black;
-  margin-bottom: $space_3l;
-  box-sizing: border-box;
-  @include mq(){
-    margin: $space_s auto $space_m;
-    font-size: $font_s;
-  }
-}
+
 
 
 .c-mypage-box {
@@ -68,186 +78,177 @@
     box-shadow: 0 0 6px $theme_gray;
     border: 1px solid $theme_black;
   }
-}
-
-.c-mypage-box__info {
-  padding-top: $space_m;
-  text-align: center;
-  width: 250px;
-  @include mq(){
-    font-weight: bold;
-    padding-top: $space_s;
-    padding-left: 10%;
-    text-align: left;
-    width: 57%;
+  &__info {
+    padding-top: $space_m;
+    text-align: center;
+    width: 250px;
+    @include mq(){
+      font-weight: bold;
+      padding-top: $space_s;
+      padding-left: 10%;
+      text-align: left;
+      width: 57%;
+    }
+    &--text {
+      @include mq(){
+        box-sizing: border-box;
+        float: left;
+        font-size: $font_sp-m;
+        font-weight: bold;
+        height: 100px;
+        line-height: 100px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        text-align: center;
+        white-space:nowrap;
+        width: 65%;
+      }
+    }
   }
-}
-.c-mypage-box__info--text {
-  @include mq(){
+  &__img {
     box-sizing: border-box;
-    float: left;
-    font-size: $font_sp-m;
-    font-weight: bold;
-    height: 100px;
-    line-height: 100px;
+    height: 148px;
+    object-fit: cover;
+    width: 150px;
+    @include mq(){
+      float: left;
+      height: 98px;
+      width: 100px;
+    }
+  }
+  &__item {
+    box-sizing: border-box;
     overflow:hidden;
+    padding: $space_s;
     text-overflow:ellipsis;
-    text-align: center;
+    width:100%;
     white-space:nowrap;
-    width: 65%;
+    @include mq(){
+      padding: 0 0 $space_s 0;
+      width:90%;
+    }
   }
-}
-
-.c-mypage-box__img {
-  box-sizing: border-box;
-  height: 148px;
-  object-fit: cover;
-  width: 150px;
-  @include mq(){
-    float: left;
-    height: 98px;
-    width: 100px;
+  &__item-for-date {
+    box-sizing: border-box;
+    overflow:hidden;
+    padding-bottom: $space_s;
+    text-overflow:ellipsis;
+    width:100%;
+    white-space:nowrap;
+    @include mq(){
+      padding-bottom: 2px;
+      color: $theme_gray;
+      font-size: $font_sp-m;
+    }
   }
-}
-
-.c-mypage-box__item {
-  box-sizing: border-box;
-  overflow:hidden;
-  padding: $space_s;
-  text-overflow:ellipsis;
-  width:100%;
-  white-space:nowrap;
-  @include mq(){
-    padding: 0 0 $space_s 0;
-    width:90%;
+  &__btn-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: $space_s;
+    @include mq(){
+      margin-top: 2px;
+      width: 100%;
+    }
   }
-}
-.c-mypage-box__item-for-date {
-  box-sizing: border-box;
-  overflow:hidden;
-  padding-bottom: $space_s;
-  text-overflow:ellipsis;
-  width:100%;
-  white-space:nowrap;
-  @include mq(){
-    padding-bottom: 2px;
-    color: $theme_gray;
+  &__user-btn-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: $space_s;
+    @include mq(){
+      justify-content: flex-start;
+      margin-top: 2px;
+      width: 100%;
+    }
+  }
+  &__btn {
+    border: none;
+    color: $theme_white;
+    cursor: pointer;
+    display: block;
     font-size: $font_sp-m;
+    font-weight: normal;
+    float: left;
+    height: $space_3l;
+    line-height: $space_3l;
+    letter-spacing: 0.1em;
+    transition: .2s;
+    margin: 0;
+    width: 150px;
+    @include mq(){
+      font-size: $font_sp-s;
+      height: $space_2l;
+      line-height: $space_2l;
+      text-align: center;
+    }
+  }
+  &__company-btn{
+    margin: 0 10% 0 0;
+  }
+  &__company-sp-size-btn{
+    @include mq(){
+      width: 90%;
+    }
+  }
+  &__user-sp-size-btn{
+    @include mq(){
+      width: 50%;
+      margin-right: 5%;
+    }
+  }
+  &__btn--normal {
+    background: $theme_yellow;
+  }
+  &__btn--normal:hover {
+    transition: .2s;
+    background: darken($theme_yellow, 3%);
+  }
+  &__btn--check {
+    background: darken($theme_green, 7%);
   }
 }
 
-.c-mypage-box__btn-container {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  margin-top: $space_s;
-  @include mq(){
-    margin-top: 2px;
-    width: 100%;
-  }
-}
-.c-mypage-box__user-btn-container {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  margin-top: $space_s;
-  @include mq(){
-    justify-content: flex-start;
-    margin-top: 2px;
-    width: 100%;
-  }
-}
 
-.c-mypage-box__btn {
-  border: none;
-  color: $theme_white;
-  cursor: pointer;
-  display: block;
-  font-size: $font_sp-m;
-  font-weight: normal;
-  float: left;
-  height: $space_3l;
-  line-height: $space_3l;
-  letter-spacing: 0.1em;
-  transition: .2s;
-  margin: 0;
-  width: 150px;
-  @include mq(){
-    font-size: $font_sp-s;
-    height: $space_2l;
-    line-height: $space_2l;
+
+
+
+
+
+
+.c-mypage-small-container {
+  &__btn-box {
+    float: left;
+    height: 150px;
+    position: relative;
+    width: 400px;
+    @include mq() {
+      width: 100%;
+    }
+  }
+  &__btn{
+    border: 1px solid $theme_black;
+    background: $theme_white;
+    color: $theme_black;
+    cursor: pointer;
+    display: block;
+    margin: $space_5l auto;
+    padding: $space_2l $space_3l;
+    text-decoration: none;
     text-align: center;
+    width: 220px;
+    @include mq() {
+      width: 60%;
+      padding: $space_l $space_2l;
+    }
   }
-}
-.c-mypage-box__company-btn{
-  margin: 0 10% 0 0;
-}
-
-.c-mypage-box__company-sp-size-btn{
-  @include mq(){
-    width: 90%;
+  &__btn:hover {
+    border: 1px solid #999999;
+    color: $theme_gray;
   }
-}
-.c-mypage-box__user-sp-size-btn{
-  @include mq(){
-    width: 50%;
-    margin-right: 5%;
+  &__btn-logo {
+    color: $theme_gray;
+    position:absolute;
   }
-}
 
-
-.c-mypage-box__btn--normal {
-  background: $theme_yellow;
-}
-.c-mypage-box__btn--normal:hover {
-  transition: .2s;
-  background: darken($theme_yellow, 3%);
-}
-.c-mypage-box__btn--check {
-  background: darken($theme_green, 7%);
-}
-
-.c-mypage-small-container__btn-box {
-  float: left;
-  height: 150px;
-  position: relative;
-  width: 400px;
-  @include mq() {
-    width: 100%;
-  }
-}
-
-.c-mypage-small-container__btn{
-  border: 1px solid $theme_black;
-  background: $theme_white;
-  color: $theme_black;
-  cursor: pointer;
-  display: block;
-  margin: $space_5l auto;
-  padding: $space_2l $space_3l;
-  text-decoration: none;
-  text-align: center;
-  width: 220px;
-  @include mq() {
-    width: 60%;
-    padding: $space_l $space_2l;
-  }
-}
-
-.c-mypage-small-container__btn:hover {
-  border: 1px solid #999999;
-  color: $theme_gray;
-}
-
-.c-mypage-small-container__btn-logo {
-  color: $theme_gray;
-  position:absolute;
-}
-
-.c-mypage__price-red {
-  color: $theme_red;
-}
-.c-mypage__price-line {
-  color: $theme_gray;
-  text-decoration: line-through;
 }
