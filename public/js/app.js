@@ -12895,19 +12895,20 @@ __webpack_require__.r(__webpack_exports__);
 
 var alertInput = document.querySelector('.js-alert-input');
 var alertForm = document.querySelector('.js-alert-form');
-alertInput.addEventListener('click', function () {
-  var result = window.confirm("商品の購入をキャンセルしますか？");
-  console.log(result);
 
-  if (result) {
-    if (alertForm !== null && alertInput !== null) {
+if (alertForm !== null && alertInput !== null) {
+  alertInput.addEventListener('click', function () {
+    var result = window.confirm("商品の購入をキャンセルしますか？");
+    console.log(result);
+
+    if (result) {
       alertInput.setAttribute("disabled", 'true');
       alertForm.submit();
+    } else {
+      return false;
     }
-  } else {
-    return false;
-  }
-});
+  });
+}
 
 /***/ }),
 

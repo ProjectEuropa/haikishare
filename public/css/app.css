@@ -2869,139 +2869,6 @@ select:-moz-focusring {
   }
 }
 
-/* ここから下がボタンのCSS　*/
-
-.p-mypage-btn-animation-01 {
-  display: inline-block;
-  width: 150px;
-  text-align: center;
-  background-color: #DFD000;
-  border: 2px solid #DFD000;
-  color: #DFD000;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 24px;
-  border-radius: 4px;
-  position: relative;
-}
-
-.p-mypage-btn-animation-01 span {
-  position: relative;
-  z-index: 1;
-}
-
-.p-mypage-btn-animation-01::before,
-.p-mypage-btn-animation-01::after {
-  content: "";
-  display: block;
-  background-color: #FFFFFF;
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  transition: 0.2s;
-}
-
-.p-mypage-btn-animation-01::before {
-  left: 0;
-}
-
-.p-mypage-btn-animation-01::after {
-  right: 0;
-}
-
-.p-mypage-btn-animation-01:hover:before,
-.p-mypage-btn-animation-01:hover:after {
-  width: 0;
-  background-color: #FFFFFF;
-}
-
-.p-mypage-btn-animation-01:hover {
-  color: #FFFFFF;
-}
-
-.p-auth-btn-animation-02 {
-  box-sizing: border-box;
-}
-
-.p-auth-btn-animation-02:before,
-.p-auth-btn-animation-02:after {
-  box-sizing: inherit;
-}
-
-.p-auth-btn-animation-02__box {
-  width: 400px;
-  text-align: left;
-  margin-top: 10px;
-  border-bottom: 3px solid #EAEAEA;
-  border-radius: 3px;
-  background: #F8FAFC;
-}
-
-.p-auth-btn-animation-02__input {
-  display: none;
-}
-
-.p-auth-btn-animation-02__label:focus,
-.p-auth-btn-animation-02__label:hover,
-.p-auth-btn-animation-02__label:active,
-.p-auth-btn-animation-02__label:checked + .p-auth-btn-animation-02__label {
-  color: #DE3737;
-}
-
-.p-auth-btn-animation-02__label:focus:before,
-.p-auth-btn-animation-02__label:hover:before,
-.p-auth-btn-animation-02__label:active:before,
-.p-auth-btn-animation-02__label:checked + .p-auth-btn-animation-02__label:before {
-  border-color: #DE3737;
-  background: #F8FAFC;
-}
-
-.p-auth-btn-animation-02__label {
-  color: #757575;
-  position: relative;
-  display: block;
-  overflow: hidden;
-  padding: 10px 10px 10px 50px;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  background: #F8FAFC;
-  font-size: 18px;
-}
-
-.p-auth-btn-animation-02__label:before {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 10px;
-  height: 10px;
-  content: "";
-  border: 0.2em solid #EAEAEA;
-  border-radius: 50%;
-}
-
-.p-auth-btn-animation-02__input:checked + .p-auth-btn-animation-02__label:before {
-  border-color: #DE3737;
-  background: #DE3737;
-}
-
-.p-auth-btn-animation-02__input:disabled + .p-auth-btn-animation-02__label {
-  cursor: not-allowed;
-  color: rgba(0, 0, 0, 0.5);
-  background: #efefef;
-}
-
-.p-auth-btn-animation-02__input:disabled + .p-auth-btn-animation-02__label:hover {
-  border-color: rgba(0, 0, 0, 0.1);
-}
-
-.p-auth-btn-animation-02__input:disabled + .p-auth-btn-animation-02__label:before {
-  border-color: #F8FAFC;
-  background: #F8FAFC;
-}
-
 .p-sub-head-modal__container {
   background: #111111;
   height: 70px;
@@ -3065,36 +2932,36 @@ select:-moz-focusring {
   }
 }
 
-.p-paginationWrap {
+.p-pagination {
   display: flex;
   justify-content: center;
   margin-bottom: 100px;
 }
 
 @media screen and (max-width: 550px) {
-  .p-paginationWrap {
+  .p-pagination {
     margin-bottom: 50px;
   }
 }
 
-.p-paginationWrap ul.p-pagination {
+.p-pagination-container {
   display: inline-block;
   padding: 0;
   margin: 0;
 }
 
-.p-paginationWrap ul.p-pagination li {
+.p-pagination-list {
   display: inline;
   margin-right: 4px;
 }
 
-.p-paginationWrap ul.p-pagination li a {
+.p-pagination-list-item {
   color: #2f3859;
   padding: 8px 14px;
   text-decoration: none;
 }
 
-.p-paginationWrap ul.p-pagination li a.active {
+.p-pagination-list-item.active {
   background-color: #DFD000;
   color: white;
   border-radius: 40px;
@@ -3102,7 +2969,7 @@ select:-moz-focusring {
   height: 38px;
 }
 
-.p-paginationWrap ul.p-pagination li a:hover:not(.active) {
+.p-pagination-list-item:hover:not(.active) {
   background-color: #F1EA91;
   border-radius: 40px;
 }
