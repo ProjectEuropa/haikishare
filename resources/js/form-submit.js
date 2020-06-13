@@ -1,3 +1,4 @@
+// 重複クリックをしないように一回だけボタンを押せるようにする
 const input = document.querySelector('.js-input');
 const form = document.querySelector('.js-form');
 if (form !== null && input !== null){

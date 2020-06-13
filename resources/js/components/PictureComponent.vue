@@ -24,6 +24,7 @@ export default {
   },
   methods: {
     setImage(e) {
+      // 画像プレビュー機能
       const files = this.$refs.file;
       const fileImg = files.files[0];
       const preview = document.querySelector('.c-product__img');

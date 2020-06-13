@@ -118,6 +118,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     setImage: function setImage(e) {
+      // 画像プレビュー機能
       var files = this.$refs.file;
       var fileImg = files.files[0];
       var preview = document.querySelector('.c-product__img');
@@ -12893,6 +12894,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+// キャンセルなどの重要な場合はform-submitと同じ機能プラスconfirm()でダイアログを出す
 var alertInput = document.querySelector('.js-alert-input');
 var alertForm = document.querySelector('.js-alert-form');
 
@@ -12902,9 +12904,11 @@ if (alertForm !== null && alertInput !== null) {
     console.log(result);
 
     if (result) {
+      // OKの時
       alertInput.setAttribute("disabled", 'true');
       alertForm.submit();
     } else {
+      // キャンセルの時
       return false;
     }
   });
@@ -12919,6 +12923,7 @@ if (alertForm !== null && alertInput !== null) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+// 3秒間メッセージを表示する
 var msg = document.querySelector('.js-flash-message');
 setTimeout(function () {
   msg.classList.add('c-flash-message-animation');
@@ -12933,6 +12938,7 @@ setTimeout(function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+// 重複クリックをしないように一回だけボタンを押せるようにする
 var input = document.querySelector('.js-input');
 var form = document.querySelector('.js-form');
 
