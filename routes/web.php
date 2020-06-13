@@ -45,7 +45,7 @@ Route::group(['prefix' => 'companies', 'middleware' => ['companycheck']], functi
 });
 //商品
 Route::get('/products/search', 'ProductController@search')->name('products.search');
-Route::get('/products/destroy/{id}', 'ProductController@destroytoggle')->name('products.destroytoggle')->middleware('companycheck');
+Route::post('/products/destroy/{id}', 'ProductController@destroytoggle')->name('products.destroytoggle')->middleware('companycheck');
 
 Route::resource('products', 'ProductController');
 

@@ -12791,7 +12791,7 @@ __webpack_require__(/*! ./flash-message */ "./resources/js/flash-message.js");
 
 __webpack_require__(/*! ./form-submit */ "./resources/js/form-submit.js");
 
-__webpack_require__(/*! ./confirm */ "./resources/js/confirm.js");
+__webpack_require__(/*! ./confirm-submit */ "./resources/js/confirm-submit.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /**
@@ -12886,16 +12886,28 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/confirm.js":
-/*!*********************************!*\
-  !*** ./resources/js/confirm.js ***!
-  \*********************************/
+/***/ "./resources/js/confirm-submit.js":
+/*!****************************************!*\
+  !*** ./resources/js/confirm-submit.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function confirm() {
-  window.confirm("商品の購入をキャンセルしますか？");
-}
+var alertInput = document.querySelector('.js-alert-input');
+var alertForm = document.querySelector('.js-alert-form');
+alertInput.addEventListener('click', function () {
+  var result = window.confirm("商品の購入をキャンセルしますか？");
+  console.log(result);
+
+  if (result) {
+    if (alertForm !== null && alertInput !== null) {
+      alertInput.setAttribute("disabled", 'true');
+      alertForm.submit();
+    }
+  } else {
+    return false;
+  }
+});
 
 /***/ }),
 
@@ -12922,14 +12934,13 @@ setTimeout(function () {
 
 var input = document.querySelector('.js-input');
 var form = document.querySelector('.js-form');
-console.log('aaa');
 
 if (form !== null && input !== null) {
   input.addEventListener('click', function () {
     input.setAttribute("disabled", 'true');
     form.submit();
   });
-} else {}
+}
 
 /***/ }),
 

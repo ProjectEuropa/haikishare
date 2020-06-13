@@ -55,9 +55,9 @@
 
       @elseif ($login_flg == 2 && $product->sold_flg === 1)
       <!--　ユーザーが自分が購入した商品を見る場合 -->
-      <form method="post" action="{{ route('orders.destroy', $product->id )}}" class="js-form">
+      <form method="post" action="{{ route('orders.destroy', $product->id )}}" class="js-alert-form">
         @csrf
-        <input class="c-product-detail__btn c-product-detail__btn--hover-warning js-input" type="button" value="購入をキャンセルする" onClick="confirm()">
+        <input class="c-product-detail__btn c-product-detail__btn--hover-warning js-alert-input" type="button" value="購入をキャンセルする">
       </form>
 
       @elseif ( $login_flg == 3 && $product->sold_flg == '0')
