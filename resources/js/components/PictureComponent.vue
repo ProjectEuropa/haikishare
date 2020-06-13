@@ -31,9 +31,6 @@ export default {
         this.data.image = window.URL.createObjectURL(fileImg);
         this.data.name = fileImg.name;
         this.data.type = fileImg.type;
-        console.log(this.data.image);
-        console.log(this.data.name);
-        console.log(this.data.type);
         preview.src = this.data.image;
       }
     },

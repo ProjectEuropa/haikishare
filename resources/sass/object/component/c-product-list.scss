@@ -29,7 +29,7 @@
     color: $theme_light_black;
     margin-top: $space_m;
     @include mq() {
-      font-size: $font_sp-s;
+      font-size: $font_sp-m;
     }
   }
   &__box {

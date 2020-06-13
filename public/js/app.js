@@ -126,9 +126,6 @@ __webpack_require__.r(__webpack_exports__);
         this.data.image = window.URL.createObjectURL(fileImg);
         this.data.name = fileImg.name;
         this.data.type = fileImg.type;
-        console.log(this.data.image);
-        console.log(this.data.name);
-        console.log(this.data.type);
         preview.src = this.data.image;
       }
     }
@@ -12926,10 +12923,8 @@ setTimeout(function () {
 var input = document.querySelector('.js-input');
 var form = document.querySelector('.js-form');
 console.log('aaa');
-console.log(form);
-console.log(input);
 
-if (form != null && input != null) {
+if (form !== null && input !== null) {
   input.addEventListener('click', function () {
     input.setAttribute("disabled", 'true');
     form.submit();

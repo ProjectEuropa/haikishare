@@ -55,7 +55,7 @@
     width: 400px;
     -webkit-border-radius: 0px;
     @include mq() {
-      font-size: $font_sp-s;
+      font-size: $font_sp-m;
       padding: 18px 0 $space_s $space_m;
       width: 100%;
     }
@@ -135,7 +135,7 @@
     width: 150px;
     @include mq() {
       padding: $space_2l 0 3px $space_m;
-      font-size: $font_sp-s;
+      font-size: $font_sp-m;
       width: 100px;
     }
   }

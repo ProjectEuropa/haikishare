@@ -389,7 +389,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-auth__input {
-    font-size: 10px;
+    font-size: 12px;
     padding: 18px 0 5px 10px;
     width: 100%;
   }
@@ -492,7 +492,7 @@ select:-moz-focusring {
 @media screen and (max-width: 550px) {
   .c-auth__select-box select {
     padding: 20px 0 3px 10px;
-    font-size: 10px;
+    font-size: 12px;
     width: 100px;
   }
 }
@@ -1454,7 +1454,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-product-list__head-info-conditions {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -1870,7 +1870,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-product__input-name {
-    font-size: 10px;
+    font-size: 12px;
     width: 100%;
     height: 40px;
   }
@@ -1926,7 +1926,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-product__input--small {
-    font-size: 10px;
+    font-size: 12px;
     height: 40px;
     width: 40%;
   }
@@ -1996,7 +1996,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-product__letter-for-yen {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -2114,7 +2114,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-product__select-box select {
-    font-size: 10px;
+    font-size: 12px;
     width: 160px;
   }
 }

@@ -63,7 +63,7 @@
     outline: none;
     width: 300px;
     @include mq() {
-      font-size: $font_sp-s;
+      font-size: $font_sp-m;
       width: 100%;
       height: 40px;
     }
@@ -105,7 +105,7 @@
     text-align: right;
     width: 100px;
     @include mq(){
-      font-size: $font_sp-s;
+      font-size: $font_sp-m;
       height: 40px;
       width: 40%;
     }
@@ -159,7 +159,7 @@
     color: $theme_gray;
     padding-left: $space_s;
     @include mq() {
-      font-size: $font_sp-s;
+      font-size: $font_sp-m;
     }
 
   }
@@ -258,7 +258,7 @@
     -webkit-appearance: none;
     width: 200px;
     @include mq() {
-      font-size: $font_sp-s;
+      font-size: $font_sp-m;
       width: 160px;
     }
   }
