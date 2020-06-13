@@ -199,10 +199,10 @@
   }
   &__btn--normal {
     background: $theme_yellow;
-  }
-  &__btn--normal:hover {
-    transition: .2s;
-    background: darken($theme_yellow, 3%);
+    &:hover {
+      transition: .2s;
+      background: darken($theme_yellow, 3%);
+    }
   }
   &__btn--check {
     background: darken($theme_green, 7%);
@@ -241,10 +241,10 @@
       width: 60%;
       padding: $space_l $space_2l;
     }
-  }
-  &__btn:hover {
-    border: 1px solid #999999;
-    color: $theme_gray;
+    &:hover {
+      border: 1px solid #999999;
+      color: $theme_gray;
+    }
   }
   &__btn-logo {
     color: $theme_gray;

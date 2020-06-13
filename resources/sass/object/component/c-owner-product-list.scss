@@ -112,10 +112,10 @@
     &--normal {
       background: $theme_yellow;
       transition: .2s;
-    }
-    &--normal:hover {
-      transition: .2s;
-      background: darken($theme_yellow, 7%);
+      &:hover {
+        transition: .2s;
+        background: darken($theme_yellow, 7%);
+      }
     }
     &--check{
       background: darken($theme_green, 7%);

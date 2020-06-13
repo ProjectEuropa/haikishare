@@ -41,6 +41,10 @@
     overflow:	hidden;
     position:	relative;
     width:	280px;
+    &:hover &__img-mask {
+      opacity:	1;	/* マスクを表示する */
+      padding-top:	$space_3l;	/* ホバーで下にずらす */
+    }
   }
   &__img {
     height:	200px;
@@ -69,10 +73,10 @@
     margin: 0 auto;
     text-decoration: none;
     width: 100px;
-  }
-  &__btn:hover {
-    background: $theme_white;
-    transition: all 0.1s ease 0s;
+    &:hover {
+      background: $theme_white;
+      transition: all 0.1s ease 0s;
+    }
   }
   &__btn-box {
     margin: $space_m auto 0;
@@ -95,10 +99,6 @@
     transition:		all 0.2s ease;
     -webkit-transition:	all 0.2s ease;
     width: 100%;
-  }
-  &__img-box:hover &__img-mask {
-    opacity:	1;	/* マスクを表示する */
-    padding-top:	$space_3l;	/* ホバーで下にずらす */
   }
 
 }

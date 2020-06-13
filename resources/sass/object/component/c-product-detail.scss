@@ -30,19 +30,23 @@
   }
   &__body {
     font-size: $font_m;
+    font-weight: bold;
+    margin: 0 auto;
     padding: 0 300px;
     position: relative;
     -webkit-font-smoothing: antialiased;
+    width: 300px;
     @include mq() {
       padding: 0 $space_3l;
       font-size: $font_s;
+      width: 80%;
     }
   }
   &__status {
     color: $theme_white;
     padding: 10px 20px;
     position: absolute;
-    right: 360px;
+    right: 250px;
     top: 0;
     @include mq() {
       padding: $space_s $space_m;

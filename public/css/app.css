@@ -1643,15 +1643,19 @@ select:-moz-focusring {
 
 .c-product-detail__body {
   font-size: 18px;
+  font-weight: bold;
+  margin: 0 auto;
   padding: 0 300px;
   position: relative;
   -webkit-font-smoothing: antialiased;
+  width: 300px;
 }
 
 @media screen and (max-width: 550px) {
   .c-product-detail__body {
     padding: 0 30px;
     font-size: 14px;
+    width: 80%;
   }
 }
 
@@ -1659,7 +1663,7 @@ select:-moz-focusring {
   color: #FFFFFF;
   padding: 10px 20px;
   position: absolute;
-  right: 360px;
+  right: 250px;
   top: 0;
 }
 
@@ -2339,6 +2343,13 @@ select:-moz-focusring {
   width: 280px;
 }
 
+.c-owner-product-sell__img-box:hover .c-owner-product-sell__img-box__img-mask {
+  opacity: 1;
+  /* マスクを表示する */
+  padding-top: 30px;
+  /* ホバーで下にずらす */
+}
+
 .c-owner-product-sell__img {
   height: 200px;
   -o-object-fit: cover;
@@ -2400,13 +2411,6 @@ select:-moz-focusring {
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
   width: 100%;
-}
-
-.c-owner-product-sell__img-box:hover .c-owner-product-sell__img-mask {
-  opacity: 1;
-  /* マスクを表示する */
-  padding-top: 30px;
-  /* ホバーで下にずらす */
 }
 
 .c-top__background {

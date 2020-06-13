@@ -15,7 +15,7 @@
   <img src="data:image/png;base64,{{$product->pic1 }}" class="c-product-detail__img">
   <div class="c-product-detail__name">{{ $product->name}}</div>
   <div class="c-product-detail__body">
-    <div class="c-product-detail__item">
+    <div>
       <span>価格</span><span class="c-product-detail__discount">{{ $product->discount}}</span><span class="c-product-detail__discount-letter">円</span><span>(税込み)</span><span class="c-product-detail__price-gray">{{ $product->price }}円</span>
       <div class="c-product-detail__category">{{ $category }}</div>
     </div>
