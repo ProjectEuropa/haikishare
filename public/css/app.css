@@ -475,32 +475,6 @@ select:-moz-focusring {
   }
 }
 
-.c-auth__select-box select {
-  -moz-appearance: none;
-       appearance: none;
-  background: #F8FAFC;
-  border: none;
-  box-shadow: none;
-  cursor: pointer;
-  font-size: 18px;
-  outline: none;
-  padding: 17px 30px 0 0;
-  -webkit-appearance: none;
-  width: 150px;
-}
-
-@media screen and (max-width: 550px) {
-  .c-auth__select-box select {
-    padding: 20px 0 3px 10px;
-    font-size: 12px;
-    width: 100px;
-  }
-}
-
-.c-auth__select-box select::-ms-expand {
-  display: none;
-}
-
 .c-auth__select-box:before {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
@@ -522,6 +496,32 @@ select:-moz-focusring {
     right: 20px;
     top: 25px;
   }
+}
+
+.c-auth__select {
+  -moz-appearance: none;
+       appearance: none;
+  background: #F8FAFC;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+  padding: 17px 30px 0 0;
+  -webkit-appearance: none;
+  width: 150px;
+}
+
+@media screen and (max-width: 550px) {
+  .c-auth__select {
+    padding: 20px 0 3px 10px;
+    font-size: 12px;
+    width: 100px;
+  }
+}
+
+.c-auth__select::-ms-expand {
+  display: none;
 }
 
 .c-auth__ask {
@@ -1048,6 +1048,8 @@ select:-moz-focusring {
   outline: none;
   width: 100px;
   padding: 10px 0 10px 10px;
+  border-bottom: 3px solid #EAEAEA;
+  position: relative;
 }
 
 @media screen and (max-width: 550px) {
@@ -1056,28 +1058,6 @@ select:-moz-focusring {
     margin-right: 35%;
     width: 25%;
   }
-}
-
-.c-profile__select-box select {
-  -moz-appearance: none;
-       appearance: none;
-  border: none;
-  cursor: pointer;
-  box-shadow: none;
-  font-size: 14px;
-  outline: none;
-  -webkit-appearance: none;
-  width: 200px;
-}
-
-.c-profile__select-box select::-ms-expand {
-  display: none;
-}
-
-.c-profile__select-box {
-  border-bottom: 3px solid #EAEAEA;
-  background: #F2F2F2;
-  position: relative;
 }
 
 .c-profile__select-box:before {
@@ -1101,14 +1081,26 @@ select:-moz-focusring {
   }
 }
 
+.c-profile__select {
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+  font-size: 14px;
+  outline: none;
+  -webkit-appearance: none;
+  width: 200px;
+}
+
+.c-profile__select::-ms-expand {
+  display: none;
+}
+
 .c-search-tab {
   background: #FFFFFF;
   max-height: 250px;
   overflow: hidden;
-  /* 元々のチェックボックス（非表示） */
-  /* チェックボックスの代わりを成すラベル */
-  /* ラベルの左に表示させる正方形のボックス□ */
-  /* チェックが入った時のレ点 */
 }
 
 .c-search-tab__main-container {
@@ -1307,31 +1299,15 @@ select:-moz-focusring {
   }
 }
 
-.c-search-tab__select--bigger {
+.c-search-tab__select-box--bigger {
   margin: 0 170px 0 0;
   width: 150px;
 }
 
 @media screen and (max-width: 550px) {
-  .c-search-tab__select--bigger {
+  .c-search-tab__select-box--bigger {
     margin: 0;
   }
-}
-
-.c-search-tab__select-box select {
-  -moz-appearance: none;
-       appearance: none;
-  border: none;
-  box-shadow: none;
-  cursor: pointer;
-  outline: none;
-  font-size: 14px;
-  -webkit-appearance: none;
-  width: 200px;
-}
-
-.c-search-tab__select-box select::-ms-expand {
-  display: none;
 }
 
 .c-search-tab__select-box:before {
@@ -1355,6 +1331,22 @@ select:-moz-focusring {
   }
 }
 
+.c-search-tab__select {
+  -moz-appearance: none;
+       appearance: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  -webkit-appearance: none;
+  width: 200px;
+}
+
+.c-search-tab__select::-ms-expand {
+  display: none;
+}
+
 .c-search-tab__simbol-for-price {
   color: #808080;
 }
@@ -1363,11 +1355,16 @@ select:-moz-focusring {
   float: left;
 }
 
-.c-search-tab .c-search-tab__checkbox .checkbox {
+/* 元々のチェックボックス（非表示） */
+
+.checkbox {
   display: none;
+  /* チェックボックスの代わりを成すラベル */
+  /* ラベルの左に表示させる正方形のボックス□ */
+  /* チェックが入った時のレ点 */
 }
 
-.c-search-tab .c-search-tab__checkbox .checkbox + label {
+.checkbox + .c-search-tab__checkbox-label {
   cursor: pointer;
   display: none;
   display: inline-block;
@@ -1377,12 +1374,12 @@ select:-moz-focusring {
 }
 
 @media screen and (max-width: 550px) {
-  .c-search-tab .c-search-tab__checkbox .checkbox + label {
+  .checkbox + .c-search-tab__checkbox-label {
     padding-right: 0;
   }
 }
 
-.c-search-tab .c-search-tab__checkbox .checkbox + label::before {
+.checkbox + .c-search-tab__checkbox-label::before {
   content: "";
   position: absolute;
   display: block;
@@ -1397,7 +1394,7 @@ select:-moz-focusring {
   /* 背景の色変更 お好きな色を */
 }
 
-.c-search-tab .c-search-tab__checkbox .checkbox:checked + label::after {
+.checkbox:checked + .c-search-tab__checkbox-label::after {
   content: "";
   position: absolute;
   display: block;
@@ -2100,29 +2097,6 @@ select:-moz-focusring {
   }
 }
 
-.c-product__select-box select {
-  -moz-appearance: none;
-       appearance: none;
-  box-shadow: none;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-  outline: none;
-  -webkit-appearance: none;
-  width: 200px;
-}
-
-@media screen and (max-width: 550px) {
-  .c-product__select-box select {
-    font-size: 12px;
-    width: 160px;
-  }
-}
-
-.c-product__select-box select::-ms-expand {
-  display: none;
-}
-
 .c-product__select-box:before {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
@@ -2142,6 +2116,29 @@ select:-moz-focusring {
     right: 25px;
     top: 16px;
   }
+}
+
+.c-product__select {
+  -moz-appearance: none;
+       appearance: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+  -webkit-appearance: none;
+  width: 200px;
+}
+
+@media screen and (max-width: 550px) {
+  .c-product__select {
+    font-size: 12px;
+    width: 160px;
+  }
+}
+
+.c-product__select__select::-ms-expand {
+  display: none;
 }
 
 .c-owner-product-list__container {

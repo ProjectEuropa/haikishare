@@ -17,7 +17,7 @@
         <div class="c-search-tab__item">
           <div class="c-search-tab__label">都道府県</div>
           <div class="c-search-tab__select-box">
-            <select name="prefecture_id" class="u-bgc-gray">
+            <select name="prefecture_id" class="c-search-tab__select u-bgc-gray">
             	<option value="" hidden>-未選択-</option>
               @foreach ($prefectures as $prefecture)
             	<option value="{{{ $prefecture->id }}}">{{{ $prefecture->name }}}</option>
@@ -33,8 +33,8 @@
 
         <div class="c-search-tab__item">
           <div class="c-search-tab__label">カテゴリー</div>
-          <div class="c-search-tab__select-box c-search-tab__select--bigger">
-            <select name="category_id" class="u-bgc-gray">
+          <div class="c-search-tab__select-box c-search-tab__select-box--bigger">
+            <select name="category_id" class="c-search-tab__select u-bgc-gray">
               <option value="" hidden>-未選択-</option>
               @foreach ($categories as $category)
               <option value="{{{ $category->id }}}">{{{ $category->name }}}</option>
@@ -69,15 +69,17 @@
 
 
       <div class="c-search-tab__item-for-checkbox">
+
         <div class="c-search-tab__label-for-checkbox">賞味期限切れ</div>
         <div class="c-search-tab__checkbox">
-            <input id="expiration" value="1" name="expiration" type="checkbox" class="checkbox"checked><label for="expiration">表示</label>
+            <input id="expiration" value="1" name="expiration" type="checkbox" class="checkbox"checked><label class="c-search-tab__checkbox-label" for="expiration">表示</label>
         </div>
 
         <div class="c-search-tab__label-for-checkbox">在庫なし</div>
         <div class="c-search-tab__checkbox">
-          <input id="sold" value="1" name="sold" type="checkbox" class="checkbox"><label for="sold">表示</label>
+          <input id="sold" value="1" name="sold" type="checkbox" class="checkbox"><label class="c-search-tab__checkbox-label" for="sold">表示</label>
         </div>
+        
       </div>
 
 

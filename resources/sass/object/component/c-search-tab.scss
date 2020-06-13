@@ -149,15 +149,32 @@
     @include mq() {
       margin: 0;
     }
-  }
-  &__select--bigger {
-    margin: 0 170px 0 0;
-    width: 150px;
-    @include mq() {
-      margin: 0;
+    &--bigger {
+      margin: 0 170px 0 0;
+      width: 150px;
+      @include mq() {
+        margin: 0;
+      }
+    }
+    &:before {
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid black;
+      content: '';
+      height: 0;
+      position: absolute;
+      pointer-events: none;
+      padding: 0;
+      pointer-events: none;
+      right: 14px;
+      top: 12px;
+      width: 0;
+      @include mq() {
+        display: none;
+      }
     }
   }
-  &__select-box select {
+  &__select {
     appearance: none;
     border: none;
     box-shadow: none;
@@ -166,24 +183,7 @@
     font-size: $font_s;
     -webkit-appearance: none;
     width: 200px;
-  }
-  &__select-box select::-ms-expand {
-    display: none;
-  }
-  &__select-box:before {
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid black;
-    content: '';
-    height: 0;
-    position: absolute;
-    pointer-events: none;
-    padding: 0;
-    pointer-events: none;
-    right: 14px;
-    top: 12px;
-    width: 0;
-    @include mq() {
+    &::-ms-expand {
       display: none;
     }
   }
@@ -193,12 +193,14 @@
   &__checkbox {
     float: left;
   }
-  /* 元々のチェックボックス（非表示） */
-  .c-search-tab__checkbox .checkbox{
-    display: none;
-  }
+
+}
+
+/* 元々のチェックボックス（非表示） */
+.checkbox{
+  display: none;
   /* チェックボックスの代わりを成すラベル */
-  .c-search-tab__checkbox .checkbox+label{
+  &+.c-search-tab__checkbox-label{
     cursor: pointer;
     display: none;
     display: inline-block;
@@ -210,7 +212,7 @@
     }
   }
   /* ラベルの左に表示させる正方形のボックス□ */
-  .c-search-tab__checkbox .checkbox+label::before{
+  &+.c-search-tab__checkbox-label::before{
     content: "";
     position: absolute;
     display: block;
@@ -224,7 +226,7 @@
     background-color: $theme_super_light_gray; /* 背景の色変更 お好きな色を */
   }
   /* チェックが入った時のレ点 */
-  .c-search-tab__checkbox .checkbox:checked+label::after{
+  &:checked+.c-search-tab__checkbox-label::after{
     content: "";
     position: absolute;
     display: block;
@@ -239,5 +241,4 @@
     border-left: 3px solid;
     border-color:  $theme_light_black; /* チェックの色変更 お好きな色を */
   }
-
 }

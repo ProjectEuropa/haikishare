@@ -63,7 +63,7 @@
           <div class="c-product__name">種類</div><div class="c-product__label">必須</div>
         </div>
         <div class="c-product__select-box">
-          <select class="u-bgc-gray" name="category_id">
+          <select class="c-product__select u-bgc-gray" name="category_id">
             <option value="" hidden>選択してください</option>
             @foreach ($categories as $category)
             @if ( old('category_id', $product->category_id) == $category->id)

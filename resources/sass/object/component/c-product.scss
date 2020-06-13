@@ -247,8 +247,25 @@
       font-size: $font_s;
       width: 160px;
     }
+    &:before {
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid $theme_black;
+      content: '';
+      height: 0;
+      position: absolute;
+      padding: 0;
+      pointer-events: none;
+      right: 20px;
+      top: 30px;
+      width: 0;
+      @include mq() {
+        right: 25px;
+        top: 16px;
+      }
+    }
   }
-  &__select-box select {
+  &__select {
     appearance: none;
     box-shadow: none;
     border: none;
@@ -261,25 +278,8 @@
       font-size: $font_sp-m;
       width: 160px;
     }
-  }
-  &__select-box select::-ms-expand {
-    display: none;
-  }
-  &__select-box:before {
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid $theme_black;
-    content: '';
-    height: 0;
-    position: absolute;
-    padding: 0;
-    pointer-events: none;
-    right: 20px;
-    top: 30px;
-    width: 0;
-    @include mq() {
-      right: 25px;
-      top: 16px;
+    &__select::-ms-expand {
+      display: none;
     }
   }
 }

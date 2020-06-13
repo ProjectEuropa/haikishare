@@ -38,7 +38,7 @@
       <div class="c-auth__item u-mgt-20-sp-0 c-auth__item-for-select"><span class="c-auth__warning c-auth__warning-for-select">必須</span>
 
         <div class="c-auth__select-box">
-          <select name="prefecture">
+          <select name="prefecture" class="c-auth__select">
           	<option value="" hidden>都道府県</option>
             @foreach ($prefectures as $prefecture)
             @if ( old('prefecture') == $prefecture->id)

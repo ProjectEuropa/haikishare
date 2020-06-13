@@ -37,7 +37,7 @@
         <div class="c-profile__item">
           <div class="c-profile__label">都道府県</div>
           <div class="c-profile__select-box">
-            <select name="prefecture_id" class="u-bgc-gray">
+            <select name="prefecture_id" class="c-profile__select u-bgc-gray">
             	<option value="" hidden>都道府県</option>
               @foreach ($prefectures as $prefecture)
               @if ( old('prefecture_id', $company->prefecture_id) == $prefecture->id)

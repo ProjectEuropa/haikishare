@@ -95,13 +95,32 @@
     outline: none;
     width: 100px;
     padding: $space_m 0 $space_m $space_m;
+    border-bottom: 3px solid $theme_gray_word_bottom;
+    position: relative;
     @include mq(){
       margin: 0;
       margin-right: 35%;
       width: 25%;
     }
+    &:before {
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid $theme_black;
+      content: '';
+      height: 0;
+      pointer-events: none;
+      position: absolute;
+      padding: 0;
+      top: 17px;
+      right: 13px;
+      width: 0;
+      pointer-events: none;
+      @include mq(){
+        display: none;
+      }
+    }
   }
-  &__select-box select {
+  &__select {
     appearance: none;
     border: none;
     cursor: pointer;
@@ -110,29 +129,7 @@
     outline: none;
     -webkit-appearance: none;
     width: 200px;
-  }
-  &__select-box select::-ms-expand {
-    display: none;
-  }
-  &__select-box {
-    border-bottom: 3px solid $theme_gray_word_bottom;
-    background: $theme_super_light_gray;
-    position: relative;
-  }
-  &__select-box:before {
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid $theme_black;
-    content: '';
-    height: 0;
-    pointer-events: none;
-    position: absolute;
-    padding: 0;
-    top: 17px;
-    right: 13px;
-    width: 0;
-    pointer-events: none;
-    @include mq(){
+    &::-ms-expand {
       display: none;
     }
   }
