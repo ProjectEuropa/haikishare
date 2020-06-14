@@ -389,7 +389,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-auth__input {
-    font-size: 12px;
+    font-size: 14px;
     padding: 18px 0 5px 10px;
     width: 100%;
   }
@@ -1944,7 +1944,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-product__input-for-expiration {
-    font-size: 10px;
+    font-size: 12px;
     height: 40px;
     padding: 5px;
     width: 27%;
@@ -1966,7 +1966,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-product__input-for-expiration-small {
-    font-size: 10px;
+    font-size: 12px;
     height: 40px;
     padding: 5px;
     width: 17%;
@@ -2013,6 +2013,7 @@ select:-moz-focusring {
 .c-product__btn {
   align-items: center;
   border: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   color: #FFFFFF;
   cursor: pointer;
   height: 50px;
@@ -2034,42 +2035,17 @@ select:-moz-focusring {
   }
 }
 
-.c-product__create-btn {
-  background: #DFD000;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
-.c-product__create-btn:hover {
+.c-product__btn:hover {
   transition: all 0.2s ease;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
+}
+
+.c-product__create-btn {
+  background: #DFD000;
 }
 
 .c-product__warning-btn {
   background: #DE3737;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  color: #FFFFFF;
-  display: block;
-  height: 50px;
-  font-size: 14px;
-  letter-spacing: 0.1em;
-  margin: 0 auto 100px;
-  transition: all 0.3s ease;
-  text-align: center;
-  width: 250px;
-  -webkit-transition: all 0.3s ease;
-}
-
-@media screen and (max-width: 550px) {
-  .c-product__warning-btn {
-    height: 40px;
-    line-height: 40px;
-    width: 80%;
-  }
-}
-
-.c-product__warning-btn:hover {
-  transition: all 0.2s ease;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
 }
 
 .c-product__select-box {

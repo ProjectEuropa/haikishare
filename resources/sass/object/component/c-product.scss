@@ -122,7 +122,7 @@
     float: left;
     width: 100px;
     @include mq(){
-      font-size: $font_sp-s;
+      font-size: $font_sp-m;
       height: 40px;
       padding: $space_s;
       width: 27%;
@@ -140,7 +140,7 @@
     height: $space_6l;
     width: 100px;
     @include mq(){
-      font-size: $font_sp-s;
+      font-size: $font_sp-m;
       height: 40px;
       padding: $space_s;
       width: 17%;
@@ -176,6 +176,7 @@
   &__btn {
     align-items: center;
     border: none;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
     color: $theme_white;
     cursor: pointer;
     height: $space_5l;
@@ -192,39 +193,17 @@
       line-height: $space_4l;
       width: 100%;
     }
+    &:hover {
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
+    }
   }
   &__create-btn {
     background: $theme_yellow;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    &:hover {
-      -webkit-transition: all 0.2s ease;
-      transition: all 0.2s ease;
-      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
-    }
   }
   &__warning-btn {
     background: $theme_red;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    color: $theme_white;
-    display: block;
-    height: $space_5l;
-    font-size: $font_s;
-    letter-spacing: 0.1em;
-    margin: 0 auto 100px;
-    transition: all 0.3s ease;
-    text-align: center;
-    width: 250px;
-    -webkit-transition: all 0.3s ease;
-    @include mq(){
-      height: $space_4l;
-      line-height: $space_4l;
-      width: 80%;
-    }
-    &:hover {
-      -webkit-transition: all 0.2s ease;
-      transition: all 0.2s ease;
-      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 8px 8px 0 rgba(0, 0, 0, 0.24);
-    }
   }
 
   &__select-box {
