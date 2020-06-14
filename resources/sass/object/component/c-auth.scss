@@ -1,7 +1,19 @@
 .c-auth{
-  &__container {
+  &__login-container {
     margin: $space_5l auto;
     overflow: hidden;
+    width: 400px;
+    @include mq() {
+      width: 80%;
+    }
+  }
+  &__register-container {
+    margin: $space_5l auto;
+    overflow: hidden;
+    width: 500px;
+    @include mq() {
+      width: 80%;
+    }
   }
   &__item {
     display: flex;
@@ -46,9 +58,10 @@
       width: 26px;
     }
   }
-  &__input {
+  &__login-input {
     border: none;
     background: $theme_gray_background;
+    border-bottom: 2px solid $theme_gray_word_bottom;
     color: $theme_dark_gray;
     font-size: $font_m;
     padding: $space_l 0;
@@ -56,7 +69,31 @@
     -webkit-border-radius: 0px;
     @include mq() {
       font-size: $font_s;
-      padding: 18px 0 $space_s $space_m;
+      padding: 0 0 0 $space_m;
+      width: 100%;
+    }
+    &:focus {
+      outline: none;
+    }
+    &::-moz-placeholder {
+      color: black;
+    }
+    &::-webkit-placeholder {
+      color: $theme_gray;
+    }
+  }
+  &__register-input {
+    border: none;
+    background: $theme_gray_background;
+    border-bottom: 3px solid $theme_gray_word_bottom;
+    color: $theme_dark_gray;
+    font-size: $font_m;
+    padding: $space_l 0;
+    width: 400px;
+    -webkit-border-radius: 0px;
+    @include mq() {
+      font-size: $font_s;
+      padding: 12px 0 0 $space_m;
       width: 100%;
     }
     &:focus {
@@ -137,7 +174,7 @@
       pointer-events: none;
       @include mq() {
         right: 20px;
-        top: 25px;
+        top: 20px;
       }
     }
   }
@@ -153,7 +190,7 @@
     -webkit-appearance: none;
     width: 150px;
     @include mq() {
-      padding: $space_2l 0 3px $space_m;
+      padding: 14px 0 3px $space_m;
       font-size: $font_sp-m;
       width: 100px;
     }

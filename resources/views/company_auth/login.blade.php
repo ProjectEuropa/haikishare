@@ -15,13 +15,13 @@
   @endslot
 @endcomponent
 
-<div class="c-auth__container c-login__container">
+<div class="c-auth__login-container">
 
   <form method="POST" action="{{ route('company_auth.login') }}">
     @csrf
 
-      <label>
-        <input type="email" class="c-auth__input c-login__input" name="email"placeholder="メールアドレス" value="{{ old('email') }}" autocomplete="email" autofocus>
+      <label class="c-auth__item">
+        <input type="email" class="c-auth__login-input" name="email"placeholder="メールアドレス" value="{{ old('email') }}" autocomplete="email" autofocus>
       </label>
 
       @error('email')
@@ -31,7 +31,7 @@
       @enderror
 
       <label class="c-auth__item">
-        <input class="c-auth__input c-login__input" type="password" placeholder="パスワード" name="password" value="{{ old('password') }}" autocomplete="current-password">
+        <input class="c-auth__login-input" type="password" placeholder="パスワード" name="password" value="{{ old('password') }}" autocomplete="current-password">
       </label>
       @error('password')
       <span class="c-auth--error">

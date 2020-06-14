@@ -316,9 +316,28 @@ select:-moz-focusring {
   margin-top: auto;
 }
 
-.c-auth__container {
+.c-auth__login-container {
   margin: 50px auto;
   overflow: hidden;
+  width: 400px;
+}
+
+@media screen and (max-width: 550px) {
+  .c-auth__login-container {
+    width: 80%;
+  }
+}
+
+.c-auth__register-container {
+  margin: 50px auto;
+  overflow: hidden;
+  width: 500px;
+}
+
+@media screen and (max-width: 550px) {
+  .c-auth__register-container {
+    width: 80%;
+  }
 }
 
 .c-auth__item {
@@ -377,9 +396,10 @@ select:-moz-focusring {
   }
 }
 
-.c-auth__input {
+.c-auth__login-input {
   border: none;
   background: #F8FAFC;
+  border-bottom: 2px solid #EAEAEA;
   color: #757575;
   font-size: 18px;
   padding: 15px 0;
@@ -388,22 +408,53 @@ select:-moz-focusring {
 }
 
 @media screen and (max-width: 550px) {
-  .c-auth__input {
+  .c-auth__login-input {
     font-size: 14px;
-    padding: 18px 0 5px 10px;
+    padding: 0 0 0 10px;
     width: 100%;
   }
 }
 
-.c-auth__input:focus {
+.c-auth__login-input:focus {
   outline: none;
 }
 
-.c-auth__input::-moz-placeholder {
+.c-auth__login-input::-moz-placeholder {
   color: black;
 }
 
-.c-auth__input::-webkit-placeholder {
+.c-auth__login-input::-webkit-placeholder {
+  color: #808080;
+}
+
+.c-auth__register-input {
+  border: none;
+  background: #F8FAFC;
+  border-bottom: 3px solid #EAEAEA;
+  color: #757575;
+  font-size: 18px;
+  padding: 15px 0;
+  width: 400px;
+  -webkit-border-radius: 0px;
+}
+
+@media screen and (max-width: 550px) {
+  .c-auth__register-input {
+    font-size: 14px;
+    padding: 12px 0 0 10px;
+    width: 100%;
+  }
+}
+
+.c-auth__register-input:focus {
+  outline: none;
+}
+
+.c-auth__register-input::-moz-placeholder {
+  color: black;
+}
+
+.c-auth__register-input::-webkit-placeholder {
   color: #808080;
 }
 
@@ -494,7 +545,7 @@ select:-moz-focusring {
 @media screen and (max-width: 550px) {
   .c-auth__select-box:before {
     right: 20px;
-    top: 25px;
+    top: 20px;
   }
 }
 
@@ -514,7 +565,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-auth__select {
-    padding: 20px 0 3px 10px;
+    padding: 14px 0 3px 10px;
     font-size: 12px;
     width: 100px;
   }
@@ -541,34 +592,6 @@ select:-moz-focusring {
 .c-auth__ask:hover {
   color: #DFD000;
   transition: 0.3s;
-}
-
-.c-login__input {
-  border-bottom: 2px solid #EAEAEA;
-}
-
-.c-login__container {
-  width: 400px;
-}
-
-@media screen and (max-width: 550px) {
-  .c-login__container {
-    width: 80%;
-  }
-}
-
-.c-register__input {
-  border-bottom: 3px solid #EAEAEA;
-}
-
-.c-register__container {
-  width: 500px;
-}
-
-@media screen and (max-width: 550px) {
-  .c-register__container {
-    width: 80%;
-  }
 }
 
 .c-mypage-container {
