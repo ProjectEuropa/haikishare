@@ -93,7 +93,7 @@
     -webkit-border-radius: 0px;
     @include mq() {
       font-size: $font_s;
-      padding: 12px 0 0 $space_m;
+      padding: 8px 0 0 $space_m;
       width: 100%;
     }
     &:focus {

@@ -441,7 +441,7 @@ select:-moz-focusring {
 @media screen and (max-width: 550px) {
   .c-auth__register-input {
     font-size: 14px;
-    padding: 12px 0 0 10px;
+    padding: 8px 0 0 10px;
     width: 100%;
   }
 }
