@@ -441,7 +441,7 @@ select:-moz-focusring {
 @media screen and (max-width: 550px) {
   .c-auth__register-input {
     font-size: 14px;
-    padding: 0px 0 0 10px;
+    padding: 5px 0 0 10px;
     width: 100%;
   }
 }
@@ -544,8 +544,8 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-auth__select-box:before {
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 15px;
   }
 }
 
@@ -565,7 +565,7 @@ select:-moz-focusring {
 
 @media screen and (max-width: 550px) {
   .c-auth__select {
-    padding: 14px 0 3px 10px;
+    padding: 8px 0 3px 10px;
     font-size: 14px;
     width: 100px;
   }

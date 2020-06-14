@@ -93,7 +93,7 @@
     -webkit-border-radius: 0px;
     @include mq() {
       font-size: $font_s;
-      padding: 0px 0 0 $space_m;
+      padding: 5px 0 0 $space_m;
       width: 100%;
     }
     &:focus {
@@ -174,7 +174,7 @@
       pointer-events: none;
       @include mq() {
         right: 10px;
-        top: 20px;
+        top: 15px;
       }
     }
   }
@@ -190,7 +190,7 @@
     -webkit-appearance: none;
     width: 150px;
     @include mq() {
-      padding: 14px 0 3px $space_m;
+      padding: 8px 0 3px $space_m;
       font-size: $font_s;
       width: 100px;
     }
