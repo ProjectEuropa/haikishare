@@ -137,7 +137,7 @@
 return [
 
   'driver' => env('MAIL_DRIVER', 'smtp'),
-  'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+  'host' => env('MAIL_HOST'),
   'port' => env('MAIL_PORT', 587),
 
   'from' => [
