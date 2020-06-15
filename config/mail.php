@@ -135,14 +135,20 @@
 //
 // ];
 return [
-  "driver" => "smtp",
-  "host" => "smtp.mailtrap.io",
-  "port" => 2525,
-  "from" => array(
-      "address" => "haikishare@example.com",
-      "name" => "Example"
-  ),
-  "username" => "f4d0b81f2f9038",
-  "password" => "4dfee56ac01e76",
-  "sendmail" => "/usr/sbin/sendmail -bs"
+
+  'driver' => env('MAIL_DRIVER', 'smtp'),
+  'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+  'port' => env('MAIL_PORT', 587),
+
+  'from' => [
+  //ここの設定を追加
+  'address' => env('MAIL_FROM_ADDRESS', null),
+  'name' => env('MAIL_FROM_NAME', null)
+  ],
+
+  'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+  'username' => env('MAIL_USERNAME'),
+  'password' => env('MAIL_PASSWORD'),
+  'sendmail' => '/usr/sbin/sendmail -bs',
+
 ];
