@@ -138,7 +138,7 @@ return [
 
   'driver' => env('MAIL_DRIVER', 'smtp'),
   'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
-  'port' => env('MAIL_PORT', 25),
+  'port' => env('MAIL_PORT', 465),
 
   'from' => [
   //ここの設定を追加
