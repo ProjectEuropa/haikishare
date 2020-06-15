@@ -142,8 +142,8 @@ return [
 
   'from' => [
   //ここの設定を追加
-  'address' => env('MAIL_FROM_ADDRESS', null),
-  'name' => env('MAIL_FROM_NAME', null)
+  'address' => env('MAIL_FROM_ADDRESS', 'neginattopan@gmail.com'),
+  'name' => env('MAIL_FROM_NAME', 'test')
   ],
 
   'encryption' => env('MAIL_ENCRYPTION', 'tls'),
